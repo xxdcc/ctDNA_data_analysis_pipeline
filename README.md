@@ -61,6 +61,7 @@ Download *GATK* from [here](https://software.broadinstitute.org/gatk/download/) 
 ## Alignment
 
 **Tool**: *BWA*
+**Algorithm**: *mem*
 
 #### 1. Construct the FM-index for the reference genome
 
@@ -269,6 +270,9 @@ nohup ./BWA_mem.sh 95_4_D.4 SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_1.fq.gz SLX-12
 ----------------------
 ## Sort and convert SAM to BAM files
 
+**Tool**: *Picard*
+**Algorithm**: *SortSam*
+
 Sort the input SAM file by coordinate and output in a binary BAM format.
 
 Paramter | Value | Description
@@ -453,6 +457,9 @@ nohup ./Picard_SAM2BAM.sh  95_4_D.4 > 95_4_D.4.Picard_SAM2BAM.log &
 
 ----------------------
 ## Mark PCR duplicates
+
+**Tool**: *Picard*
+**Algorithm**: *MarkDuplicates*
 
 Locates and tag duplicate reads in a BAM files, where duplicate reads are defined as originating from a single fragment of DNA.
 Duplicates can arise during sample preparation e.g. library construction using PCR. Duplicate reads can also result from a single amplification cluster, incorrectly detected as multiple clusters by the optical sensor of the sequencing instrument. These duplication artifacts are referred to as optical duplicates.
@@ -640,6 +647,9 @@ nohup ./Picard_markDupl.sh  95_4_D.4 > 95_4_D.4.Picard_markDupl.log &
 
 ----------------------
 ## Collect statistics for *BAM* files using *SAMtools stats*
+
+**Tool**: *SAMtools*
+**Algorithm**: *stats*
 
 *SAMtools stats* collects statistics (e.g. GC content, insert size, per-base sequence content, quality per cycle) from *BAM* files and outputs in a text format. The output is then visualized graphically using *plot-bamstats*.
 
@@ -880,7 +890,10 @@ plot-bamstats -p 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats.plot 95_4_D
 
 
 ----------------------
-## Calculate the coverage (after marking PCR duplicates) using *GATK DepthOfCoverage*
+## Calculate the coverage (after marking PCR duplicates)
+
+**Tool**: *GATK*
+**Algorithm**: *DepthOfCoverage*
 
 #### 1. Download the *Agilent Human Exon V6 exome capture bed* files and use *liftOver* to change the coordinates from *hg19* to *hg38*.<br><br>
 **Note**: one needs to remove the header before and add again after *liftover*.
