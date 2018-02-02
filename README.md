@@ -7,9 +7,9 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
 
 #### Start with loading modules and installing necessary tools
 
-- [SAMtools](http://samtools.sourceforge.net/)
-- [Burrows-Wheeler Alignmer](http://bio-bwa.sourceforge.net/) (BWA)
-- [Picard](https://broadinstitute.github.io/picard/)
+- *[SAMtools](http://samtools.sourceforge.net/)*
+- *[Burrows-Wheeler Alignmer](http://bio-bwa.sourceforge.net/)* (*BWA*)
+- *[Picard](https://broadinstitute.github.io/picard/)*
 
 
 ```
@@ -23,7 +23,7 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
     bwa
 ```
 
-If not, download the most recent version (0.7.15 on 30.11.2016) from [here](https://sourceforge.net/projects/bio-bwa/files/) and install in home directory on *sm11* ($HOME/applications)
+If not, download the most recent version (0.7.15 on 30.11.2016) from [here](https://sourceforge.net/projects/bio-bwa/files/) and install in home directory on *sm11* (*$HOME/applications*)
 
 ```
     tar -xjf bwa-0.7.15.tar.bz2  
@@ -32,7 +32,7 @@ If not, download the most recent version (0.7.15 on 30.11.2016) from [here](http
     cp bwa $HOME/applications
 ```
 
-Download *Picard* from [here](https://github.com/broadinstitute/picard/zipball/master) and install in home directory on *sm11* ($HOME/applications)
+Download *Picard* from [here](https://github.com/broadinstitute/picard/zipball/master) and install in home directory on *sm11* (*$HOME/applications*)
 <br><br>
 
 ## Alignment with *BWA*
