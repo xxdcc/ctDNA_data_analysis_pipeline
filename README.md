@@ -56,7 +56,7 @@ This method is recommended for BWA-MEM alignment algorithm.
 
 Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/BWA_mem.sh)* script
 
-* Sequencing batch 1
+* **Sequencing batch 1**
 
 Sample 45_1_B
 ```
@@ -99,7 +99,7 @@ Sample 95_4_D
 ```
 <br>
 
-* Sequencing batch 2
+* **Sequencing batch 2**
 
 Sample 45_1_B
 ```
