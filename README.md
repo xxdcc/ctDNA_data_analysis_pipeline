@@ -436,7 +436,7 @@ Duplicates can arise during sample preparation e.g. library construction using P
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
-METRICS_FILE | $samplename\.DuplicationMetrics\.txt | File to write duplication metrics to
+METRICS_FILE | \[samplename\]\.DuplicationMetrics\.txt | File to write duplication metrics to
 VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
 <br /> 
