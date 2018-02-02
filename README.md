@@ -35,6 +35,7 @@ If not, download the most recent version (0.7.15 on 30.11.2016) from [here](http
 Download *Picard* from [here](https://github.com/broadinstitute/picard/zipball/master) and install in home directory on *sm11* ($HOME/applications)
 
 
+
 ## Alignment with *BWA*
 
 #### 1. Construct the FM-index for the reference genome
@@ -55,7 +56,6 @@ This method is recommended for *BWA-MEM* alignment algorithm.
 ```
 
 #### 3. Perform alignment using '*mem*' algorithm
-
 
 *BWA-MEM* is generally recommended for high-quality queries as it is faster and more accurate. For this use the index generated '*bwtsw*' algorithm.
 
