@@ -430,6 +430,17 @@ nohup ./Picard_SAM2BAM.sh  95_4_D.4 > 95_4_D.4.Picard_SAM2BAM.log &
 ----------------------
 #### 5. Mark PCR duplicates using Picard
 
+Locates and tag duplicate reads in a BAM files, where duplicate reads are defined as originating from a single fragment of DNA.
+Duplicates can arise during sample preparation e.g. library construction using PCR. Duplicate reads can also result from a single amplification cluster, incorrectly detected as multiple clusters by the optical sensor of the sequencing instrument. These duplication artifacts are referred to as optical duplicates.
+*Picard MarkDuplicates* produces a metrics file indicating the numbers of duplicates for both single- and paired-end reads.
+
+Paramter | Value | Description
+------------ | ------------ | ------------
+METRICS_FILE | sample.DuplicationMetrics.txt | File to write duplication metrics to
+VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
+CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
+<br /> 
+
 Run *[Picard_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_markDupl.sh)* script for each sample
 
 * **Sequencing batch 1**
