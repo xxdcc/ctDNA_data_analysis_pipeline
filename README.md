@@ -3,7 +3,7 @@
 This repository describes pipeline for analysing data from whole-exome sequencing (WES) of circulating tumour DNA (ctDNA).
 The pipeline is implemented using ctDNA from plasma samples derived from pancreatic cancer patients. The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computing](https://docs.hpc.qmul.ac.uk/) (HPC) cluster in the following directory<br>
 
-/data/BCI-BioInformatics/PC_ctDNA/WES_data
+*/data/BCI-BioInformatics/PC_ctDNA/WES_data*
 
 #### Start with loading modules
 
@@ -58,7 +58,7 @@ Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeli
 
 ***Sequencing batch 1***
 
-**Sample 45_1_B**
+****Sample 45_1_B****
 
 ```
         nohup ./BWA_mem.sh 45_1_B SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.BWA_mem.log &
