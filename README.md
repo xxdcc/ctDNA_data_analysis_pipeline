@@ -1,7 +1,7 @@
 # Circulating tumour DNA whole-exome sequencing pipeline
 
 This repository describes pipeline for analysing data from whole-exome sequencing (WES) of circulating tumour DNA (ctDNA).
-The pipeline is implemented using ctDNA from plasma samples derived from pancreatic cancer patients. The analyses are conducted on [QMUL Apocrita High Performance Computing](https://docs.hpc.qmul.ac.uk/) (HPC) cluster in the following directory<br>
+The pipeline is implemented using ctDNA from plasma samples derived from pancreatic cancer patients. The analyses are conducted on [QMUL Apocrita (sm11) High Performance Computing](https://docs.hpc.qmul.ac.uk/) (HPC) cluster in the following directory<br>
 
 /data/BCI-BioInformatics/PC_ctDNA/WES_data
 
@@ -12,29 +12,24 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
 
 
 ```
-      module load samtools
-      module load bwa
-      
+        module load samtools
+        module load bwa
 ```
 
+NOTE: Check if the most recent bwa is installed
 
+```
+        bwa
+```
 
-#### Check if the installed bwa is the newsest
-bwa
+If not, download the newest one (0.7.17 on 02.02.2018) from [here](https://sourceforge.net/projects/bio-bwa/files/) and install in home directory on sm11 ($HOME/applications)
 
-
-#### If not, download the newest one (0.7.15-r1140 on 30.11.2016) and install in sm11 ($HOME/applications)
-
-https://sourceforge.net/projects/bio-bwa/files/
-
-tar -xjf bwa-0.7.15.tar.bz2  
-
-cd bwa-0.7.15
-
-make
-
-cp bwa $HOME/bin
-
+```
+        tar -xjf bwa-0.7.15.tar.bz2  
+        cd bwa-0.7.15
+        make
+        cp bwa $HOME/bin
+```
 
 
 #### Construct the FM-index for the reference genome
