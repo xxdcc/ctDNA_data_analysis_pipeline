@@ -33,8 +33,7 @@ If not, download the most recent version (0.7.15 on 30.11.2016) from [here](http
 ```
 
 Download *Picard* from [here](https://github.com/broadinstitute/picard/zipball/master) and install in home directory on *sm11* ($HOME/applications)
-
-
+<br>
 
 ## Alignment with *BWA*
 
