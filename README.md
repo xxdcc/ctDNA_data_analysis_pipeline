@@ -5,9 +5,8 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
 
 /data/BCI-BioInformatics/PC_ctDNA/WES_data
 
-<br><br>
-#### Load modules
-
+<br>
+##### Start with loading modules
 ```
       module load sbcs
 ```
