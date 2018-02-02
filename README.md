@@ -60,9 +60,6 @@ Download *GATK* from [here](https://software.broadinstitute.org/gatk/download/) 
 ----------------------
 ## 1. Alignment
 
-**Tool**: *BWA*<br>
-**Algorithm**: *mem*
-
 #### 1.1 Construct the FM-index for the reference genome
 
 ```
@@ -86,6 +83,9 @@ $HOME/applications/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/re
 #### 1.3. Perform alignment using '*mem*' algorithm
 
 *BWA-MEM* is generally recommended for high-quality queries as it is faster and more accurate. For this use the index generated '*bwtsw*' algorithm.
+
+**Tool**: *BWA*<br>
+**Algorithm**: *mem*
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
@@ -1192,7 +1192,8 @@ Paramter | Value | Description
 METRICS_FILE | \[samplename\]\.merged\.DuplicationMetrics\.txt | File to write duplication metrics to
 VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
-<br /> 
+<br />
+
 **Tool**: *Picard*<br>
 **Algorithm**: *FixMateInformation*
 
