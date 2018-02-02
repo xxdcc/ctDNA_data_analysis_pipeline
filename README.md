@@ -11,13 +11,12 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
 - *[Burrows-Wheeler Alignmer](http://bio-bwa.sourceforge.net/)* (*BWA*)
 - *[Picard](https://broadinstitute.github.io/picard/)*
 - *[Genome Analysis Toolkit](https://software.broadinstitute.org/gatk/)* (GATK)
-
+<br>
 
 ```
     module load samtools
     module load bwa
 ```
-<br>
 
 **NOTE**: Check if the most recent *BWA* is installed
 
