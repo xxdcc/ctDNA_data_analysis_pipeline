@@ -1059,6 +1059,7 @@ Sample 95_4_D
 ```
 nohup ./GATK_coverage.sh  95_4_D.4 > 95_4_D.4.GATK_coverage.log &
 ```
+<br><br>
 
 At thie step 7 files are creates per each sample
 
