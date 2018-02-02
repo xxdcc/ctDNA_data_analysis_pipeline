@@ -1,4 +1,4 @@
-# Circulating tumour DNA whole-exome sequencing pipeline
+# ctDNA WES data analysis pipeline
 
 This repository describes pipeline for analysing data from whole-exome sequencing (WES) of circulating tumour DNA (ctDNA).
 
