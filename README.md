@@ -1,10 +1,28 @@
 # Circulating tumour DNA whole-exome sequencing pipeline
 
 This repository describes pipeline for analysing data from whole-exome sequencing (WES) of circulating tumour DNA (ctDNA).
-The pipeline is implemented using ctDNA from plasma samples derived from pancreatic cancer patients. The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computing](https://docs.hpc.qmul.ac.uk/) (HPC) cluster in the following directory<br>
+The pipeline is implemented using ctDNA from plasma samples derived from pancreatic cancer patients. The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computing](https://docs.hpc.qmul.ac.uk/) (HPC) cluster and the ctDNA WES data is located in the following directory<br>
 
 */data/BCI-BioInformatics/PC_ctDNA/WES_data*
 
+
+The pipeline containts the following steps:
+
+Step | Analysis | Tool | Algorithm
+------------ | ------------ | ------------
+1 | [Alignment](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#alignment-with-bwa) | *[Burrows-Wheeler Alignmer](http://bio-bwa.sourceforge.net/)* (*BWA*) | *mem*
+2 | [Sort and convert SAM to BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#sort-and-convert-sam-to-bam-files-using-picard) | *[Picard](https://broadinstitute.github.io/picard/)* | *SortSam*
+3 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#mark-pcr-duplicates-using-picard) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
+4 | [Collect statistics for BAM file](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#collect-statistics-for-bam-files-using-samtools-stats) | *[SAMtools](http://samtools.sourceforge.net/)* | *stats*
+5 | [Calculate the coverage (after marking PCR duplicates)](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#calculate-the-coverage-after-marking-pcr-duplicates-using-gatk-depthofcoverage) | *[Genome Analysis Toolkit](https://software.broadinstitute.org/gatk/)* (GATK) | *DepthOfCoverage*
+6 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#mark-pcr-duplicates-using-picard) | *[Picard](https://broadinstitute.github.io/picard/)*
+7 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#mark-pcr-duplicates-using-picard) | *[Picard](https://broadinstitute.github.io/picard/)*
+8 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#mark-pcr-duplicates-using-picard) | *[Picard](https://broadinstitute.github.io/picard/)*
+
+<br />
+
+
+----------------------
 #### Start with loading modules and installing necessary tools
 
 - *[SAMtools](http://samtools.sourceforge.net/)*
@@ -862,7 +880,7 @@ plot-bamstats -p 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats.plot 95_4_D
 ----------------------
 ## Calculate the coverage (after marking PCR duplicates) using *GATK DepthOfCoverage*
 
-First, download the *Agilent Human Exon V6 exome capture bed* files and use *liftOver* to change the coordinates from *hg19* to *hg38*.<br><br>
+#### 1. Download the *Agilent Human Exon V6 exome capture bed* files and use *liftOver* to change the coordinates from *hg19* to *hg38*.<br><br>
 **Note**: one needs to remove the header before and add again after *liftover*.
 
 This step was done on local machine
@@ -879,7 +897,7 @@ grep '^chr[0-9XY]\{1,2\}\t' /Users/marzec01/data/PC_ctDNA/WES_data/Agilent_Human
 ```
 <br>
 
-*GATK DepthOfCoverage*  processes a set of *BAM*  files to determine coverage at different levels of partitioning and aggregation.
+#### 2. Use *GATK DepthOfCoverage*  to processes *BAM*  files to determine coverage at different levels of partitioning and aggregation.
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
@@ -1059,7 +1077,7 @@ Sample 95_4_D
 ```
 nohup ./GATK_coverage.sh  95_4_D.4 > 95_4_D.4.GATK_coverage.log &
 ```
-<br><br>
+<br>
 
 At thie step 7 files are creates per each sample
 
@@ -1076,7 +1094,7 @@ no suffix | per locus coverage
 
 
 ----------------------
-## Mark PCR duplicates using Picard
+## Merge *BAM* files using *Picard MarkDuplicates*
 
 Locates and tag duplicate reads in a BAM files, where duplicate reads are defined as originating from a single fragment of DNA.
 Duplicates can arise during sample preparation e.g. library construction using PCR. Duplicate reads can also result from a single amplification cluster, incorrectly detected as multiple clusters by the optical sensor of the sequencing instrument. These duplication artifacts are referred to as optical duplicates.
