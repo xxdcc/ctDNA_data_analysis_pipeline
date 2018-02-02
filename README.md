@@ -43,6 +43,11 @@ Download *Picard* from [here](https://github.com/broadinstitute/picard/zipball/m
     mkdir /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15
     cd /data/BCI-BioInformatics/Jun/reference_hg38/
 ```
+=======================
+
+----------------------
+
+______________________
 
 #### 2. Construct index using the '*bwtsw*' algorithm implemented in *BWT-SW*
 This method is recommended for *BWA-MEM* alignment algorithm.
