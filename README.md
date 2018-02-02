@@ -37,18 +37,15 @@ Download *Picard* from [here](https://github.com/broadinstitute/picard/zipball/m
 
 ## Alignment with *BWA*
 
+----------------------
 #### 1. Construct the FM-index for the reference genome
 
 ```
     mkdir /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15
     cd /data/BCI-BioInformatics/Jun/reference_hg38/
 ```
-=======================
 
 ----------------------
-
-______________________
-
 #### 2. Construct index using the '*bwtsw*' algorithm implemented in *BWT-SW*
 This method is recommended for *BWA-MEM* alignment algorithm.
 
@@ -59,6 +56,7 @@ This method is recommended for *BWA-MEM* alignment algorithm.
     $HOME/applications/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15_bwtsw/hg38.fa
 ```
 
+----------------------
 #### 3. Perform alignment using '*mem*' algorithm
 
 *BWA-MEM* is generally recommended for high-quality queries as it is faster and more accurate. For this use the index generated '*bwtsw*' algorithm.
