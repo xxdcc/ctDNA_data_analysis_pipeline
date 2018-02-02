@@ -20,7 +20,7 @@ Step | Analysis | Tools | Algorithms
 8 | [Base quality score recalibration](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#8-base-quality-score-recalibration) | *[GATK](https://software.broadinstitute.org/gatk/)* | *BaseRecalibrator* <br> *PrintReads*
 9 | Check merged and recalibrated BAM files | *[SAMtools](http://samtools.sourceforge.net/)* | *flagstat*
 10 | Index BAM files | *[SAMtools](http://samtools.sourceforge.net/)* | *index*
-11 | Varaints calling | *[SAMtools](http://samtools.sourceforge.net/)* <br> *[VarScan](http://varscan.sourceforge.net/)* | *mpileup* <br> *mpileup2cns*
+11 | Variant calling | *[SAMtools](http://samtools.sourceforge.net/)* <br> *[VarScan](http://varscan.sourceforge.net/)* | *mpileup* <br> *mpileup2cns*
 
 <br />
 
