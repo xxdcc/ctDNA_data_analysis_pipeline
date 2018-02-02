@@ -20,16 +20,16 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
 **NOTE**: Check if the most recent *BWA* is installed
 
 ```
-    bwa
+bwa
 ```
 
 If not, download the most recent version (0.7.15 on 30.11.2016) from [here](https://sourceforge.net/projects/bio-bwa/files/) and install in home directory on *sm11* (*$HOME/applications*)
 
 ```
-    tar -xjf bwa-0.7.15.tar.bz2  
-    cd bwa-0.7.15
-    make
-    cp bwa $HOME/applications
+tar -xjf bwa-0.7.15.tar.bz2  
+cd bwa-0.7.15
+make
+cp bwa $HOME/applications
 ```
 
 Download *Picard* from [here](https://github.com/broadinstitute/picard/zipball/master) and install in home directory on *sm11* (*$HOME/applications*)
@@ -41,8 +41,8 @@ Download *Picard* from [here](https://github.com/broadinstitute/picard/zipball/m
 #### 1. Construct the FM-index for the reference genome
 
 ```
-    mkdir /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15
-    cd /data/BCI-BioInformatics/Jun/reference_hg38/
+mkdir /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15
+cd /data/BCI-BioInformatics/Jun/reference_hg38/
 ```
 
 ----------------------
@@ -50,10 +50,10 @@ Download *Picard* from [here](https://github.com/broadinstitute/picard/zipball/m
 This method is recommended for *BWA-MEM* alignment algorithm.
 
 ```
-    mkdir index_bwa_0.7.15_bwtsw
-    cp hg38.fa index_bwa_0.7.15_bwtsw
-    cd index_bwa_0.7.15_bwtsw
-    $HOME/applications/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15_bwtsw/hg38.fa
+mkdir index_bwa_0.7.15_bwtsw
+cp hg38.fa index_bwa_0.7.15_bwtsw
+cd index_bwa_0.7.15_bwtsw
+$HOME/applications/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15_bwtsw/hg38.fa
 ```
 
 ----------------------
@@ -67,42 +67,42 @@ Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeli
 
 Sample 45_1_B
 ```
-    nohup ./BWA_mem.sh 45_1_B SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.BWA_mem.log &
+nohup ./BWA_mem.sh 45_1_B SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.BWA_mem.log &
 ```
 
 Sample 45_2_C
 ```
-    nohup ./BWA_mem.sh 45_2_C SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.BWA_mem.log &
+nohup ./BWA_mem.sh 45_2_C SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.BWA_mem.log &
 ```
 
 Sample 45_3_D
 ```
-    nohup ./BWA_mem.sh 45_3_D SLX-12721.iPCRtagT005.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT005.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT005.HGJWLBBXX.s_5.BWA_mem.log &
+nohup ./BWA_mem.sh 45_3_D SLX-12721.iPCRtagT005.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT005.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT005.HGJWLBBXX.s_5.BWA_mem.log &
 ```
 
 Sample 45_4_E
 ```
-    nohup ./BWA_mem.sh 45_4_E SLX-12721.iPCRtagT006.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT006.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT006.HGJWLBBXX.s_5.BWA_mem.log &
+nohup ./BWA_mem.sh 45_4_E SLX-12721.iPCRtagT006.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT006.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT006.HGJWLBBXX.s_5.BWA_mem.log &
 ```
 
 Sample 95_1_A
 ```
-    nohup ./BWA_mem.sh 95_1_A SLX-12721.iPCRtagT007.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT007.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT007.HGJWLBBXX.s_5.BWA_mem.log &
+nohup ./BWA_mem.sh 95_1_A SLX-12721.iPCRtagT007.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT007.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT007.HGJWLBBXX.s_5.BWA_mem.log &
 ```
 
 Sample 95_2_B
 ```
-    nohup ./BWA_mem.sh 95_2_B SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.BWA_mem.log &
+nohup ./BWA_mem.sh 95_2_B SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.BWA_mem.log &
 ```
 
 Sample 95_3_C
 ```
-    nohup ./BWA_mem.sh 95_3_C SLX-12721.iPCRtagT010.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT010.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT010.HGJWLBBXX.s_5.BWA_mem.log &
+nohup ./BWA_mem.sh 95_3_C SLX-12721.iPCRtagT010.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT010.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT010.HGJWLBBXX.s_5.BWA_mem.log &
 ```
 
 Sample 95_4_D
 ```
-    nohup ./BWA_mem.sh 95_4_D SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.BWA_mem.log &
+nohup ./BWA_mem.sh 95_4_D SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.BWA_mem.log &
 ```
 <br>
 
@@ -417,111 +417,174 @@ Run *[Picard_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WE
 
 * **Sequencing batch 1**
 
-# Sample 45_1_B
+Sample 45_1_B
+```
 nohup ./Picard_markDupl.sh  45_1_B > 45_1_B.Picard_markDupl.log &
+```
 
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./Picard_markDupl.sh  45_2_C > 45_2_C.Picard_markDupl.log &
+```
 
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./Picard_markDupl.sh  45_3_D > 45_3_D.Picard_markDupl.log &
+```
 
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./Picard_markDupl.sh  45_4_E > 45_4_E.Picard_markDupl.log &
+```
 
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./Picard_markDupl.sh  95_1_A > 95_1_A.Picard_markDupl.log &
+```
 
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./Picard_markDupl.sh  95_2_B > 95_2_B.Picard_markDupl.log &
+```
 
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./Picard_markDupl.sh  95_3_C > 95_3_C.Picard_markDupl.log &
+```
 
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./Picard_markDupl.sh  95_4_D > 95_4_D.Picard_markDupl.log &
+```
+<br>
 
+* **Sequencing batch 2**
 
-#### Batch 2
-
-# Sample 45_1_B
+Sample 45_1_B
+```
 nohup ./Picard_markDupl.sh  45_1_B.2 > 45_1_B.2.Picard_markDupl.log &
+```
 
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./Picard_markDupl.sh  45_2_C.2 > 45_2_C.2.Picard_markDupl.log &
+```
 
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./Picard_markDupl.sh  45_3_D.2 > 45_3_D.2.Picard_markDupl.log &
+```
 
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./Picard_markDupl.sh  45_4_E.2 > 45_4_E.2.Picard_markDupl.log &
+```
 
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./Picard_markDupl.sh  95_1_A.2 > 95_1_A.2.Picard_markDupl.log &
+```
 
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./Picard_markDupl.sh  95_2_B.2 > 95_2_B.2.Picard_markDupl.log &
+```
 
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./Picard_markDupl.sh  95_3_C.2 > 95_3_C.2.Picard_markDupl.log &
+```
 
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./Picard_markDupl.sh  95_4_D.2 > 95_4_D.2.Picard_markDupl.log &
+```
+<br>
 
+* **Sequencing batch 3**
 
-#### Batch 3
-
-# Sample 45_1_B
+Sample 45_1_B
+```
 nohup ./Picard_markDupl.sh  45_1_B.3 > 45_1_B.3.Picard_markDupl.log &
+```
 
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./Picard_markDupl.sh  45_2_C.3 > 45_2_C.3.Picard_markDupl.log &
+```
 
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./Picard_markDupl.sh  45_3_D.3 > 45_3_D.3.Picard_markDupl.log &
+```
 
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./Picard_markDupl.sh  45_4_E.3 > 45_4_E.3.Picard_markDupl.log &
+```
 
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./Picard_markDupl.sh  95_1_A.3 > 95_1_A.3.Picard_markDupl.log &
+```
 
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./Picard_markDupl.sh  95_2_B.3 > 95_2_B.3.Picard_markDupl.log &
+```
 
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./Picard_markDupl.sh  95_3_C.3 > 95_3_C.3.Picard_markDupl.log &
+```
 
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./Picard_markDupl.sh  95_4_D.3 > 95_4_D.3.Picard_markDupl.log &
+```
+<br>
 
+* **Sequencing batch 4**
 
-#### Batch 4
-
-# Sample 45_1_B
+Sample 45_1_B
+```
 nohup ./Picard_markDupl.sh  45_1_B.4 > 45_1_B.4.Picard_markDupl.log &
+```
 
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./Picard_markDupl.sh  45_2_C.4 > 45_2_C.4.Picard_markDupl.log &
+```
 
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./Picard_markDupl.sh  45_3_D.4 > 45_3_D.4.Picard_markDupl.log &
+```
 
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./Picard_markDupl.sh  45_4_E.4 > 45_4_E.4.Picard_markDupl.log &
+```
 
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./Picard_markDupl.sh  95_1_A.4 > 95_1_A.4.Picard_markDupl.log &
+```
 
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./Picard_markDupl.sh  95_2_B.4 > 95_2_B.4.Picard_markDupl.log &
+```
 
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./Picard_markDupl.sh  95_3_C.4 > 95_3_C.4.Picard_markDupl.log &
+```
 
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./Picard_markDupl.sh  95_4_D.4 > 95_4_D.4.Picard_markDupl.log &
-
+```
 
 
 ####################################################################################################
