@@ -5,18 +5,18 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
 
 /data/BCI-BioInformatics/PC_ctDNA/WES_data
 
-<br>
-
 ##### Start with loading modules
+
+- [samtools](http://samtools.sourceforge.net/)
+- [bwa](http://bio-bwa.sourceforge.net/)
+
+
 ```
-      module load sbcs
+      module load samtools
+      module load bwa
+      
 ```
 
-
-
-# Make sure to use the new samtools v1.3 installed locally ($HOME/applications/samtools-1.3.1)
-SAMTOOLSDIR=$HOME/applications/samtools-1.3.1/
-$SAMTOOLSDIR/samtools
 
 
 #### Check if the installed bwa is the newsest
@@ -494,47 +494,47 @@ nohup ./Picard_markDupl.sh  95_4_D.4 > 95_4_D.4.Picard_markDupl.log &
 
 #### Batch 1
 
-$SAMTOOLSDIR/samtools flagstat 45_1_B.marked.bam > 45_1_B.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 45_2_C.marked.bam > 45_2_C.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 45_3_D.marked.bam > 45_3_D.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 45_4_E.marked.bam > 45_4_E.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_1_A.marked.bam > 95_1_A.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_2_B.marked.bam > 95_2_B.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_3_C.marked.bam > 95_3_C.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_4_D.marked.bam > 95_4_D.marked.flagstat.txt
+samtools flagstat 45_1_B.marked.bam > 45_1_B.marked.flagstat.txt
+samtools flagstat 45_2_C.marked.bam > 45_2_C.marked.flagstat.txt
+samtools flagstat 45_3_D.marked.bam > 45_3_D.marked.flagstat.txt
+samtools flagstat 45_4_E.marked.bam > 45_4_E.marked.flagstat.txt
+samtools flagstat 95_1_A.marked.bam > 95_1_A.marked.flagstat.txt
+samtools flagstat 95_2_B.marked.bam > 95_2_B.marked.flagstat.txt
+samtools flagstat 95_3_C.marked.bam > 95_3_C.marked.flagstat.txt
+samtools flagstat 95_4_D.marked.bam > 95_4_D.marked.flagstat.txt
 
 #### Batch 2
 
-$SAMTOOLSDIR/samtools flagstat 45_1_B.2.marked.bam > 45_1_B.2.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 45_2_C.2.marked.bam > 45_2_C.2.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 45_3_D.2.marked.bam > 45_3_D.2.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 45_4_E.2.marked.bam > 45_4_E.2.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_1_A.2.marked.bam > 95_1_A.2.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_2_B.2.marked.bam > 95_2_B.2.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_3_C.2.marked.bam > 95_3_C.2.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_4_D.2.marked.bam > 95_4_D.2.marked.flagstat.txt
+samtools flagstat 45_1_B.2.marked.bam > 45_1_B.2.marked.flagstat.txt
+samtools flagstat 45_2_C.2.marked.bam > 45_2_C.2.marked.flagstat.txt
+samtools flagstat 45_3_D.2.marked.bam > 45_3_D.2.marked.flagstat.txt
+samtools flagstat 45_4_E.2.marked.bam > 45_4_E.2.marked.flagstat.txt
+samtools flagstat 95_1_A.2.marked.bam > 95_1_A.2.marked.flagstat.txt
+samtools flagstat 95_2_B.2.marked.bam > 95_2_B.2.marked.flagstat.txt
+samtools flagstat 95_3_C.2.marked.bam > 95_3_C.2.marked.flagstat.txt
+samtools flagstat 95_4_D.2.marked.bam > 95_4_D.2.marked.flagstat.txt
 
 #### Batch 3
 
-$SAMTOOLSDIR/samtools flagstat 45_1_B.3.marked.bam > 45_1_B.3.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 45_2_C.3.marked.bam > 45_2_C.3.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 45_3_D.3.marked.bam > 45_3_D.3.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 45_4_E.3.marked.bam > 45_4_E.3.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_1_A.3.marked.bam > 95_1_A.3.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_2_B.3.marked.bam > 95_2_B.3.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_3_C.3.marked.bam > 95_3_C.3.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_4_D.3.marked.bam > 95_4_D.3.marked.flagstat.txt
+samtools flagstat 45_1_B.3.marked.bam > 45_1_B.3.marked.flagstat.txt
+samtools flagstat 45_2_C.3.marked.bam > 45_2_C.3.marked.flagstat.txt
+samtools flagstat 45_3_D.3.marked.bam > 45_3_D.3.marked.flagstat.txt
+samtools flagstat 45_4_E.3.marked.bam > 45_4_E.3.marked.flagstat.txt
+samtools flagstat 95_1_A.3.marked.bam > 95_1_A.3.marked.flagstat.txt
+samtools flagstat 95_2_B.3.marked.bam > 95_2_B.3.marked.flagstat.txt
+samtools flagstat 95_3_C.3.marked.bam > 95_3_C.3.marked.flagstat.txt
+samtools flagstat 95_4_D.3.marked.bam > 95_4_D.3.marked.flagstat.txt
 
 #### Batch 4
 
-$SAMTOOLSDIR/samtools flagstat 45_1_B.4.marked.bam > 45_1_B.4.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 45_2_C.4.marked.bam > 45_2_C.4.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 45_3_D.4.marked.bam > 45_3_D.4.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 45_4_E.4.marked.bam > 45_4_E.4.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_1_A.4.marked.bam > 95_1_A.4.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_2_B.4.marked.bam > 95_2_B.4.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_3_C.4.marked.bam > 95_3_C.4.marked.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_4_D.4.marked.bam > 95_4_D.4.marked.flagstat.txt
+samtools flagstat 45_1_B.4.marked.bam > 45_1_B.4.marked.flagstat.txt
+samtools flagstat 45_2_C.4.marked.bam > 45_2_C.4.marked.flagstat.txt
+samtools flagstat 45_3_D.4.marked.bam > 45_3_D.4.marked.flagstat.txt
+samtools flagstat 45_4_E.4.marked.bam > 45_4_E.4.marked.flagstat.txt
+samtools flagstat 95_1_A.4.marked.bam > 95_1_A.4.marked.flagstat.txt
+samtools flagstat 95_2_B.4.marked.bam > 95_2_B.4.marked.flagstat.txt
+samtools flagstat 95_3_C.4.marked.bam > 95_3_C.4.marked.flagstat.txt
+samtools flagstat 95_4_D.4.marked.bam > 95_4_D.4.marked.flagstat.txt
 
 
 
@@ -548,56 +548,56 @@ $SAMTOOLSDIR/samtools flagstat 95_4_D.4.marked.bam > 95_4_D.4.marked.flagstat.tx
 # Sample 45_1_B
 mkdir 45_1_B.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 45_1_B.marked.bam > 45_1_B.marked.bam.stats/45_1_B.marked.bam.stats
+samtools stats 45_1_B.marked.bam > 45_1_B.marked.bam.stats/45_1_B.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 45_1_B.marked.bam.stats/45_1_B.marked.bam.stats.plot 45_1_B.marked.bam.stats/45_1_B.marked.bam.stats
 
 
 # Sample 45_2_C
 mkdir 45_2_C.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 45_2_C.marked.bam > 45_2_C.marked.bam.stats/45_2_C.marked.bam.stats
+samtools stats 45_2_C.marked.bam > 45_2_C.marked.bam.stats/45_2_C.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 45_2_C.marked.bam.stats/45_2_C.marked.bam.stats.plot 45_2_C.marked.bam.stats/45_2_C.marked.bam.stats
 
 
 # Sample 45_3_D
 mkdir 45_3_D.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 45_3_D.marked.bam > 45_3_D.marked.bam.stats/45_3_D.marked.bam.stats
+samtools stats 45_3_D.marked.bam > 45_3_D.marked.bam.stats/45_3_D.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 45_3_D.marked.bam.stats/45_3_D.marked.bam.stats.plot 45_3_D.marked.bam.stats/45_3_D.marked.bam.stats
 
 
 # Sample 45_4_E
 mkdir 45_4_E.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 45_4_E.marked.bam > 45_4_E.marked.bam.stats/45_4_E.marked.bam.stats
+samtools stats 45_4_E.marked.bam > 45_4_E.marked.bam.stats/45_4_E.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 45_4_E.marked.bam.stats/45_4_E.marked.bam.stats.plot 45_4_E.marked.bam.stats/45_4_E.marked.bam.stats
 
 
 # Sample 95_1_A
 mkdir 95_1_A.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 95_1_A.marked.bam > 95_1_A.marked.bam.stats/95_1_A.marked.bam.stats
+samtools stats 95_1_A.marked.bam > 95_1_A.marked.bam.stats/95_1_A.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 95_1_A.marked.bam.stats/95_1_A.marked.bam.stats.plot 95_1_A.marked.bam.stats/95_1_A.marked.bam.stats
 
 
 # Sample 95_2_B
 mkdir 95_2_B.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 95_2_B.marked.bam > 95_2_B.marked.bam.stats/95_2_B.marked.bam.stats
+samtools stats 95_2_B.marked.bam > 95_2_B.marked.bam.stats/95_2_B.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 95_2_B.marked.bam.stats/95_2_B.marked.bam.stats.plot 95_2_B.marked.bam.stats/95_2_B.marked.bam.stats
 
 
 # Sample 95_3_C
 mkdir 95_3_C.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 95_3_C.marked.bam > 95_3_C.marked.bam.stats/95_3_C.marked.bam.stats
+samtools stats 95_3_C.marked.bam > 95_3_C.marked.bam.stats/95_3_C.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 95_3_C.marked.bam.stats/95_3_C.marked.bam.stats.plot 95_3_C.marked.bam.stats/95_3_C.marked.bam.stats
 
 
 # Sample 95_4_D
 mkdir 95_4_D.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 95_4_D.marked.bam > 95_4_D.marked.bam.stats/95_4_D.marked.bam.stats
+samtools stats 95_4_D.marked.bam > 95_4_D.marked.bam.stats/95_4_D.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 95_4_D.marked.bam.stats/95_4_D.marked.bam.stats.plot 95_4_D.marked.bam.stats/95_4_D.marked.bam.stats
 
 
@@ -606,56 +606,56 @@ $SAMTOOLSDIR/misc/plot-bamstats -p 95_4_D.marked.bam.stats/95_4_D.marked.bam.sta
 # Sample 45_1_B
 mkdir 45_1_B.2.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 45_1_B.2.marked.bam > 45_1_B.2.marked.bam.stats/45_1_B.2.marked.bam.stats
+samtools stats 45_1_B.2.marked.bam > 45_1_B.2.marked.bam.stats/45_1_B.2.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 45_1_B.2.marked.bam.stats/45_1_B.2.marked.bam.stats.plot 45_1_B.2.marked.bam.stats/45_1_B.2.marked.bam.stats
 
 
 # Sample 45_2_C
 mkdir 45_2_C.2.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 45_2_C.2.marked.bam > 45_2_C.2.marked.bam.stats/45_2_C.2.marked.bam.stats
+samtools stats 45_2_C.2.marked.bam > 45_2_C.2.marked.bam.stats/45_2_C.2.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 45_2_C.2.marked.bam.stats/45_2_C.2.marked.bam.stats.plot 45_2_C.2.marked.bam.stats/45_2_C.2.marked.bam.stats
 
 
 # Sample 45_3_D
 mkdir 45_3_D.2.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 45_3_D.2.marked.bam > 45_3_D.2.marked.bam.stats/45_3_D.2.marked.bam.stats
+samtools stats 45_3_D.2.marked.bam > 45_3_D.2.marked.bam.stats/45_3_D.2.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 45_3_D.2.marked.bam.stats/45_3_D.2.marked.bam.stats.plot 45_3_D.2.marked.bam.stats/45_3_D.2.marked.bam.stats
 
 
 # Sample 45_4_E
 mkdir 45_4_E.2.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 45_4_E.2.marked.bam > 45_4_E.2.marked.bam.stats/45_4_E.2.marked.bam.stats
+samtools stats 45_4_E.2.marked.bam > 45_4_E.2.marked.bam.stats/45_4_E.2.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 45_4_E.2.marked.bam.stats/45_4_E.2.marked.bam.stats.plot 45_4_E.2.marked.bam.stats/45_4_E.2.marked.bam.stats
 
 
 # Sample 95_1_A
 mkdir 95_1_A.2.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 95_1_A.2.marked.bam > 95_1_A.2.marked.bam.stats/95_1_A.2.marked.bam.stats
+samtools stats 95_1_A.2.marked.bam > 95_1_A.2.marked.bam.stats/95_1_A.2.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 95_1_A.2.marked.bam.stats/95_1_A.2.marked.bam.stats.plot 95_1_A.2.marked.bam.stats/95_1_A.2.marked.bam.stats
 
 
 # Sample 95_2_B
 mkdir 95_2_B.2.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 95_2_B.2.marked.bam > 95_2_B.2.marked.bam.stats/95_2_B.2.marked.bam.stats
+samtools stats 95_2_B.2.marked.bam > 95_2_B.2.marked.bam.stats/95_2_B.2.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 95_2_B.2.marked.bam.stats/95_2_B.2.marked.bam.stats.plot 95_2_B.2.marked.bam.stats/95_2_B.2.marked.bam.stats
 
 
 # Sample 95_3_C
 mkdir 95_3_C.2.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 95_3_C.2.marked.bam > 95_3_C.2.marked.bam.stats/95_3_C.2.marked.bam.stats
+samtools stats 95_3_C.2.marked.bam > 95_3_C.2.marked.bam.stats/95_3_C.2.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 95_3_C.2.marked.bam.stats/95_3_C.2.marked.bam.stats.plot 95_3_C.2.marked.bam.stats/95_3_C.2.marked.bam.stats
 
 
 # Sample 95_4_D
 mkdir 95_4_D.2.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 95_4_D.2.marked.bam > 95_4_D.2.marked.bam.stats/95_4_D.2.marked.bam.stats
+samtools stats 95_4_D.2.marked.bam > 95_4_D.2.marked.bam.stats/95_4_D.2.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 95_4_D.2.marked.bam.stats/95_4_D.2.marked.bam.stats.plot 95_4_D.2.marked.bam.stats/95_4_D.2.marked.bam.stats
 
 
@@ -664,56 +664,56 @@ $SAMTOOLSDIR/misc/plot-bamstats -p 95_4_D.2.marked.bam.stats/95_4_D.2.marked.bam
 # Sample 45_1_B
 mkdir 45_1_B.3.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 45_1_B.3.marked.bam > 45_1_B.3.marked.bam.stats/45_1_B.3.marked.bam.stats
+samtools stats 45_1_B.3.marked.bam > 45_1_B.3.marked.bam.stats/45_1_B.3.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 45_1_B.3.marked.bam.stats/45_1_B.3.marked.bam.stats.plot 45_1_B.3.marked.bam.stats/45_1_B.3.marked.bam.stats
 
 
 # Sample 45_2_C
 mkdir 45_2_C.3.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 45_2_C.3.marked.bam > 45_2_C.3.marked.bam.stats/45_2_C.3.marked.bam.stats
+samtools stats 45_2_C.3.marked.bam > 45_2_C.3.marked.bam.stats/45_2_C.3.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 45_2_C.3.marked.bam.stats/45_2_C.3.marked.bam.stats.plot 45_2_C.3.marked.bam.stats/45_2_C.3.marked.bam.stats
 
 
 # Sample 45_3_D
 mkdir 45_3_D.3.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 45_3_D.3.marked.bam > 45_3_D.3.marked.bam.stats/45_3_D.3.marked.bam.stats
+samtools stats 45_3_D.3.marked.bam > 45_3_D.3.marked.bam.stats/45_3_D.3.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 45_3_D.3.marked.bam.stats/45_3_D.3.marked.bam.stats.plot 45_3_D.3.marked.bam.stats/45_3_D.3.marked.bam.stats
 
 
 # Sample 45_4_E
 mkdir 45_4_E.3.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 45_4_E.3.marked.bam > 45_4_E.3.marked.bam.stats/45_4_E.3.marked.bam.stats
+samtools stats 45_4_E.3.marked.bam > 45_4_E.3.marked.bam.stats/45_4_E.3.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 45_4_E.3.marked.bam.stats/45_4_E.3.marked.bam.stats.plot 45_4_E.3.marked.bam.stats/45_4_E.3.marked.bam.stats
 
 
 # Sample 95_1_A
 mkdir 95_1_A.3.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 95_1_A.3.marked.bam > 95_1_A.3.marked.bam.stats/95_1_A.3.marked.bam.stats
+samtools stats 95_1_A.3.marked.bam > 95_1_A.3.marked.bam.stats/95_1_A.3.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 95_1_A.3.marked.bam.stats/95_1_A.3.marked.bam.stats.plot 95_1_A.3.marked.bam.stats/95_1_A.3.marked.bam.stats
 
 
 # Sample 95_2_B
 mkdir 95_2_B.3.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 95_2_B.3.marked.bam > 95_2_B.3.marked.bam.stats/95_2_B.3.marked.bam.stats
+samtools stats 95_2_B.3.marked.bam > 95_2_B.3.marked.bam.stats/95_2_B.3.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 95_2_B.3.marked.bam.stats/95_2_B.3.marked.bam.stats.plot 95_2_B.3.marked.bam.stats/95_2_B.3.marked.bam.stats
 
 
 # Sample 95_3_C
 mkdir 95_3_C.3.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 95_3_C.3.marked.bam > 95_3_C.3.marked.bam.stats/95_3_C.3.marked.bam.stats
+samtools stats 95_3_C.3.marked.bam > 95_3_C.3.marked.bam.stats/95_3_C.3.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 95_3_C.3.marked.bam.stats/95_3_C.3.marked.bam.stats.plot 95_3_C.3.marked.bam.stats/95_3_C.3.marked.bam.stats
 
 
 # Sample 95_4_D
 mkdir 95_4_D.3.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 95_4_D.3.marked.bam > 95_4_D.3.marked.bam.stats/95_4_D.3.marked.bam.stats
+samtools stats 95_4_D.3.marked.bam > 95_4_D.3.marked.bam.stats/95_4_D.3.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 95_4_D.3.marked.bam.stats/95_4_D.3.marked.bam.stats.plot 95_4_D.3.marked.bam.stats/95_4_D.3.marked.bam.stats
 
 
@@ -722,56 +722,56 @@ $SAMTOOLSDIR/misc/plot-bamstats -p 95_4_D.3.marked.bam.stats/95_4_D.3.marked.bam
 # Sample 45_1_B
 mkdir 45_1_B.4.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 45_1_B.4.marked.bam > 45_1_B.4.marked.bam.stats/45_1_B.4.marked.bam.stats
+samtools stats 45_1_B.4.marked.bam > 45_1_B.4.marked.bam.stats/45_1_B.4.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 45_1_B.4.marked.bam.stats/45_1_B.4.marked.bam.stats.plot 45_1_B.4.marked.bam.stats/45_1_B.4.marked.bam.stats
 
 
 # Sample 45_2_C
 mkdir 45_2_C.4.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 45_2_C.4.marked.bam > 45_2_C.4.marked.bam.stats/45_2_C.4.marked.bam.stats
+samtools stats 45_2_C.4.marked.bam > 45_2_C.4.marked.bam.stats/45_2_C.4.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 45_2_C.4.marked.bam.stats/45_2_C.4.marked.bam.stats.plot 45_2_C.4.marked.bam.stats/45_2_C.4.marked.bam.stats
 
 
 # Sample 45_3_D
 mkdir 45_3_D.4.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 45_3_D.4.marked.bam > 45_3_D.4.marked.bam.stats/45_3_D.4.marked.bam.stats
+samtools stats 45_3_D.4.marked.bam > 45_3_D.4.marked.bam.stats/45_3_D.4.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 45_3_D.4.marked.bam.stats/45_3_D.4.marked.bam.stats.plot 45_3_D.4.marked.bam.stats/45_3_D.4.marked.bam.stats
 
 
 # Sample 45_4_E
 mkdir 45_4_E.4.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 45_4_E.4.marked.bam > 45_4_E.4.marked.bam.stats/45_4_E.4.marked.bam.stats
+samtools stats 45_4_E.4.marked.bam > 45_4_E.4.marked.bam.stats/45_4_E.4.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 45_4_E.4.marked.bam.stats/45_4_E.4.marked.bam.stats.plot 45_4_E.4.marked.bam.stats/45_4_E.4.marked.bam.stats
 
 
 # Sample 95_1_A
 mkdir 95_1_A.4.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 95_1_A.4.marked.bam > 95_1_A.4.marked.bam.stats/95_1_A.4.marked.bam.stats
+samtools stats 95_1_A.4.marked.bam > 95_1_A.4.marked.bam.stats/95_1_A.4.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 95_1_A.4.marked.bam.stats/95_1_A.4.marked.bam.stats.plot 95_1_A.4.marked.bam.stats/95_1_A.4.marked.bam.stats
 
 
 # Sample 95_2_B
 mkdir 95_2_B.4.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 95_2_B.4.marked.bam > 95_2_B.4.marked.bam.stats/95_2_B.4.marked.bam.stats
+samtools stats 95_2_B.4.marked.bam > 95_2_B.4.marked.bam.stats/95_2_B.4.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 95_2_B.4.marked.bam.stats/95_2_B.4.marked.bam.stats.plot 95_2_B.4.marked.bam.stats/95_2_B.4.marked.bam.stats
 
 
 # Sample 95_3_C
 mkdir 95_3_C.4.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 95_3_C.4.marked.bam > 95_3_C.4.marked.bam.stats/95_3_C.4.marked.bam.stats
+samtools stats 95_3_C.4.marked.bam > 95_3_C.4.marked.bam.stats/95_3_C.4.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 95_3_C.4.marked.bam.stats/95_3_C.4.marked.bam.stats.plot 95_3_C.4.marked.bam.stats/95_3_C.4.marked.bam.stats
 
 
 # Sample 95_4_D
 mkdir 95_4_D.4.marked.bam.stats
 
-$SAMTOOLSDIR/samtools stats 95_4_D.4.marked.bam > 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats
+samtools stats 95_4_D.4.marked.bam > 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats
 $SAMTOOLSDIR/misc/plot-bamstats -p 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats.plot 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats
 
 
@@ -1046,15 +1046,15 @@ rm [sample_name].merged.marked.realigned.fixed.bai
 #### Check the merged.recalib.BAM files with samtools
 
 
-$SAMTOOLSDIR/samtools flagstat 45_1_B.merged.recalib.bam > 45_1_B.merged.recalib.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 45_2_C.merged.recalib.bam > 45_2_C.merged.recalib.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 45_3_D.merged.recalib.bam > 45_3_D.merged.recalib.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 45_4_E.merged.recalib.bam > 45_4_E.merged.recalib.flagstat.txt
+samtools flagstat 45_1_B.merged.recalib.bam > 45_1_B.merged.recalib.flagstat.txt
+samtools flagstat 45_2_C.merged.recalib.bam > 45_2_C.merged.recalib.flagstat.txt
+samtools flagstat 45_3_D.merged.recalib.bam > 45_3_D.merged.recalib.flagstat.txt
+samtools flagstat 45_4_E.merged.recalib.bam > 45_4_E.merged.recalib.flagstat.txt
 
-$SAMTOOLSDIR/samtools flagstat 95_1_A.merged.recalib.bam > 95_1_A.merged.recalib.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_2_B.merged.recalib.bam > 95_2_B.merged.recalib.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_3_C.merged.recalib.bam > 95_3_C.merged.recalib.flagstat.txt
-$SAMTOOLSDIR/samtools flagstat 95_4_D.merged.recalib.bam > 95_4_D.merged.recalib.flagstat.txt
+samtools flagstat 95_1_A.merged.recalib.bam > 95_1_A.merged.recalib.flagstat.txt
+samtools flagstat 95_2_B.merged.recalib.bam > 95_2_B.merged.recalib.flagstat.txt
+samtools flagstat 95_3_C.merged.recalib.bam > 95_3_C.merged.recalib.flagstat.txt
+samtools flagstat 95_4_D.merged.recalib.bam > 95_4_D.merged.recalib.flagstat.txt
 
 
 
@@ -1062,15 +1062,15 @@ $SAMTOOLSDIR/samtools flagstat 95_4_D.merged.recalib.bam > 95_4_D.merged.recalib
 
 #### Index merged BAM files
 
-$SAMTOOLSDIR/samtools index 45_1_B.merged.recalib.bam
-$SAMTOOLSDIR/samtools index 45_2_C.merged.recalib.bam
-$SAMTOOLSDIR/samtools index 45_3_D.merged.recalib.bam
-$SAMTOOLSDIR/samtools index 45_4_E.merged.recalib.bam
+samtools index 45_1_B.merged.recalib.bam
+samtools index 45_2_C.merged.recalib.bam
+samtools index 45_3_D.merged.recalib.bam
+samtools index 45_4_E.merged.recalib.bam
 
-$SAMTOOLSDIR/samtools index 95_1_A.merged.recalib.bam
-$SAMTOOLSDIR/samtools index 95_2_B.merged.recalib.bam
-$SAMTOOLSDIR/samtools index 95_3_C.merged.recalib.bam
-$SAMTOOLSDIR/samtools index 95_4_D.merged.recalib.bam
+samtools index 95_1_A.merged.recalib.bam
+samtools index 95_2_B.merged.recalib.bam
+samtools index 95_3_C.merged.recalib.bam
+samtools index 95_4_D.merged.recalib.bam
 
 
 
