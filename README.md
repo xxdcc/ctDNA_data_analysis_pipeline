@@ -40,7 +40,8 @@ If not, download the newest one (0.7.15 on 30.11.2016) from [here](https://sourc
         cd /data/BCI-BioInformatics/Jun/reference_hg38/
 ```
 
-#### 2. Construct index using the 'bwtsw' algorithm implemented in BWT-SW. This method is recommended for BWA-MEM alignment algorithm
+#### 2. Construct index using the 'bwtsw' algorithm implemented in BWT-SW
+This method is recommended for BWA-MEM alignment algorithm.
 
 ```
         mkdir index_bwa_0.7.15_bwtsw
@@ -55,7 +56,7 @@ If not, download the newest one (0.7.15 on 30.11.2016) from [here](https://sourc
 
 Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/BWA_mem.sh)* script
 
-**Sequencing batch 1**
+***Sequencing batch 1***
 
 **Sample 45_1_B**
 
