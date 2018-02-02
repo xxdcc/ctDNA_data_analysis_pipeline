@@ -5,10 +5,11 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
 
 */data/BCI-BioInformatics/PC_ctDNA/WES_data*
 
-#### Start with loading modules
+#### Start with loading modules and installing necessary tools
 
 - [SAMtools](http://samtools.sourceforge.net/)
 - [Burrows-Wheeler Alignmer](http://bio-bwa.sourceforge.net/) (BWA)
+- [Picard](https://broadinstitute.github.io/picard/)
 
 
 ```
@@ -22,14 +23,17 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
     bwa
 ```
 
-If not, download the newest one (0.7.15 on 30.11.2016) from [here](https://sourceforge.net/projects/bio-bwa/files/) and install in home directory on sm11 ($HOME/bin)
+If not, download the newest one (0.7.15 on 30.11.2016) from [here](https://sourceforge.net/projects/bio-bwa/files/) and install in home directory on sm11 ($HOME/applications)
 
 ```
     tar -xjf bwa-0.7.15.tar.bz2  
     cd bwa-0.7.15
     make
-    cp bwa $HOME/bin
+    cp bwa $HOME/applications
 ```
+
+Download and install Picard from [here](https://github.com/broadinstitute/picard/zipball/master) and install in home directory on sm11 ($HOME/applications)
+
 
 ## Alignment with BWA
 
@@ -47,7 +51,7 @@ This method is recommended for BWA-MEM alignment algorithm.
     mkdir index_bwa_0.7.15_bwtsw
     cp hg38.fa index_bwa_0.7.15_bwtsw
     cd index_bwa_0.7.15_bwtsw
-    $HOME/bin/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15_bwtsw/hg38.fa
+    $HOME/applications/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15_bwtsw/hg38.fa
 ```
 
 #### 3. Perform alignment using 'mem' algorithm
@@ -142,7 +146,7 @@ nohup ./BWA_mem.sh 95_4_D.2 SLX-12721.iPCRtagT012.HGYHFBBXX.s_2.r_1.fq.gz SLX-12
 ```
 <br>
 
-* Sequencing batch 3
+* **Sequencing batch 3**
 
 Sample 45_1_B
 ```
@@ -185,7 +189,7 @@ nohup ./BWA_mem.sh 95_4_D.3 SLX-12721.iPCRtagT012.HGYHFBBXX.s_3.r_1.fq.gz SLX-12
 ```
 <br>
 
-* Sequencing batch 4
+* **Sequencing batch 4**
 
 Sample 45_1_B
 ```
@@ -227,10 +231,7 @@ Sample 95_4_D
 nohup ./BWA_mem.sh 95_4_D.4 SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.BWA_mem.log &
 ```
 
-
-####################################################################################################
-
-#### SAM to BAM conversion using Picard
+#### 4. Convert SAM to BAM files using Picard
 # Run 'Picard_SAM2BAM.sh' script
 
 #### Batch 1
