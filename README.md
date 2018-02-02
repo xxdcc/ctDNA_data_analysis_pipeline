@@ -247,7 +247,7 @@ nohup ./BWA_mem.sh 95_4_D.4 SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_1.fq.gz SLX-12
 ```
 
 ----------------------
-#### 4. Sort and convert SAM to BAM files using Picard
+## Sort and convert SAM to BAM files using Picard
 
 Sort the input SAM file by coordinate and output in a binary BAM format.
 
@@ -432,7 +432,7 @@ nohup ./Picard_SAM2BAM.sh  95_4_D.4 > 95_4_D.4.Picard_SAM2BAM.log &
 ```
 
 ----------------------
-#### 5. Mark PCR duplicates using Picard
+## Mark PCR duplicates using Picard
 
 Locates and tag duplicate reads in a BAM files, where duplicate reads are defined as originating from a single fragment of DNA.
 Duplicates can arise during sample preparation e.g. library construction using PCR. Duplicate reads can also result from a single amplification cluster, incorrectly detected as multiple clusters by the optical sensor of the sequencing instrument. These duplication artifacts are referred to as optical duplicates.
@@ -619,7 +619,7 @@ nohup ./Picard_markDupl.sh  95_4_D.4 > 95_4_D.4.Picard_markDupl.log &
 ```
 
 ----------------------
-#### 6. Collect statistics for *BAM* files using *SAMtools stats*
+## Collect statistics for *BAM* files using *SAMtools stats*
 
 *SAMtools stats* collects statistics (e.g. GC content, insert size, per-base sequence content, quality per cycle) from *BAM* files and outputs in a text format. The output is then visualized graphically using *plot-bamstats*.
 
@@ -860,7 +860,7 @@ plot-bamstats -p 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats.plot 95_4_D
 
 
 ----------------------
-#### 7. Calculate the coverage (after marking PCR duplicates) using *GATK DepthOfCoverage*
+## Calculate the coverage (after marking PCR duplicates) using *GATK DepthOfCoverage*
 
 First, download the *Agilent Human Exon V6 exome capture bed* files and use *liftOver* to change the coordinates from *hg19* to *hg38*.<br><br>
 **Note**: one needs to remove the header before and add again after *liftover*.
@@ -1062,7 +1062,7 @@ nohup ./GATK_coverage.sh  95_4_D.4 > 95_4_D.4.GATK_coverage.log &
 
 At thie step 7 files are creates per each sample
 
-File suffix | Description
+Output file suffix | Description
 ------------ | ------------
 no suffix | per locus coverage
 \_summary | total, mean, median, quartiles, and threshold proportions, aggregated over all bases
@@ -1073,6 +1073,24 @@ no suffix | per locus coverage
 \_cumulative_coverage_proportions | proprotions of loci with >= X coverage, aggregated over all bases
 <br /> 
 
+
+----------------------
+## Mark PCR duplicates using Picard
+
+Locates and tag duplicate reads in a BAM files, where duplicate reads are defined as originating from a single fragment of DNA.
+Duplicates can arise during sample preparation e.g. library construction using PCR. Duplicate reads can also result from a single amplification cluster, incorrectly detected as multiple clusters by the optical sensor of the sequencing instrument. These duplication artifacts are referred to as optical duplicates.
+*Picard MarkDuplicates* produces a metrics file indicating the numbers of duplicates for both single- and paired-end reads.
+
+Paramter | Value | Description
+------------ | ------------ | ------------
+METRICS_FILE | \[samplename\]\.DuplicationMetrics\.txt | File to write duplication metrics to
+VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
+CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
+<br /> 
+
+Run *[Picard_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_markDupl.sh)* script for each sample
+
+* **Sequencing batch 1**
 
 ####################################################################################################
 
