@@ -8,7 +8,7 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
 #### Start with loading modules
 
 - [SAMtools](http://samtools.sourceforge.net/)
-- [Burrows-Wheeler Alignment (BWA) tool](http://bio-bwa.sourceforge.net/)
+- [Burrows-Wheeler Alignmer](http://bio-bwa.sourceforge.net/) (BWA)
 
 
 ```
@@ -51,7 +51,7 @@ If not, download the newest one (0.7.15 on 30.11.2016) from [here](https://sourc
 
 #### 3. Perform alignment using 'mem' algorithm
 
-BWA-MEM is generally recommended for high-quality queries as it is faster and more accurate. For this use the index generated 'bwtsw' algorithm.
+*BWA-MEM* is generally recommended for high-quality queries as it is faster and more accurate. For this use the index generated 'bwtsw' algorithm.
 
 Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/BWA_mem.sh)* script
 
