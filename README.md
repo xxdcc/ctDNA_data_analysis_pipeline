@@ -57,10 +57,11 @@ Download *Picard* from [here](https://github.com/broadinstitute/picard/zipball/m
 Download *GATK* from [here](https://software.broadinstitute.org/gatk/download/) and install in home directory on *sm11* (*$HOME/applications*)
 <br><br>
 
+----------------------
 ## Alignment
 
 **Tool**: *BWA*
-----------------------
+
 #### 1. Construct the FM-index for the reference genome
 
 ```
@@ -68,7 +69,6 @@ mkdir /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15
 cd /data/BCI-BioInformatics/Jun/reference_hg38/
 ```
 
-----------------------
 #### 2. Construct index using the '*bwtsw*' algorithm implemented in *BWT-SW*
 
 This method is recommended for *BWA-MEM* alignment algorithm.
@@ -80,7 +80,6 @@ cd index_bwa_0.7.15_bwtsw
 $HOME/applications/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15_bwtsw/hg38.fa
 ```
 
-----------------------
 #### 3. Perform alignment using '*mem*' algorithm
 
 *BWA-MEM* is generally recommended for high-quality queries as it is faster and more accurate. For this use the index generated '*bwtsw*' algorithm.
