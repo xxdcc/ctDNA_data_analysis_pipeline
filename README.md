@@ -860,7 +860,7 @@ plot-bamstats -p 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats.plot 95_4_D
 
 
 ----------------------
-#### 7. Calculate the coverage after marking PCR duplicates
+#### 7. Calculate the coverage (after marking PCR duplicates) using *GATK DepthOfCoverage*
 
 First, download the *Agilent Human Exon V6 exome capture bed* files and use *liftOver* to change the coordinates from *hg19* to *hg38*.<br>
 **Note**: one needs to remove the header before and add again after *liftover*.
@@ -875,12 +875,14 @@ This step was done on local machine
 ```
 grep '^chr[0-9XY]\{1,2\}\t' /Users/marzec01/data/PC_ctDNA/WES_data/Agilent_Human_Exon_V6/S07604514_Covered_hg38.bed > /Users/marzec01/data/PC_ctDNA/WES_data/Agilent_Human_Exon_V6/S07604514_Covered_hg38_clean.bed
 ```
+<br>
+
+*GATK DepthOfCoverage*  processes a set of *BAM*  files to determine coverage at different levels of partitioning and aggregation.
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
-METRICS_FILE | \[samplename\]\.DuplicationMetrics\.txt | File to write duplication metrics to
-VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
-CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
+-ct | 20, 50, 80, 100, 150, 200 | Coverage threshold (in percent) for summarising statistics
+-L  | Agilent_Human_Exon_V6/S07604514_Covered_hg38_clean\.bed | Restrict processing to specific genomic intervals
 <br /> 
 
 Run *[GATK_coverage.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/GATK_coverage.sh)* script for each sample
