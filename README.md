@@ -1168,8 +1168,45 @@ nohup ./Picard_merge_4BAMs_markDupl.sh  95_4_D  95_4_D.recalib.bam  95_4_D.2.rec
 ```
 
 
+----------------------
+## 7. Local alignment around indels
 
-####################################################################################################
+Following Broad Institute recommendation for [pre-processing data from multiplexed sequencing and multi-library designs](https://software.broadinstitute.org/gatk/guide/article?id=3060), after running the initial steps of the pre-processing workflow (mapping, sorting and marking duplicates) separately on individual *BAM* files, we merge the data into a single *BAM* file for each sample. This is done by re-running *Picard MarkDuplicates* algorithm, this time using all read group *BAM* files for each sample.
+
+
+**Tool**: *GATK*<br>
+**Algorithm**: *RealignerTargetCreator*
+
+Paramter | Value | Description
+------------ | ------------ | ------------
+METRICS_FILE | \[samplename\]\.merged\.DuplicationMetrics\.txt | File to write duplication metrics to
+VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
+CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
+<br />
+
+**Tool**: *GATK*<br>
+**Algorithm**: *IndelRealigner*
+
+Paramter | Value | Description
+------------ | ------------ | ------------
+METRICS_FILE | \[samplename\]\.merged\.DuplicationMetrics\.txt | File to write duplication metrics to
+VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
+CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
+<br /> 
+**Tool**: *Picard*<br>
+**Algorithm**: *FixMateInformation*
+
+Paramter | Value | Description
+------------ | ------------ | ------------
+METRICS_FILE | \[samplename\]\.merged\.DuplicationMetrics\.txt | File to write duplication metrics to
+VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
+CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
+<br /> 
+
+Run *[Picard_merge_4BAMs_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_merge_4BAMs_markDupl.sh)* script for each sample
+
+* **Sequencing batch 1**
+
 
 
 The Indel Realignment and Base Recalibration is then run on the aggregated per-sample BAM files
@@ -1292,393 +1329,6 @@ samtools index 95_1_A.merged.recalib.bam
 samtools index 95_2_B.merged.recalib.bam
 samtools index 95_3_C.merged.recalib.bam
 samtools index 95_4_D.merged.recalib.bam
-
-
-
-####################################################################################################
-
-#### Call variants with MuTect 2
-
-http://archive.broadinstitute.org/cancer/cga/mutect
-http://archive.broadinstitute.org/cancer/cga/mutect_run
-http://gatkforums.broadinstitute.org/gatk/discussion/6858/mutect-2
-https://software.broadinstitute.org/gatk/gatkdocs/org_broadinstitute_gatk_tools_walkers_cancer_m2_MuTect2.php
-
-#### First download and prepare COSMIC and dbSNP VCF files
-https://brb.nci.nih.gov/seqtools/downloadfilesforanno.html
-
-# All steps were described in /Users/marzec01/data/PC_ctDNA/WGS_data_analysis_pipeline.txt
-
-
-#### Run 'GATK_MuTect2.sh' script
-
-########### Generates error when data from WGS and WES data are interrogated ###########
-
-# Sample 45_1_B vs Sample X16018P001A01 (WGS)
-nohup ./GATK_MuTect2.sh  45_1_B.merged  45_1_B.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001A01/B01P0045_BBC03_normal.bam > 45_1_B.merged.GATK_MuTect2.log &
-
-
-# Sample 45_2_C vs Sample X16018P001A01 (WGS)
-nohup ./GATK_MuTect2.sh  45_2_C.merged  45_2_C.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001A01/B01P0045_BBC03_normal.bam > 45_2_C.merged.GATK_MuTect2.log &
-
-
-# Sample 45_3_D vs Sample X16018P001A01 (WGS)
-nohup ./GATK_MuTect2.sh  45_3_D.merged  45_3_D.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001A01/B01P0045_BBC03_normal.bam > 45_3_D.merged.GATK_MuTect2.log &
-
-
-# Sample 45_4_E vs Sample X16018P001A01 (WGS)
-nohup ./GATK_MuTect2.sh  45_4_E.merged  45_4_E.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001A01/B01P0045_BBC03_normal.bam > 45_4_E.merged.GATK_MuTect2.log &
-
-
-# Sample 95_1_A vs Sample X16018P001B01 (WGS)
-nohup ./GATK_MuTect2.sh  95_1_A.merged  95_1_A.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001B01/B01P0095_ABC03_normal.bam > 95_1_A.merged.GATK_MuTect2.log &
-
-
-# Sample 95_2_B vs Sample X16018P001B01 (WGS)
-nohup ./GATK_MuTect2.sh  95_2_B.merged  95_2_B.recalib_merged.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001B01/B01P0095_ABC03_normal.bam > 95_2_B.merged.GATK_MuTect2.log &
-
-
-# Sample 95_3_C vs Sample X16018P001B01 (WGS)
-nohup ./GATK_MuTect2.sh  95_3_C.merged  95_3_C.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001B01/B01P0095_ABC03_normal.bam > 95_3_C.merged.GATK_MuTect2.log &
-
-
-# Sample 95_4_D vs Sample X16018P001B01 (WGS)
-nohup ./GATK_MuTect2.sh  95_4_D.merged  95_4_D.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001B01/B01P0095_ABC03_normal.bam > 95_4_D.merged.GATK_MuTect2.log &
-
-
-
-
-########################################################################################
-
-#### Calling variants with MuTect 2 only within defined list of regions (interval list)
-
-
-############################ Getting timeout error, need to stick to Agilent_Human_Exon_V6 capture bed file ###########
-#
-# First, download the bed file with exonic regions from Ensembl biomart (http://www.ensembl.org/biomart/martview)
-#
-############################ This query is too extensive for BioMart interface ###########
-# Don't set any filters
-# 1. In attributes go to "structures" and select (1) "Chromosome/scaffold name", (2) "Exon Chr Start (bp)", (3) "Exon Chr End (bp)" and "Gene ID"
-# 2. Export  all results to XLS file (select unique results only)
-# 3. Make sure to add "chr" to the chromosome numbers
-# 4. Add 150bp upstream and 150bp downstream to each coordinate to capture possibly all reads information around the exons (reads length 150bp).
-##########################################################################################
-#
-############################ Getting timeout error #######################################
-# Run the BioMart-generated Perl script 'ensembl_Homo_sapiens.GRCh38.exons.pl' (/data/home/hfw456/genome_annotation)
-#
-cd /data/home/hfw456/genome_annotation
-#
-perl ensembl_Homo_sapiens.GRCh38.exons.pl  >  ensembl_Homo_sapiens.GRCh38.exons.bed
-#
-##########################################################################################
-
-
-#### modify the Agilent_Human_Exon_V6 capture bed file by adding 150bp upstream and 150bp downstream to each coordinate to capture possibly all reads information around the exons (reads length 150bp) (use excel to edit the original bed file)
-
- 
-S07604514_Covered_hg38_clean.bed  ->  S07604514_Covered_hg38_clean_extended.bed
-
-
-
-#### Run 'GATK_MuTect2_interval.sh' script
-
-# Sample 45_1_B vs Sample X16018P001A01 (WGS)
-nohup ./GATK_MuTect2_interval.sh  45_1_B.merged_exome  45_1_B.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001A01/B01P0045_BBC03_normal.bam > 45_1_B.merged_exome.GATK_MuTect2.log &
-
-
-# Sample 45_2_C vs Sample X16018P001A01 (WGS)
-nohup ./GATK_MuTect2_interval.sh  45_2_C.merged_exome  45_2_C.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001A01/B01P0045_BBC03_normal.bam > 45_2_C.merged_exome.GATK_MuTect2.log &
-
-
-# Sample 45_3_D vs Sample X16018P001A01 (WGS)
-nohup ./GATK_MuTect2_interval.sh  45_3_D.merged_exome  45_3_D.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001A01/B01P0045_BBC03_normal.bam > 45_3_D.merged_exome.GATK_MuTect2.log &
-
-
-# Sample 45_4_E vs Sample X16018P001A01 (WGS)
-nohup ./GATK_MuTect2_interval.sh  45_4_E.merged_exome  45_4_E.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001A01/B01P0045_BBC03_normal.bam > 45_4_E.merged_exome.GATK_MuTect2.log &
-
-
-# Sample 95_1_A vs Sample X16018P001B01 (WGS)
-nohup ./GATK_MuTect2_interval.sh  95_1_A.merged_exome  95_1_A.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001B01/B01P0095_ABC03_normal.bam > 95_1_A.merged_exome.GATK_MuTect2.log &
-
-
-# Sample 95_2_B vs Sample X16018P001B01 (WGS)
-nohup ./GATK_MuTect2_interval.sh  95_2_B_exome  95_2_B.recalib_merged.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001B01/B01P0095_ABC03_normal.bam > 95_2_B_exome.GATK_MuTect2.log &
-
-
-# Sample 95_3_C vs Sample X16018P001B01 (WGS)
-nohup ./GATK_MuTect2_interval.sh  95_3_C.merged_exome  95_3_C.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001B01/B01P0095_ABC03_normal.bam > 95_3_C.merged_exome.GATK_MuTect2.log &
-
-
-# Sample 95_4_D vs Sample X16018P001B01 (WGS)
-nohup ./GATK_MuTect2_interval.sh  95_4_D.merged_exome  95_4_D.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001B01/B01P0095_ABC03_normal.bam > 95_4_D.merged_exome.GATK_MuTect2.log &
-
-
-
-
-#### Annotate somatic variants with Annovar
-http://annovar.openbioinformatics.org/en/latest/
-http://annovar.openbioinformatics.org/en/latest/user-guide/download/
-
-
-#### Download appropriate database files from UCSC Genome Browser Annotation Database using annotate_variation.pl
-http://annovar.openbioinformatics.org/en/latest/user-guide/filter
-
-cd /data/home/hfw456/applications/annovar
-
-./annotate_variation.pl -buildver hg38 -downdb -webfrom annovar refGene /data/BCI-BioInformatics/jack/genome_annotation/annovar/humandb/
-./annotate_variation.pl -buildver hg38 -downdb -webfrom annovar knownGene /data/BCI-BioInformatics/jack/genome_annotation/annovar/humandb/
-
-./annotate_variation.pl -buildver hg38 -downdb cytoBand /data/BCI-BioInformatics/jack/genome_annotation/annovar/humandb/
-./annotate_variation.pl -buildver hg38 -downdb genomicSuperDups /data/BCI-BioInformatics/jack/genome_annotation/annovar/humandb/ 
-
-./annotate_variation.pl -buildver hg38 -downdb -webfrom annovar esp6500siv2_all /data/BCI-BioInformatics/jack/genome_annotation/annovar/humandb/
-./annotate_variation.pl -buildver hg38 -downdb -webfrom annovar 1000g2015aug /data/BCI-BioInformatics/jack/genome_annotation/annovar/humandb/
-./annotate_variation.pl -buildver hg38 -downdb -webfrom annovar kaviar_20150923 /data/BCI-BioInformatics/jack/genome_annotation/annovar/humandb/
-./annotate_variation.pl -buildver hg38 -downdb -webfrom annovar hrcr1 /data/BCI-BioInformatics/jack/genome_annotation/annovar/humandb/
-
-./annotate_variation.pl -buildver hg38 -downdb -webfrom annovar exac03 /data/BCI-BioInformatics/jack/genome_annotation/annovar/humandb/ 
-./annotate_variation.pl -buildver hg38 -downdb -webfrom annovar avsnp147 /data/BCI-BioInformatics/jack/genome_annotation/annovar/humandb/
-./annotate_variation.pl -buildver hg38 -downdb -webfrom annovar dbnsfp30a /data/BCI-BioInformatics/jack/genome_annotation/annovar/humandb/
-
-./annotate_variation.pl -buildver hg38 -downdb -webfrom annovar clinvar_20150629 /data/BCI-BioInformatics/jack/genome_annotation/annovar/humandb/
-./annotate_variation.pl -buildver hg38 -downdb -webfrom annovar cosmic70 /data/BCI-BioInformatics/jack/genome_annotation/annovar/humandb/
-./annotate_variation.pl -buildver hg38 -downdb -webfrom annovar kgXref /data/BCI-BioInformatics/jack/genome_annotation/annovar/humandb/
-./annotate_variation.pl -buildver hg38 -downdb -webfrom annovar nci60 /data/BCI-BioInformatics/jack/genome_annotation/annovar/humandb/
-
-
-
-#### Run 'Annovar_annotate_variation.sh' script
-#### NOTE: the info from VCF file will be reported only for the first sample (should be TUMOUR)
-
-
-# Sample 45_1_B vs Sample X16018P001A01 (WGS)
-nohup ./Annovar_annotate_variation.sh  45_1_B.merged > 45_1_B.merged.Annovar.log &
-
-# Sample 45_2_C vs Sample X16018P001A01 (WGS)
-nohup ./Annovar_annotate_variation.sh  45_2_C.merged > 45_2_C.merged.Annovar.log &
-
-# Sample 45_3_D vs Sample X16018P001A01 (WGS)
-nohup ./Annovar_annotate_variation.sh  45_3_D.merged > 45_3_D.merged.Annovar.log &
-
-# Sample 45_4_E vs Sample X16018P001A01 (WGS)
-nohup ./Annovar_annotate_variation.sh  45_4_E.merged > 45_4_E.merged.Annovar.log &
-
-# Sample 95_1_A vs Sample X16018P001B01 (WGS)
-nohup ./Annovar_annotate_variation.sh  95_1_A.merged > 95_1_A.merged.Annovar.log &
-
-# Sample 95_2_B vs Sample X16018P001B01 (WGS)
-nohup ./Annovar_annotate_variation.sh  95_2_B.merged > 95_2_B.merged.Annovar.log &
-
-# Sample 95_3_C vs Sample X16018P001B01 (WGS)
-nohup ./Annovar_annotate_variation.sh  95_3_C.merged > 95_3_C.merged.Annovar.log &
-
-# Sample 95_4_D vs Sample X16018P001B01 (WGS)
-nohup ./Annovar_annotate_variation.sh  95_4_D.merged > 95_4_D.merged.Annovar.log &
-
-
-
-#### Filter the variants to those which PASSed Mutect2 calling
-
-# Sample 45_1_B
-
-egrep PASS 45_1_B.merged.vcf.avinput.exonic_variant_function > 45_1_B.merged.vcf.avinput.exonic_variant_function_PASS
-
-
-########## SKIP this filtering #########
-#### Exclude synonymous and unknown variants (info in second column)
-#awk '{ if ( $2 != "synonymous" && $2 != "unknown" ) { print $0; } }' 45_1_B.merged.vcf.avinput.exonic_variant_function_PASS > 45_1_B.merged.vcf.avinput.exonic_variant_function_PASS_nonsyn
-########################################
-
-
-egrep PASS 45_1_B.merged.vcf.avinput.variant_function > 45_1_B.merged.vcf.avinput.variant_function_PASS
-
-#### Include only splicing variants
-egrep splicing 45_1_B.merged.vcf.avinput.variant_function_PASS > 45_1_B.merged.vcf.avinput.variant_function_PASS_splice
-
-
-#### Format Annovar output files
-
-./process_annovar_output_exonic.pl -i 45_1_B.merged.vcf.avinput.exonic_variant_function_PASS
-
-./process_annovar_output_splice.pl -i 45_1_B.merged.vcf.avinput.variant_function_PASS_splice
-
-
-
-# Sample 45_2_C
-
-egrep PASS 45_2_C.merged.vcf.avinput.exonic_variant_function > 45_2_C.merged.vcf.avinput.exonic_variant_function_PASS
-
-
-########## SKIP this filtering #########
-#### Exclude synonymous and unknown variants (info in second column)
-#awk '{ if ( $2 != "synonymous" && $2 != "unknown" ) { print $0; } }' 45_2_C.merged.vcf.avinput.exonic_variant_function_PASS > 45_2_C.merged.vcf.avinput.exonic_variant_function_PASS_nonsyn
-########################################
-
-
-egrep PASS 45_2_C.merged.vcf.avinput.variant_function > 45_2_C.merged.vcf.avinput.variant_function_PASS
-
-#### Include only splicing variants
-egrep splicing 45_2_C.merged.vcf.avinput.variant_function_PASS > 45_2_C.merged.vcf.avinput.variant_function_PASS_splice
-
-
-#### Format Annovar output files
-
-./process_annovar_output_exonic.pl -i 45_2_C.merged.vcf.avinput.exonic_variant_function_PASS
-
-./process_annovar_output_splice.pl -i 45_2_C.merged.vcf.avinput.variant_function_PASS_splice
-
-
-
-# Sample 45_3_D
-
-egrep PASS 45_3_D.merged.vcf.avinput.exonic_variant_function > 45_3_D.merged.vcf.avinput.exonic_variant_function_PASS
-
-
-########## SKIP this filtering #########
-#### Exclude synonymous and unknown variants (info in second column)
-#awk '{ if ( $2 != "synonymous" && $2 != "unknown" ) { print $0; } }' 45_3_D.merged.vcf.avinput.exonic_variant_function_PASS > 45_3_D.merged.vcf.avinput.exonic_variant_function_PASS_nonsyn
-########################################
-
-
-egrep PASS 45_3_D.merged.vcf.avinput.variant_function > 45_3_D.merged.vcf.avinput.variant_function_PASS
-
-#### Include only splicing variants
-egrep splicing 45_3_D.merged.vcf.avinput.variant_function_PASS > 45_3_D.merged.vcf.avinput.variant_function_PASS_splice
-
-
-#### Format Annovar output files
-
-./process_annovar_output_exonic.pl -i 45_3_D.merged.vcf.avinput.exonic_variant_function_PASS
-
-./process_annovar_output_splice.pl -i 45_3_D.merged.vcf.avinput.variant_function_PASS_splice
-
-
-
-# Sample 45_4_E
-
-egrep PASS 45_4_E.merged.vcf.avinput.exonic_variant_function > 45_4_E.merged.vcf.avinput.exonic_variant_function_PASS
-
-
-########## SKIP this filtering #########
-#### Exclude synonymous and unknown variants (info in second column)
-#awk '{ if ( $2 != "synonymous" && $2 != "unknown" ) { print $0; } }' 45_4_E.merged.vcf.avinput.exonic_variant_function_PASS > 45_4_E.merged.vcf.avinput.exonic_variant_function_PASS_nonsyn
-########################################
-
-
-egrep PASS 45_4_E.merged.vcf.avinput.variant_function > 45_4_E.merged.vcf.avinput.variant_function_PASS
-
-#### Include only splicing variants
-egrep splicing 45_4_E.merged.vcf.avinput.variant_function_PASS > 45_4_E.merged.vcf.avinput.variant_function_PASS_splice
-
-
-#### Format Annovar output files
-
-./process_annovar_output_exonic.pl -i 45_4_E.merged.vcf.avinput.exonic_variant_function_PASS
-
-./process_annovar_output_splice.pl -i 45_4_E.merged.vcf.avinput.variant_function_PASS_splice
-
-
-
-# Sample 95_1_A
-
-egrep PASS 95_1_A.merged.vcf.avinput.exonic_variant_function > 95_1_A.merged.vcf.avinput.exonic_variant_function_PASS
-
-
-########## SKIP this filtering #########
-#### Exclude synonymous and unknown variants (info in second column)
-#awk '{ if ( $2 != "synonymous" && $2 != "unknown" ) { print $0; } }' 95_1_A.merged.vcf.avinput.exonic_variant_function_PASS > 95_1_A.merged.vcf.avinput.exonic_variant_function_PASS_nonsyn
-########################################
-
-
-egrep PASS 95_1_A.merged.vcf.avinput.variant_function > 95_1_A.merged.vcf.avinput.variant_function_PASS
-
-#### Include only splicing variants
-egrep splicing 95_1_A.merged.vcf.avinput.variant_function_PASS > 95_1_A.merged.vcf.avinput.variant_function_PASS_splice
-
-
-#### Format Annovar output files
-
-./process_annovar_output_exonic.pl -i 95_1_A.merged.vcf.avinput.exonic_variant_function_PASS
-
-./process_annovar_output_splice.pl -i 95_1_A.merged.vcf.avinput.variant_function_PASS_splice
-
-
-
-# Sample 95_2_B
-
-egrep PASS 95_2_B.merged.vcf.avinput.exonic_variant_function > 95_2_B.merged.vcf.avinput.exonic_variant_function_PASS
-
-
-########## SKIP this filtering #########
-#### Exclude synonymous and unknown variants (info in second column)
-#awk '{ if ( $2 != "synonymous" && $2 != "unknown" ) { print $0; } }' 95_2_B.merged.vcf.avinput.exonic_variant_function_PASS > 95_2_B.merged.vcf.avinput.exonic_variant_function_PASS_nonsyn
-########################################
-
-
-egrep PASS 95_2_B.merged.vcf.avinput.variant_function > 95_2_B.merged.vcf.avinput.variant_function_PASS
-
-#### Include only splicing variants
-egrep splicing 95_2_B.merged.vcf.avinput.variant_function_PASS > 95_2_B.merged.vcf.avinput.variant_function_PASS_splice
-
-
-#### Format Annovar output files
-
-./process_annovar_output_exonic.pl -i 95_2_B.merged.vcf.avinput.exonic_variant_function_PASS
-
-./process_annovar_output_splice.pl -i 95_2_B.merged.vcf.avinput.variant_function_PASS_splice
-
-
-
-# Sample 95_3_C
-
-egrep PASS 95_3_C.merged.vcf.avinput.exonic_variant_function > 95_3_C.merged.vcf.avinput.exonic_variant_function_PASS
-
-
-########## SKIP this filtering #########
-#### Exclude synonymous and unknown variants (info in second column)
-#awk '{ if ( $2 != "synonymous" && $2 != "unknown" ) { print $0; } }' 95_3_C.merged.vcf.avinput.exonic_variant_function_PASS > 95_3_C.merged.vcf.avinput.exonic_variant_function_PASS_nonsyn
-########################################
-
-
-egrep PASS 95_3_C.merged.vcf.avinput.variant_function > 95_3_C.merged.vcf.avinput.variant_function_PASS
-
-#### Include only splicing variants
-egrep splicing 95_3_C.merged.vcf.avinput.variant_function_PASS > 95_3_C.merged.vcf.avinput.variant_function_PASS_splice
-########################################
-
-#### Format Annovar output files
-
-./process_annovar_output_exonic.pl -i 95_3_C.merged.vcf.avinput.exonic_variant_function_PASS
-
-./process_annovar_output_splice.pl -i 95_3_C.merged.vcf.avinput.variant_function_PASS_splice
-
-
-
-# Sample 95_4_D
-
-egrep PASS 95_4_D.merged.vcf.avinput.exonic_variant_function > 95_4_D.merged.vcf.avinput.exonic_variant_function_PASS
-
-
-########## SKIP this filtering #########
-#### Exclude synonymous and unknown variants (info in second column)
-#awk '{ if ( $2 != "synonymous" && $2 != "unknown" ) { print $0; } }' 95_4_D.merged.vcf.avinput.exonic_variant_function_PASS > 95_4_D.merged.vcf.avinput.exonic_variant_function_PASS_nonsyn
-########################################
-
-
-egrep PASS 95_4_D.merged.vcf.avinput.variant_function > 95_4_D.merged.vcf.avinput.variant_function_PASS
-
-#### Include only splicing variants
-egrep splicing 95_4_D.merged.vcf.avinput.variant_function_PASS > 95_4_D.merged.vcf.avinput.variant_function_PASS_splice
-
-
-#### Format Annovar output files
-
-./process_annovar_output_exonic.pl -i 95_4_D.merged.vcf.avinput.exonic_variant_function_PASS
-
-./process_annovar_output_splice.pl -i 95_4_D.merged.vcf.avinput.variant_function_PASS_splice
 
 
 
