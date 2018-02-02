@@ -56,8 +56,9 @@ This method is recommended for BWA-MEM alignment algorithm.
 
 Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/BWA_mem.sh)* script
 
-* ***Sequencing batch 1***
-
+*
+***Sequencing batch 1***
+    *
     ***Sample 45_1_B***
 ```
     nohup ./BWA_mem.sh 45_1_B SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.BWA_mem.log &
