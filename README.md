@@ -16,7 +16,7 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
         module load bwa
 ```
 
-NOTE: Check if the most recent bwa is installed
+*NOTE*: Check if the most recent bwa is installed
 
 ```
         bwa
