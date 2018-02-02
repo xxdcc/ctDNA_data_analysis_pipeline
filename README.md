@@ -9,7 +9,7 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
 The pipeline containts the following steps:
 
 Step | Analysis | Tool | Algorithm
------------- | ------------ | ------------
+------------ | ------------ | ------------ | ------------
 1 | [Alignment](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#alignment-with-bwa) | *[Burrows-Wheeler Alignmer](http://bio-bwa.sourceforge.net/)* (*BWA*) | *mem*
 2 | [Sort and convert SAM to BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#sort-and-convert-sam-to-bam-files-using-picard) | *[Picard](https://broadinstitute.github.io/picard/)* | *SortSam*
 3 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#mark-pcr-duplicates-using-picard) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
