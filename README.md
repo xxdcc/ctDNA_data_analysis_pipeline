@@ -17,7 +17,7 @@ Step | Analysis | Tools | Algorithms
 5 | [Calculate the coverage (after marking PCR duplicates)](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#5-calculate-the-coverage) | *[Genome Analysis Toolkit](https://software.broadinstitute.org/gatk/)* (GATK) | *DepthOfCoverage*
 6 | [Merge BAM files per sample](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#6-merge-bam-files-per-sample) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
 7 | [Local alignment around indels](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#7-local-alignment-around-indels) | *[GATK](https://software.broadinstitute.org/gatk/)* <br> *[Picard](https://broadinstitute.github.io/picard/)*  | *RealignerTargetCreator* <br> *IndelRealigner* <br> *FixMateInformation*
-8 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
+8 | [Base quality score recalibration](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#8-base-quality-score-recalibration) | *[GATK](https://software.broadinstitute.org/gatk/)* | *BaseRecalibrator* <br> *PrintReads*
 
 <br />
 
@@ -1251,6 +1251,9 @@ nohup ./Picard_GATK_localAlign_indels.sh  95_4_D.merged > 95_4_D.merged.Picard_G
 ## 8. Base quality score recalibration
 
 Variant calling algorithms rely heavily on the quality scores assigned to the individual base calls in each sequence read. These scores are per-base estimates of error emitted by the sequencing machines. Unfortunately, the scores produced by the machines are subject to various sources of systematic technical error, leading to over- or under-estimated base quality scores in the data. *Base quality score recalibration* (*BQSR*) is a process in which machine learning is applied to model these errors empirically and adjust the quality scores accordingly. This allows to get more accurate base qualities, which in turn improves the accuracy of our variant calls. The base recalibration process involves two key steps: first the program builds a model of covariation based on the data and a set of known variants, then it adjusts the base quality scores in the data based on the model.
+<br>
+
+#### 8.1 Perform base quality score recalibration
 
 **Tool**: *GATK*<br>
 **Algorithm**: *BaseRecalibrator*
@@ -1301,8 +1304,9 @@ Sample 95_4_D
 nohup ./GATK_baseQrecalib.sh  95_4_D.merged > 95_4_D.merged.GATK_baseQrecalib.log &
 ```
 
+#### 8.2 Remove redundant files for each sample to save space
 
-#### Remove redundant files for each sample
+```
 rm [sample_name].sam
 rm [sample_name].bam
 rm [sample_name].bai
@@ -1312,5 +1316,5 @@ rm [sample_name].merged.marked.realigned.bam
 rm [sample_name].merged.marked.realigned.bai
 rm [sample_name].merged.marked.realigned.fixed.bam
 rm [sample_name].merged.marked.realigned.fixed.bai
-
+```
 
