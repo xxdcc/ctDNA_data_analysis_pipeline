@@ -1,14 +1,17 @@
 # Circulating tumour DNA whole-exome sequencing pipeline
 
 This repository describes pipeline for analysing data from whole-exome sequencing (WES) of circulating tumour DNA (ctDNA).
-The pipeline is implemented using ctDNA from plasma samples derived from pancreatic cancer patients. The analyses are conducted on [QMUL Apocrita
-High Performance Computing (HPC)](https://docs.hpc.qmul.ac.uk/) cluster in the following directory<br>
+The pipeline is implemented using ctDNA from plasma samples derived from pancreatic cancer patients. The analyses are conducted on [QMUL Apocrita High Performance Computing](https://docs.hpc.qmul.ac.uk/) (HPC) cluster in the following directory<br>
 
 /data/BCI-BioInformatics/PC_ctDNA/WES_data
 
 <br><br>
-# Load modules
-module load sbcs
+#### Load modules
+
+```
+      module load sbcs
+```
+
 
 
 # Make sure to use the new samtools v1.3 installed locally ($HOME/applications/samtools-1.3.1)
