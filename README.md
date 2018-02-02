@@ -234,6 +234,7 @@ Sample 95_4_D
 nohup ./BWA_mem.sh 95_4_D.4 SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.BWA_mem.log &
 ```
 
+----------------------
 #### 4. Convert SAM to BAM files using Picard
 
 Run *[Picard_SAM2BAM.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_SAM2BAM.sh)* script for each sample
@@ -409,6 +410,7 @@ Sample 95_4_D
 nohup ./Picard_SAM2BAM.sh  95_4_D.4 > 95_4_D.4.Picard_SAM2BAM.log &
 ```
 
+----------------------
 #### 5. Mark PCR duplicates using Picard
 
 Run *[Picard_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_markDupl.sh)* script for each sample
