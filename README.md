@@ -17,6 +17,7 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
     module load samtools
     module load bwa
 ```
+<br>
 
 **NOTE**: Check if the most recent *BWA* is installed
 
