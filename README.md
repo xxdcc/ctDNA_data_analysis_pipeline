@@ -64,8 +64,9 @@ $HOME/applications/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/re
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
--M | NA | Mark shorter split hits as secondary (for Picard compatibility)
+-M | N/A | Mark shorter split hits as secondary (for Picard compatibility)
 -t | 4 | Number of threads
+-R | @RG\tID:$samplename\tLB:$samplename\tSM:$samplename\tPL:Illumina | Complete read group header line
 <br />
 
 Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/BWA_mem.sh)* script for each sample
