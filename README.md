@@ -621,7 +621,7 @@ nohup ./Picard_markDupl.sh  95_4_D.4 > 95_4_D.4.Picard_markDupl.log &
 ----------------------
 #### 6. Collect statistics for *BAM* files using *SAMtools stats*
 
-*SAMtools stats* collects statistics from *BAM* files and outputs in a text format. The output is then visualized graphically using *plot-bamstats*.
+*SAMtools stats* collects statistics (e.g. GC content, insert size, per-base sequence content, quality per cycle) from *BAM* files and outputs in a text format. The output is then visualized graphically using *plot-bamstats*.
 
 
 * **Sequencing batch 1**
