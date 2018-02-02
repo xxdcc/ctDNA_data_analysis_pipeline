@@ -66,7 +66,7 @@ Paramter | Value | Description
 ------------ | ------------ | ------------
 -M | N/A | Mark shorter split hits as secondary (for Picard compatibility)
 -t | 4 | Number of threads
--R | @RG ID:\[samplename\] LB:[samplename\] SM:\[samplename\] PL:Illumina | Complete read group header line
+-R | :\[samplename\] LB:[samplename\] SM:\[samplename\] PL:Illumina | Complete read group header line
 <br />
 
 Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/BWA_mem.sh)* script for each sample
