@@ -270,10 +270,10 @@ nohup ./BWA_mem.sh 95_4_D.4 SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_1.fq.gz SLX-12
 ----------------------
 ## 2. Sort and convert SAM to BAM files
 
+Sort the input SAM file by coordinate and output in a binary BAM format.
+
 **Tool**: *Picard*<br>
 **Algorithm**: *SortSam*
-
-Sort the input SAM file by coordinate and output in a binary BAM format.
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
@@ -458,12 +458,12 @@ nohup ./Picard_SAM2BAM.sh  95_4_D.4 > 95_4_D.4.Picard_SAM2BAM.log &
 ----------------------
 ## 3. Mark PCR duplicates
 
-**Tool**: *Picard*<br>
-**Algorithm**: *MarkDuplicates*
-
 Locates and tag duplicate reads in a BAM files, where duplicate reads are defined as originating from a single fragment of DNA.
 Duplicates can arise during sample preparation e.g. library construction using PCR. Duplicate reads can also result from a single amplification cluster, incorrectly detected as multiple clusters by the optical sensor of the sequencing instrument. These duplication artifacts are referred to as optical duplicates.
 *Picard MarkDuplicates* produces a metrics file indicating the numbers of duplicates for both single- and paired-end reads.
+
+**Tool**: *Picard*<br>
+**Algorithm**: *MarkDuplicates*
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
@@ -892,9 +892,6 @@ plot-bamstats -p 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats.plot 95_4_D
 ----------------------
 ## 5. Calculate the coverage
 
-**Tool**: *GATK*<br>
-**Algorithm**: *DepthOfCoverage*
-
 #### 5.1. Download the *Agilent Human Exon V6 exome capture bed* files and use *liftOver* to change the coordinates from *hg19* to *hg38*.<br><br>
 **Note**: one needs to remove the header before and add again after *liftover*.
 
@@ -913,6 +910,9 @@ grep '^chr[0-9XY]\{1,2\}\t' /Users/marzec01/data/PC_ctDNA/WES_data/Agilent_Human
 <br>
 
 #### 5.2. Use *GATK DepthOfCoverage*  to processes *BAM*  files to determine coverage at different levels of partitioning and aggregation.
+
+**Tool**: *GATK*<br>
+**Algorithm**: *DepthOfCoverage*
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
@@ -1111,10 +1111,10 @@ no suffix | per locus coverage
 ----------------------
 ## 6. Merge *BAM* files per sample
 
+Following Broad Institute recommendation for [pre-processing data from multiplexed sequencing and multi-library designs](https://software.broadinstitute.org/gatk/guide/article?id=3060), after running the initial steps of the pre-processing workflow (mapping, sorting and marking duplicates) separately on individual *BAM* files, we merge the data into a single *BAM* file for each sample. This is done by re-running *Picard MarkDuplicates* algorithm, this time using all read group *BAM* files for each sample.
+
 **Tool**: *Picard*<br>
 **Algorithm**: *MarkDuplicates*
-
-Following Broad Institute recommendation for [pre-processing data from multiplexed sequencing and multi-library designs](https://software.broadinstitute.org/gatk/guide/article?id=3060), after running the initial steps of the pre-processing workflow (mapping, sorting and marking duplicates) separately on individual *BAM* files, we merge the data into a single *BAM* file for each sample. This is done by re-running *Picard MarkDuplicates* algorithm, this time using all read group *BAM* files for each sample.
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
@@ -1171,87 +1171,79 @@ nohup ./Picard_merge_4BAMs_markDupl.sh  95_4_D  95_4_D.recalib.bam  95_4_D.2.rec
 ----------------------
 ## 7. Local alignment around indels
 
-Following Broad Institute recommendation for [pre-processing data from multiplexed sequencing and multi-library designs](https://software.broadinstitute.org/gatk/guide/article?id=3060), after running the initial steps of the pre-processing workflow (mapping, sorting and marking duplicates) separately on individual *BAM* files, we merge the data into a single *BAM* file for each sample. This is done by re-running *Picard MarkDuplicates* algorithm, this time using all read group *BAM* files for each sample.
+The local realignment process is designed to locally realign reads such that the number of mismatching bases is minimized across all the reads. In general, a large percent of regions requiring local realignment are due to the presence of an insertion or deletion (indels) in the individual's genome with respect to the reference genome. Such alignment artifacts result in many bases mismatching the reference near the misalignment, which are easily mistaken as SNPs. Moreover, since read mapping algorithms operate on each read independently, it is impossible to place reads on the reference genome such at mismatches are minimized across all reads. Consequently, even when some reads are correctly mapped with indels, reads covering the indel near just the start or end of the read are often incorrectly mapped with respect the true indel, also requiring realignment. Local realignment serves to transform regions with misalignments due to indels into clean reads containing a consensus indel suitable for standard variant discovery approaches.<br><br>
+**NOTE**: Local realignment is not necessary for variant callers that perform a haplotype assembly step, such as HaplotypeCaller or MuTect2. We perfrom this step since we adapted the *mpileup* appraoch for calling variants.
 
+#### 7.1 Create the reference fasta sequence dictionary file
+
+```
+$HOME/applications/picard-tools-1.119/CreateSequenceDictionary.jar R= /data/BCI-BioInformatics/Jun/reference_hg38/hg38.fa O= /data/BCI-BioInformatics/Jun/reference_hg38/hg38.dict
+```
+<br>
+
+#### 7.2 Perform local alignment around indels
 
 **Tool**: *GATK*<br>
 **Algorithm**: *RealignerTargetCreator*
 
-Paramter | Value | Description
------------- | ------------ | ------------
-METRICS_FILE | \[samplename\]\.merged\.DuplicationMetrics\.txt | File to write duplication metrics to
-VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
-CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
-<br />
-
 **Tool**: *GATK*<br>
 **Algorithm**: *IndelRealigner*
-
-Paramter | Value | Description
------------- | ------------ | ------------
-METRICS_FILE | \[samplename\]\.merged\.DuplicationMetrics\.txt | File to write duplication metrics to
-VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
-CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
-<br />
 
 **Tool**: *Picard*<br>
 **Algorithm**: *FixMateInformation*
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
-METRICS_FILE | \[samplename\]\.merged\.DuplicationMetrics\.txt | File to write duplication metrics to
+SO | coordinate | Sort order of output file by coordinate
 VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
 <br /> 
 
-Run *[Picard_merge_4BAMs_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_merge_4BAMs_markDupl.sh)* script for each sample
-
-* **Sequencing batch 1**
 
 
+Run *[Picard_GATK_localAlign_indels.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_GATK_localAlign_indels.sh)* script for each sample
 
-The Indel Realignment and Base Recalibration is then run on the aggregated per-sample BAM files
-
-
-#### Perform local alignment around indels using GATK
-
-#### First create the reference fasta sequence dictionary file
-$HOME/applications/picard-tools-1.119/CreateSequenceDictionary.jar R= /data/BCI-BioInformatics/Jun/reference_hg38/hg38.fa O= /data/BCI-BioInformatics/Jun/reference_hg38/hg38.dict
-
-#### NOTE: Local realignment is not necessary for variant callers that perform a haplotype assembly step, such as HaplotypeCaller or MuTect2. I perfrom this step anyway as it does not take much time (5-10h)
-
-
-#### Run 'Picard_GATK_localAlign_indels.sh' script
-
-
-# Sample 45_1_B
+Sample 45_1_B
+```
 nohup ./Picard_GATK_localAlign_indels.sh  45_1_B.merged > 45_1_B.merged.Picard_GATK_localAlign_indels.log &
+```
 
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./Picard_GATK_localAlign_indels.sh  45_2_C.merged > 45_2_C.merged.Picard_GATK_localAlign_indels.log &
+```
 
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./Picard_GATK_localAlign_indels.sh  45_3_D.merged > 45_3_D.merged.Picard_GATK_localAlign_indels.log &
+```
 
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./Picard_GATK_localAlign_indels.sh  45_4_E.merged > 45_4_E.merged.Picard_GATK_localAlign_indels.log &
+```
 
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./Picard_GATK_localAlign_indels.sh  95_1_A.merged > 95_1_A.merged.Picard_GATK_localAlign_indels.log &
+```
 
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./Picard_GATK_localAlign_indels.sh  95_2_B.merged > 95_2_B.merged.Picard_GATK_localAlign_indels.log &
+```
 
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./Picard_GATK_localAlign_indels.sh  95_3_C.merged > 95_3_C.merged.Picard_GATK_localAlign_indels.log &
+```
 
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./Picard_GATK_localAlign_indels.sh  95_4_D.merged > 95_4_D.merged.Picard_GATK_localAlign_indels.log &
+```
 
 
-
-
-####################################################################################################
 
 #### Perform base quality score recalibration using GATK
 #### Run 'GATK_baseQrecalib.sh' script
