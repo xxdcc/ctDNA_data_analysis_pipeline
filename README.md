@@ -232,115 +232,179 @@ nohup ./BWA_mem.sh 95_4_D.4 SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_1.fq.gz SLX-12
 ```
 
 #### 4. Convert SAM to BAM files using Picard
-# Run 'Picard_SAM2BAM.sh' script
 
-#### Batch 1
+Run *[Picard_SAM2BAM.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_SAM2BAM.sh)* script
 
-# Sample 45_1_B
+* **Sequencing batch 1**
+
+Sample 45_1_B
+```
 nohup ./Picard_SAM2BAM.sh  45_1_B > 45_1_B.Picard_SAM2BAM.log &
+```
 
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./Picard_SAM2BAM.sh  45_2_C > 45_2_C.Picard_SAM2BAM.log &
+```
 
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./Picard_SAM2BAM.sh  45_3_D > 45_3_D.Picard_SAM2BAM.log &
+```
 
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./Picard_SAM2BAM.sh  45_4_E > 45_4_E.Picard_SAM2BAM.log &
+```
 
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./Picard_SAM2BAM.sh  95_1_A > 95_1_A.Picard_SAM2BAM.log &
+```
 
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./Picard_SAM2BAM.sh  95_2_B > 95_2_B.Picard_SAM2BAM.log &
+```
 
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./Picard_SAM2BAM.sh  95_3_C > 95_3_C.Picard_SAM2BAM.log &
+```
 
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./Picard_SAM2BAM.sh  95_4_D > 95_4_D.Picard_SAM2BAM.log &
+```
+<br>
 
+* **Sequencing batch 2**
 
-#### Batch 2
-
-# Sample 45_1_B
+Sample 45_1_B
+```
 nohup ./Picard_SAM2BAM.sh  45_1_B.2 > 45_1_B.2.Picard_SAM2BAM.log &
+```
 
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./Picard_SAM2BAM.sh  45_2_C.2 > 45_2_C.2.Picard_SAM2BAM.log &
+```
 
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./Picard_SAM2BAM.sh  45_3_D.2 > 45_3_D.2.Picard_SAM2BAM.log &
+```
 
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./Picard_SAM2BAM.sh  45_4_E.2 > 45_4_E.2.Picard_SAM2BAM.log &
+```
 
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./Picard_SAM2BAM.sh  95_1_A.2 > 95_1_A.2.Picard_SAM2BAM.log &
+```
 
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./Picard_SAM2BAM.sh  95_2_B.2 > 95_2_B.2.Picard_SAM2BAM.log &
+```
 
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./Picard_SAM2BAM.sh  95_3_C.2 > 95_3_C.2.Picard_SAM2BAM.log &
+```
 
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./Picard_SAM2BAM.sh  95_4_D.2 > 95_4_D.2.Picard_SAM2BAM.log &
+```
+<br>
 
+* **Sequencing batch 3**
 
-#### Batch 3
-
-# Sample 45_1_B
+Sample 45_1_B
+```
 nohup ./Picard_SAM2BAM.sh  45_1_B.3 > 45_1_B.3.Picard_SAM2BAM.log &
+```
 
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./Picard_SAM2BAM.sh  45_2_C.3 > 45_2_C.3.Picard_SAM2BAM.log &
+```
 
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./Picard_SAM2BAM.sh  45_3_D.3 > 45_3_D.3.Picard_SAM2BAM.log &
+```
 
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./Picard_SAM2BAM.sh  45_4_E.3 > 45_4_E.3.Picard_SAM2BAM.log &
+```
 
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./Picard_SAM2BAM.sh  95_1_A.3 > 95_1_A.3.Picard_SAM2BAM.log &
+```
 
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./Picard_SAM2BAM.sh  95_2_B.3 > 95_2_B.3.Picard_SAM2BAM.log &
+```
 
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./Picard_SAM2BAM.sh  95_3_C.3 > 95_3_C.3.Picard_SAM2BAM.log &
+```
 
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./Picard_SAM2BAM.sh  95_4_D.3 > 95_4_D.3.Picard_SAM2BAM.log &
+```
+<br>
 
+* **Sequencing batch 4**
 
-#### Batch 4
-
-# Sample 45_1_B
+Sample 45_1_B
+```
 nohup ./Picard_SAM2BAM.sh  45_1_B.4 > 45_1_B.4.Picard_SAM2BAM.log &
+```
 
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./Picard_SAM2BAM.sh  45_2_C.4 > 45_2_C.4.Picard_SAM2BAM.log &
+```
 
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./Picard_SAM2BAM.sh  45_3_D.4 > 45_3_D.4.Picard_SAM2BAM.log &
+```
 
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./Picard_SAM2BAM.sh  45_4_E.4 > 45_4_E.4.Picard_SAM2BAM.log &
+```
 
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./Picard_SAM2BAM.sh  95_1_A.4 > 95_1_A.4.Picard_SAM2BAM.log &
+```
 
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./Picard_SAM2BAM.sh  95_2_B.4 > 95_2_B.4.Picard_SAM2BAM.log &
+```
 
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./Picard_SAM2BAM.sh  95_3_C.4 > 95_3_C.4.Picard_SAM2BAM.log &
+```
 
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./Picard_SAM2BAM.sh  95_4_D.4 > 95_4_D.4.Picard_SAM2BAM.log &
-
+```
 
 
 ####################################################################################################
