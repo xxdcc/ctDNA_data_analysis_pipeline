@@ -646,7 +646,7 @@ nohup ./Picard_markDupl.sh  95_4_D.4 > 95_4_D.4.Picard_markDupl.log &
 ```
 
 ----------------------
-## 4. Collect statistics for *BAM* files using *SAMtools stats*
+## 4. Collect statistics for *BAM* files
 
 **Tool**: *SAMtools*<br>
 **Algorithm**: *stats*
