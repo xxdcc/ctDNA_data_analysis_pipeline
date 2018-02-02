@@ -19,16 +19,16 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
 **NOTE**: Check if the most recent BWA is installed
 
 ```
-        bwa
+    bwa
 ```
 
 If not, download the newest one (0.7.15 on 30.11.2016) from [here](https://sourceforge.net/projects/bio-bwa/files/) and install in home directory on sm11 ($HOME/bin)
 
 ```
-        tar -xjf bwa-0.7.15.tar.bz2  
-        cd bwa-0.7.15
-        make
-        cp bwa $HOME/bin
+    tar -xjf bwa-0.7.15.tar.bz2  
+    cd bwa-0.7.15
+    make
+    cp bwa $HOME/bin
 ```
 
 ## Alignment with BWA
@@ -36,18 +36,18 @@ If not, download the newest one (0.7.15 on 30.11.2016) from [here](https://sourc
 #### 1. Construct the FM-index for the reference genome
 
 ```
-        mkdir /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15
-        cd /data/BCI-BioInformatics/Jun/reference_hg38/
+    mkdir /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15
+    cd /data/BCI-BioInformatics/Jun/reference_hg38/
 ```
 
 #### 2. Construct index using the 'bwtsw' algorithm implemented in BWT-SW
 This method is recommended for BWA-MEM alignment algorithm.
 
 ```
-        mkdir index_bwa_0.7.15_bwtsw
-        cp hg38.fa index_bwa_0.7.15_bwtsw
-        cd index_bwa_0.7.15_bwtsw
-        $HOME/bin/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15_bwtsw/hg38.fa
+    mkdir index_bwa_0.7.15_bwtsw
+    cp hg38.fa index_bwa_0.7.15_bwtsw
+    cd index_bwa_0.7.15_bwtsw
+    $HOME/bin/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15_bwtsw/hg38.fa
 ```
 
 #### 3. Perform alignment using 'mem' algorithm
@@ -56,12 +56,12 @@ This method is recommended for BWA-MEM alignment algorithm.
 
 Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/BWA_mem.sh)* script
 
-***Sequencing batch 1***
+==Sequencing batch 1==
 
-****Sample 45_1_B****
+=Sample 45_1_B=
 
 ```
-        nohup ./BWA_mem.sh 45_1_B SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.BWA_mem.log &
+    nohup ./BWA_mem.sh 45_1_B SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.BWA_mem.log &
 ```
 
 # Sample 45_2_C
