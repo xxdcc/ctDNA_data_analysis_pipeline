@@ -15,7 +15,7 @@ Step | Analysis | Tool | Algorithm
 3 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#3-mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
 4 | [Collect statistics for BAM file](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#4-collect-statistics-for-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *stats*
 5 | [Calculate the coverage (after marking PCR duplicates)](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#5-calculate-the-coverage) | *[Genome Analysis Toolkit](https://software.broadinstitute.org/gatk/)* (GATK) | *DepthOfCoverage*
-6 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
+6 | [Merge BAM files per sample](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#6-merge-bam-files-per-sample) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
 7 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
 8 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
 
@@ -1109,12 +1109,12 @@ no suffix | per locus coverage
 
 
 ----------------------
-## 6. Merge *BAM* files
+## 6. Merge *BAM* files per sample
 
 **Tool**: *Picard*<br>
 **Algorithm**: *MarkDuplicates*
 
-Following Broad Institute recommendation for [pre-processing data from multiplexed sequencing and multi-library designs](https://software.broadinstitute.org/gatk/guide/article?id=3060), after running the initial steps of the pre-processing workflow (mapping, sorting and marking duplicates) separately on individual BAM files, we merge the data into a single BAM file for each sample. This is done by re-running *Picard MarkDuplicates* algorithm, this time using all read group BAM files for each sample.
+Following Broad Institute recommendation for [pre-processing data from multiplexed sequencing and multi-library designs](https://software.broadinstitute.org/gatk/guide/article?id=3060), after running the initial steps of the pre-processing workflow (mapping, sorting and marking duplicates) separately on individual *BAM* files, we merge the data into a single *BAM* file for each sample. This is done by re-running *Picard MarkDuplicates* algorithm, this time using all read group *BAM* files for each sample.
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
@@ -1127,37 +1127,45 @@ Run *[Picard_merge_4BAMs_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw
 
 * **Sequencing batch 1**
 
-# Sample 45_1_B
+Sample 45_1_B
+```
 nohup ./Picard_merge_4BAMs_markDupl.sh  45_1_B  45_1_B.recalib.bam  45_1_B.2.recalib.bam  45_1_B.3.recalib.bam  45_1_B.4.recalib.bam  >  45_1_B.Picard_merge_4BAMs_markDupl.log &
+```
 
-
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./Picard_merge_4BAMs_markDupl.sh  45_2_C  45_2_C.recalib.bam  45_2_C.2.recalib.bam  45_2_C.3.recalib.bam  45_2_C.4.recalib.bam  >  45_2_C.Picard_merge_4BAMs_markDupl.log &
+```
 
-
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./Picard_merge_4BAMs_markDupl.sh  45_3_D  45_3_D.recalib.bam  45_3_D.2.recalib.bam  45_3_D.3.recalib.bam  45_3_D.4.recalib.bam  >  45_3_D.Picard_merge_4BAMs_markDupl.log &
+```
 
-
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./Picard_merge_4BAMs_markDupl.sh  45_4_E  45_4_E.recalib.bam  45_4_E.2.recalib.bam  45_4_E.3.recalib.bam  45_4_E.4.recalib.bam  >  45_4_E.Picard_merge_4BAMs_markDupl.log &
+```
 
-
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./Picard_merge_4BAMs_markDupl.sh  95_1_A  95_1_A.recalib.bam  95_1_A.2.recalib.bam  95_1_A.3.recalib.bam  95_1_A.4.recalib.bam  >  95_1_A.Picard_merge_4BAMs_markDupl.log &
+```
 
-
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./Picard_merge_4BAMs_markDupl.sh  95_2_B  95_2_B.recalib.bam  95_2_B.2.recalib.bam  95_2_B.3.recalib.bam  95_2_B.4.recalib.bam  >  95_2_B.Picard_merge_4BAMs_markDupl.log &
+```
 
-
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./Picard_merge_4BAMs_markDupl.sh  95_3_C  95_3_C.recalib.bam  95_3_C.2.recalib.bam  95_3_C.3.recalib.bam  95_3_C.4.recalib.bam  >  95_3_C.Picard_merge_4BAMs_markDupl.log &
+```
 
-
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./Picard_merge_4BAMs_markDupl.sh  95_4_D  95_4_D.recalib.bam  95_4_D.2.recalib.bam  95_4_D.3.recalib.bam  95_4_D.4.recalib.bam  >  95_4_D.Picard_merge_4BAMs_markDupl.log &
-
+```
 
 
 
