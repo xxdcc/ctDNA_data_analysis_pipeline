@@ -17,13 +17,13 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
     module load bwa
 ```
 
-**NOTE**: Check if the most recent BWA is installed
+**NOTE**: Check if the most recent *BWA* is installed
 
 ```
     bwa
 ```
 
-If not, download the newest one (0.7.15 on 30.11.2016) from [here](https://sourceforge.net/projects/bio-bwa/files/) and install in home directory on sm11 ($HOME/applications)
+If not, download the most recent version (0.7.15 on 30.11.2016) from [here](https://sourceforge.net/projects/bio-bwa/files/) and install in home directory on *sm11* ($HOME/applications)
 
 ```
     tar -xjf bwa-0.7.15.tar.bz2  
@@ -32,10 +32,10 @@ If not, download the newest one (0.7.15 on 30.11.2016) from [here](https://sourc
     cp bwa $HOME/applications
 ```
 
-Download and install Picard from [here](https://github.com/broadinstitute/picard/zipball/master) and install in home directory on sm11 ($HOME/applications)
+Download *Picard* from [here](https://github.com/broadinstitute/picard/zipball/master) and install in home directory on *sm11* ($HOME/applications)
 
 
-## Alignment with BWA
+## Alignment with *BWA*
 
 #### 1. Construct the FM-index for the reference genome
 
@@ -44,8 +44,8 @@ Download and install Picard from [here](https://github.com/broadinstitute/picard
     cd /data/BCI-BioInformatics/Jun/reference_hg38/
 ```
 
-#### 2. Construct index using the 'bwtsw' algorithm implemented in BWT-SW
-This method is recommended for BWA-MEM alignment algorithm.
+#### 2. Construct index using the '*bwtsw*' algorithm implemented in *BWT-SW*
+This method is recommended for *BWA-MEM* alignment algorithm.
 
 ```
     mkdir index_bwa_0.7.15_bwtsw
@@ -54,9 +54,9 @@ This method is recommended for BWA-MEM alignment algorithm.
     $HOME/applications/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15_bwtsw/hg38.fa
 ```
 
-#### 3. Perform alignment using 'mem' algorithm
+#### 3. Perform alignment using '*mem*' algorithm
 
-*BWA-MEM* is generally recommended for high-quality queries as it is faster and more accurate. For this use the index generated 'bwtsw' algorithm.
+*BWA-MEM* is generally recommended for high-quality queries as it is faster and more accurate. For this use the index generated '*bwtsw*' algorithm.
 
 Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/BWA_mem.sh)* script
 
