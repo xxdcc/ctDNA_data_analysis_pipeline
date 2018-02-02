@@ -10,6 +10,7 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
 - *[SAMtools](http://samtools.sourceforge.net/)*
 - *[Burrows-Wheeler Alignmer](http://bio-bwa.sourceforge.net/)* (*BWA*)
 - *[Picard](https://broadinstitute.github.io/picard/)*
+- *[Genome Analysis Toolkit](https://software.broadinstitute.org/gatk/)* (GATK)
 
 
 ```
@@ -31,8 +32,12 @@ cd bwa-0.7.15
 make
 cp bwa $HOME/applications
 ```
+<br>
 
 Download *Picard* from [here](https://github.com/broadinstitute/picard/zipball/master) and install in home directory on *sm11* (*$HOME/applications*)
+<br>
+Download *GATK* from [here](https://software.broadinstitute.org/gatk/download/) and install in home directory on *sm11* (*$HOME/applications*)
+<br><br>
 <br><br>
 
 ## Alignment with *BWA*
