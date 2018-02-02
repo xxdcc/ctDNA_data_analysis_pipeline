@@ -60,7 +60,7 @@ Download *GATK* from [here](https://software.broadinstitute.org/gatk/download/) 
 ----------------------
 ## 1. Alignment
 
-**Tool**: *BWA*
+**Tool**: *BWA*<br>
 **Algorithm**: *mem*
 
 #### 1. Construct the FM-index for the reference genome
