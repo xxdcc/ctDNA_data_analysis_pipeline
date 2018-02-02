@@ -18,6 +18,9 @@ Step | Analysis | Tools | Algorithms
 6 | [Merge BAM files per sample](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#6-merge-bam-files-per-sample) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
 7 | [Local alignment around indels](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#7-local-alignment-around-indels) | *[GATK](https://software.broadinstitute.org/gatk/)* <br> *[Picard](https://broadinstitute.github.io/picard/)*  | *RealignerTargetCreator* <br> *IndelRealigner* <br> *FixMateInformation*
 8 | [Base quality score recalibration](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#8-base-quality-score-recalibration) | *[GATK](https://software.broadinstitute.org/gatk/)* | *BaseRecalibrator* <br> *PrintReads*
+9 | Check merged and recalibrated BAM files | *[SAMtools](http://samtools.sourceforge.net/)* | *flagstat*
+10 | Index BAM files | *[SAMtools](http://samtools.sourceforge.net/)* | *index*
+11 | Varaints calling | *[SAMtools](http://samtools.sourceforge.net/)* <br> *[VarScan](http://varscan.sourceforge.net/)* | *mpileup* <br> *mpileup2cns*
 
 <br />
 
@@ -29,6 +32,7 @@ Step | Analysis | Tools | Algorithms
 - *[Burrows-Wheeler Alignmer](http://bio-bwa.sourceforge.net/)* (*BWA*)
 - *[Picard](https://broadinstitute.github.io/picard/)*
 - *[Genome Analysis Toolkit](https://software.broadinstitute.org/gatk/)* (GATK)
+- *[VarScan](http://varscan.sourceforge.net/)*
 <br>
 
 ```
@@ -55,6 +59,8 @@ cp bwa $HOME/applications
 Download *Picard* from [here](https://github.com/broadinstitute/picard/zipball/master) and install in home directory on *sm11* (*$HOME/applications*)
 <br><br>
 Download *GATK* from [here](https://software.broadinstitute.org/gatk/download/) and install in home directory on *sm11* (*$HOME/applications*)
+<br><br>
+Download *VarScan* from [here](https://sourceforge.net/projects/varscan/files/) and install in home directory on *sm11* (*$HOME/applications*)
 <br><br>
 
 ----------------------
