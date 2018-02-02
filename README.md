@@ -99,115 +99,133 @@ Sample 95_4_D
 ```
 <br>
 
-* ***Sequencing batch 2***
+* Sequencing batch 2
 
-    * ***Sample 45_1_B***
+Sample 45_1_B
 ```
 nohup ./BWA_mem.sh 45_1_B.2 SLX-12721.iPCRtagT002.HGYHFBBXX.s_2.r_1.fq.gz SLX-12721.iPCRtagT002.HGYHFBBXX.s_2.r_2.fq.gz > SLX-12721.iPCRtagT002.HGYHFBBXX.s_2.BWA_mem.log &
 ```
 
-    * ***Sample 45_2_C***
+Sample 45_2_C
 ```
 nohup ./BWA_mem.sh 45_2_C.2 SLX-12721.iPCRtagT004.HGYHFBBXX.s_2.r_1.fq.gz SLX-12721.iPCRtagT004.HGYHFBBXX.s_2.r_2.fq.gz > SLX-12721.iPCRtagT004.HGYHFBBXX.s_2.BWA_mem.log &
 ```
 
-    * ***Sample 45_3_D***
+Sample 45_3_D
 ```
 nohup ./BWA_mem.sh 45_3_D.2 SLX-12721.iPCRtagT005.HGYHFBBXX.s_2.r_1.fq.gz SLX-12721.iPCRtagT005.HGYHFBBXX.s_2.r_2.fq.gz > SLX-12721.iPCRtagT005.HGYHFBBXX.s_2.BWA_mem.log &
 ```
 
-    * ***Sample 45_4_E***
+Sample 45_4_E
 ```
 nohup ./BWA_mem.sh 45_4_E.2 SLX-12721.iPCRtagT006.HGYHFBBXX.s_2.r_1.fq.gz SLX-12721.iPCRtagT006.HGYHFBBXX.s_2.r_2.fq.gz > SLX-12721.iPCRtagT006.HGYHFBBXX.s_2.BWA_mem.log &
 ```
 
-    * ***Sample 95_1_A***
+Sample 95_1_A
 ```
 nohup ./BWA_mem.sh 95_1_A.2 SLX-12721.iPCRtagT007.HGYHFBBXX.s_2.r_1.fq.gz SLX-12721.iPCRtagT007.HGYHFBBXX.s_2.r_2.fq.gz > SLX-12721.iPCRtagT007.HGYHFBBXX.s_2.BWA_mem.log &
 ```
 
-    * ***Sample 95_2_B***
+Sample 95_2_B
 ```
 nohup ./BWA_mem.sh 95_2_B.2 SLX-12721.iPCRtagT009.HGYHFBBXX.s_2.r_1.fq.gz SLX-12721.iPCRtagT009.HGYHFBBXX.s_2.r_2.fq.gz > SLX-12721.iPCRtagT009.HGYHFBBXX.s_2.BWA_mem.log &
 ```
 
-    * ***Sample 95_3_C***
+Sample 95_3_C
 ```
 nohup ./BWA_mem.sh 95_3_C.2 SLX-12721.iPCRtagT010.HGYHFBBXX.s_2.r_1.fq.gz SLX-12721.iPCRtagT010.HGYHFBBXX.s_2.r_2.fq.gz > SLX-12721.iPCRtagT010.HGYHFBBXX.s_2.BWA_mem.log &
 ```
 
-    * ***Sample 95_4_D***
+Sample 95_4_D
 ```
 nohup ./BWA_mem.sh 95_4_D.2 SLX-12721.iPCRtagT012.HGYHFBBXX.s_2.r_1.fq.gz SLX-12721.iPCRtagT012.HGYHFBBXX.s_2.r_2.fq.gz > SLX-12721.iPCRtagT012.HGYHFBBXX.s_2.BWA_mem.log &
 ```
+<br>
 
-* ***Sequencing batch 3***
+* Sequencing batch 3
 
-# Sample 45_1_B
+Sample 45_1_B
+```
 nohup ./BWA_mem.sh 45_1_B.3 SLX-12721.iPCRtagT002.HGYHFBBXX.s_3.r_1.fq.gz SLX-12721.iPCRtagT002.HGYHFBBXX.s_3.r_2.fq.gz > SLX-12721.iPCRtagT002.HGYHFBBXX.s_3.BWA_mem.log &
+```
 
-
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./BWA_mem.sh 45_2_C.3 SLX-12721.iPCRtagT004.HGYHFBBXX.s_3.r_1.fq.gz SLX-12721.iPCRtagT004.HGYHFBBXX.s_3.r_2.fq.gz > SLX-12721.iPCRtagT004.HGYHFBBXX.s_3.BWA_mem.log &
+```
 
-
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./BWA_mem.sh 45_3_D.3 SLX-12721.iPCRtagT005.HGYHFBBXX.s_3.r_1.fq.gz SLX-12721.iPCRtagT005.HGYHFBBXX.s_3.r_2.fq.gz > SLX-12721.iPCRtagT005.HGYHFBBXX.s_3.BWA_mem.log &
+```
 
-
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./BWA_mem.sh 45_4_E.3 SLX-12721.iPCRtagT006.HGYHFBBXX.s_3.r_1.fq.gz SLX-12721.iPCRtagT006.HGYHFBBXX.s_3.r_2.fq.gz > SLX-12721.iPCRtagT006.HGYHFBBXX.s_3.BWA_mem.log &
+```
 
-
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./BWA_mem.sh 95_1_A.3 SLX-12721.iPCRtagT007.HGYHFBBXX.s_3.r_1.fq.gz SLX-12721.iPCRtagT007.HGYHFBBXX.s_3.r_2.fq.gz > SLX-12721.iPCRtagT007.HGYHFBBXX.s_3.BWA_mem.log &
+```
 
-
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./BWA_mem.sh 95_2_B.3 SLX-12721.iPCRtagT009.HGYHFBBXX.s_3.r_1.fq.gz SLX-12721.iPCRtagT009.HGYHFBBXX.s_3.r_2.fq.gz > SLX-12721.iPCRtagT009.HGYHFBBXX.s_3.BWA_mem.log &
+```
 
-
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./BWA_mem.sh 95_3_C.3 SLX-12721.iPCRtagT010.HGYHFBBXX.s_3.r_1.fq.gz SLX-12721.iPCRtagT010.HGYHFBBXX.s_3.r_2.fq.gz > SLX-12721.iPCRtagT010.HGYHFBBXX.s_3.BWA_mem.log &
+```
 
-
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./BWA_mem.sh 95_4_D.3 SLX-12721.iPCRtagT012.HGYHFBBXX.s_3.r_1.fq.gz SLX-12721.iPCRtagT012.HGYHFBBXX.s_3.r_2.fq.gz > SLX-12721.iPCRtagT012.HGYHFBBXX.s_3.BWA_mem.log &
+```
+<br>
 
+* Sequencing batch 4
 
-***Sequencing batch 4***
-
-# Sample 45_1_B
+Sample 45_1_B
+```
 nohup ./BWA_mem.sh 45_1_B.4 SLX-12721.iPCRtagT002.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT002.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT002.HGYHFBBXX.s_4.BWA_mem.log &
+```
 
-
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./BWA_mem.sh 45_2_C.4 SLX-12721.iPCRtagT004.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT004.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT004.HGYHFBBXX.s_4.BWA_mem.log &
+```
 
-
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./BWA_mem.sh 45_3_D.4 SLX-12721.iPCRtagT005.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT005.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT005.HGYHFBBXX.s_4.BWA_mem.log &
+```
 
-
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./BWA_mem.sh 45_4_E.4 SLX-12721.iPCRtagT006.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT006.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT006.HGYHFBBXX.s_4.BWA_mem.log &
+```
 
-
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./BWA_mem.sh 95_1_A.4 SLX-12721.iPCRtagT007.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT007.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT007.HGYHFBBXX.s_4.BWA_mem.log &
+```
 
-
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./BWA_mem.sh 95_2_B.4 SLX-12721.iPCRtagT009.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT009.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT009.HGYHFBBXX.s_4.BWA_mem.log &
+```
 
-
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./BWA_mem.sh 95_3_C.4 SLX-12721.iPCRtagT010.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT010.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT010.HGYHFBBXX.s_4.BWA_mem.log &
+```
 
-
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./BWA_mem.sh 95_4_D.4 SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.BWA_mem.log &
-
+```
 
 
 ####################################################################################################
