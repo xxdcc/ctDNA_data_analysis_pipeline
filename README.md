@@ -16,7 +16,7 @@ Step | Analysis | Tools | Algorithms
 4 | [Collect statistics for BAM file](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#4-collect-statistics-for-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *stats*
 5 | [Calculate the coverage (after marking PCR duplicates)](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#5-calculate-the-coverage) | *[Genome Analysis Toolkit](https://software.broadinstitute.org/gatk/)* (GATK) | *DepthOfCoverage*
 6 | [Merge BAM files per sample](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#6-merge-bam-files-per-sample) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
-7 | [Local alignment around indels](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#7-local-alignment-around-indels) | *[GATK](https://software.broadinstitute.org/gatk/)* <br> *[Picard](https://broadinstitute.github.io/picard/)*  | *RealignerTargetCreator* \| *IndelRealigner* <br> *FixMateInformation*
+7 | [Local alignment around indels](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#7-local-alignment-around-indels) | *[GATK](https://software.broadinstitute.org/gatk/)* <br> *[Picard](https://broadinstitute.github.io/picard/)*  | *RealignerTargetCreator* <br> *IndelRealigner* <br> *FixMateInformation*
 8 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
 
 <br />
@@ -1246,34 +1246,60 @@ nohup ./Picard_GATK_localAlign_indels.sh  95_4_D.merged > 95_4_D.merged.Picard_G
 
 
 
-#### Perform base quality score recalibration using GATK
-#### Run 'GATK_baseQrecalib.sh' script
+
+----------------------
+## 8. Base quality score recalibration
+
+Variant calling algorithms rely heavily on the quality scores assigned to the individual base calls in each sequence read. These scores are per-base estimates of error emitted by the sequencing machines. Unfortunately, the scores produced by the machines are subject to various sources of systematic technical error, leading to over- or under-estimated base quality scores in the data. *Base quality score recalibration* (*BQSR*) is a process in which machine learning is applied to model these errors empirically and adjust the quality scores accordingly. This allows to get more accurate base qualities, which in turn improves the accuracy of our variant calls. The base recalibration process involves two key steps: first the program builds a model of covariation based on the data and a set of known variants, then it adjusts the base quality scores in the data based on the model.
+
+**Tool**: *GATK*<br>
+**Algorithm**: *BaseRecalibrator*
+
+**Tool**: *GATK*<br>
+**Algorithm**: *PrintReads*
 
 
-# Sample 45_1_B
+Run *[GATK_baseQrecalib.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/GATK_baseQrecalib.sh)* script for each sample
+
+Sample 45_1_B
+```
 nohup ./GATK_baseQrecalib.sh  45_1_B.merged > 45_1_B.merged.GATK_baseQrecalib.log &
+```
 
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./GATK_baseQrecalib.sh  45_2_C.merged > 45_2_C.merged.GATK_baseQrecalib.log &
+```
 
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./GATK_baseQrecalib.sh  45_3_D.merged > 45_3_D.merged.GATK_baseQrecalib.log &
+```
 
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./GATK_baseQrecalib.sh  45_4_E.merged > 45_4_E.merged.GATK_baseQrecalib.log &
+```
 
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./GATK_baseQrecalib.sh  95_1_A.merged > 95_1_A.merged.GATK_baseQrecalib.log &
+```
 
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./GATK_baseQrecalib.sh  95_2_B.merged > 95_2_B.merged.GATK_baseQrecalib.log &
+```
 
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./GATK_baseQrecalib.sh  95_3_C.merged > 95_3_C.merged.GATK_baseQrecalib.log &
+```
 
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./GATK_baseQrecalib.sh  95_4_D.merged > 95_4_D.merged.GATK_baseQrecalib.log &
-
+```
 
 
 #### Remove redundant files for each sample
@@ -1286,124 +1312,5 @@ rm [sample_name].merged.marked.realigned.bam
 rm [sample_name].merged.marked.realigned.bai
 rm [sample_name].merged.marked.realigned.fixed.bam
 rm [sample_name].merged.marked.realigned.fixed.bai
-
-
-
-
-
-----------------------
-#### XXXX. Check the *merged.recalib.BAM* files with *SAMtools flagstat*
-
-*[SAMtools flagstat](http://www.htslib.org/doc/samtools.html) flagstat* does a full pass through the input file to calculate statistics
-
-
-
-samtools flagstat 45_1_B.merged.recalib.bam > 45_1_B.merged.recalib.flagstat.txt
-samtools flagstat 45_2_C.merged.recalib.bam > 45_2_C.merged.recalib.flagstat.txt
-samtools flagstat 45_3_D.merged.recalib.bam > 45_3_D.merged.recalib.flagstat.txt
-samtools flagstat 45_4_E.merged.recalib.bam > 45_4_E.merged.recalib.flagstat.txt
-
-samtools flagstat 95_1_A.merged.recalib.bam > 95_1_A.merged.recalib.flagstat.txt
-samtools flagstat 95_2_B.merged.recalib.bam > 95_2_B.merged.recalib.flagstat.txt
-samtools flagstat 95_3_C.merged.recalib.bam > 95_3_C.merged.recalib.flagstat.txt
-samtools flagstat 95_4_D.merged.recalib.bam > 95_4_D.merged.recalib.flagstat.txt
-
-
-
-####################################################################################################
-
-#### Index merged BAM files
-
-samtools index 45_1_B.merged.recalib.bam
-samtools index 45_2_C.merged.recalib.bam
-samtools index 45_3_D.merged.recalib.bam
-samtools index 45_4_E.merged.recalib.bam
-
-samtools index 95_1_A.merged.recalib.bam
-samtools index 95_2_B.merged.recalib.bam
-samtools index 95_3_C.merged.recalib.bam
-samtools index 95_4_D.merged.recalib.bam
-
-
-
-
-
-####################################################################################################
-#
-#### Since we expect little tumour content in the plasma DNA Mutect2 algorithm may be too stringent to call variants in plasma samples. Thus, we try an alternative approach based on reporting any variants, compared to reference genome, across all samples followed by relevant filtering (germline mutations etc.)
-#### (see paper by Murtaza M et al, 2013, Non-invasive analysis of acquired resistance to cancer therapy by sequencing of plasma DNA; https://www.ncbi.nlm.nih.gov/pubmed/23563269)
-#
-########################################################################################
-#
-#### NOTE: No need to run this part. Run this analysis from WGS directory including all samples (normal tissue + tumour tissue + plasma 1 + plasma 2 + plasma 3 + plasma 4
-#
-########################################################################################
-
-#### Calling variants based on mpileup approach
-
-
-#### Run 'Varscan_pileup2cns_3samples.sh' script to call variants (SNPs and indels) using Varscan mpileup2cns for 3 samples
-
-
-# Sample 45_1_B
-nohup ./Varscan_pileup2cns_3samples.sh 45_1_B.merged  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001A01/B01P0045_BBC03_normal.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001C01/B01P0045BAA07_tumour.bam  45_1_B.merged.recalib.bam  > 45_1_B.merged.Varscan_pileup2cns_3samples.log &
-
-
-
-# Sample 45_2_C
-nohup ./Varscan_pileup2cns_3samples.sh 45_2_C.merged  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001A01/B01P0045_BBC03_normal.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001C01/B01P0045BAA07_tumour.bam  45_2_C.merged.recalib.bam  > 45_2_C.merged.Varscan_pileup2cns_3samples.log &
-
-
-
-# Sample 95_1_A
-nohup ./Varscan_pileup2cns_3samples.sh 95_1_A.merged  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001B01/B01P0095_ABC03_normal.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001D01/B01P0095AAA03_tumour.bam  95_1_A.merged.recalib.bam  > 95_1_A.merged.Varscan_pileup2cns_3samples.log &
-
-
-
-
-########################################################################################
-
-#### Calling variants based on mpileup approach (as above) for defined regions (interval list)
-
-
-#### Run 'Varscan_pileup2cns_3samples_interval.sh' script to call variants (SNPs and indels) using Varscan mpileup2cns for 3 samples for defined list of regions (interval list)
-
-
-# Sample 45_1_B
-nohup ./Varscan_pileup2cns_3samples_interval.sh 45_1_B.merged  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001A01/B01P0045_BBC03_normal.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001C01/B01P0045BAA07_tumour.bam  45_1_B.merged.recalib.bam  > 45_1_B.merged.Varscan_pileup2cns_3samples_interval.log &
-
-
-# Sample 95_1_A
-nohup ./Varscan_pileup2cns_3samples_interval.sh 95_1_A.merged  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001B01/B01P0095_ABC03_normal.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001D01/B01P0095AAA03_tumour.bam  95_1_A.merged.recalib.bam  > 95_1_A.merged.Varscan_pileup2cns_3samples_interval.log &
-
-
-
-
-########################################################################################
-
-#### Annotate somatic variants with Annovar across ALL SAMPLES for defined regions (interval list)
-
-#### Run 'Annovar_annotate_variation_allsample.sh' script
-
-
-# Sample 45_1_B
-nohup ./Annovar_annotate_variation_allsample.sh  45_1_B.merged.cns_exome > 45_1_B.merged.Annovar_allsample.log &
-
-
-#################### No need to run, run filtering below instead #######################
-#### Format Annovar output files
-#
-#./process_annovar_output_exonic_3samples.pl -i 45_1_B.merged.cns_exome.vcf.avinput.exonic_variant_function
-#
-./process_annovar_output_splice_3samples.pl -i 45_1_B.merged.cns_exome.vcf.avinput.variant_function
-##
-######################################################################################## 
-
-
-#### Filter Annovar output files
-# NOTE: for plasma samples set the minimum base Q to 40 as for some reason the qualities in plasma samples are doubled (e.g. 60 instead of 30)
-
-./process_annovar_output_exonic_3samples_filtering.pl -t 4 -p 2 -d 1 -q 40 -i 45_1_B.merged.cns_exome.vcf.avinput.exonic_variant_function
-
 
 
