@@ -12,8 +12,8 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
 
 
 ```
-        module load samtools
-        module load bwa
+    module load samtools
+    module load bwa
 ```
 
 **NOTE**: Check if the most recent BWA is installed
@@ -33,14 +33,14 @@ If not, download the newest one (0.7.15 on 30.11.2016) from [here](https://sourc
 
 ## Alignment with BWA
 
-#### Construct the FM-index for the reference genome
+#### 1. Construct the FM-index for the reference genome
 
 ```
         mkdir /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15
         cd /data/BCI-BioInformatics/Jun/reference_hg38/
 ```
 
-#### Construct index using the 'bwtsw' algorithm implemented in BWT-SW. This method is recommended for BWA-MEM alignment algorithm
+#### 2. Construct index using the 'bwtsw' algorithm implemented in BWT-SW. This method is recommended for BWA-MEM alignment algorithm
 
 ```
         mkdir index_bwa_0.7.15_bwtsw
@@ -49,7 +49,7 @@ If not, download the newest one (0.7.15 on 30.11.2016) from [here](https://sourc
         $HOME/bin/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15_bwtsw/hg38.fa
 ```
 
-#### Perform alignment using 'mem' algorithm
+#### 3. Perform alignment using 'mem' algorithm
 
 BWA-MEM is generally recommended for high-quality queries as it is faster and more accurate. For this use the index generated 'bwtsw' algorithm.
 
