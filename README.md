@@ -1,14 +1,14 @@
 # Circulating tumour DNA whole-exome sequencing pipeline
 
 This repository describes pipeline for analysing data from whole-exome sequencing (WES) of circulating tumour DNA (ctDNA).
-The pipeline is implemented using ctDNA from plasma samples derived from pancreatic cancer patients. The analyses are conducted on [QMUL Apocrita **(sm11)** High Performance Computing](https://docs.hpc.qmul.ac.uk/) (HPC) cluster in the following directory<br>
+The pipeline is implemented using ctDNA from plasma samples derived from pancreatic cancer patients. The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computing](https://docs.hpc.qmul.ac.uk/) (HPC) cluster in the following directory<br>
 
 /data/BCI-BioInformatics/PC_ctDNA/WES_data
 
-##### Start with loading modules
+#### Start with loading modules
 
-- [samtools](http://samtools.sourceforge.net/)
-- [bwa](http://bio-bwa.sourceforge.net/)
+- [SAMtools](http://samtools.sourceforge.net/)
+- [Burrows-Wheeler Alignment (BWA) tool](http://bio-bwa.sourceforge.net/)
 
 
 ```
@@ -16,13 +16,13 @@ The pipeline is implemented using ctDNA from plasma samples derived from pancrea
         module load bwa
 ```
 
-**NOTE**: Check if the most recent bwa is installed
+**NOTE**: Check if the most recent BWA is installed
 
 ```
         bwa
 ```
 
-If not, download the newest one (0.7.17 on 02.02.2018) from [here](https://sourceforge.net/projects/bio-bwa/files/) and install in home directory on sm11 ($HOME/applications)
+If not, download the newest one (0.7.15 on 30.11.2016) from [here](https://sourceforge.net/projects/bio-bwa/files/) and install in home directory on sm11 ($HOME/applications)
 
 ```
         tar -xjf bwa-0.7.15.tar.bz2  
@@ -31,97 +31,37 @@ If not, download the newest one (0.7.17 on 02.02.2018) from [here](https://sourc
         cp bwa $HOME/bin
 ```
 
+### Alignment with BWA
 
 #### Construct the FM-index for the reference genome
 
-mkdir /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15
+```
+        mkdir /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15
+        cd /data/BCI-BioInformatics/Jun/reference_hg38/
+```
 
-cd /data/BCI-BioInformatics/Jun/reference_hg38/
+#### Construct index using the 'bwtsw' algorithm implemented in BWT-SW. This method is recommended for BWA-MEM alignment algorithm
 
+```
+        mkdir index_bwa_0.7.15_bwtsw
+        cp hg38.fa index_bwa_0.7.15_bwtsw
+        cd index_bwa_0.7.15_bwtsw
+        $HOME/bin/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15_bwtsw/hg38.fa
+```
 
-#### Construct index using the default 'IS' linear-time algorithm
+#### Perform alignment using 'mem' algorithm
 
-############################################ use bwtsw instead ############################################
-#
-mkdir index_bwa_0.7.15
+BWA-MEM is generally recommended for high-quality queries as it is faster and more accurate. For this use the index generated 'bwtsw' algorithm.
 
-cp hg38.fa index_bwa_0.7.15
+Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/BWA_mem.sh)* script
 
-cd index_bwa_0.7.15
-
-$HOME/bin/bwa index /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15/hg38.fa
-#
-###########################################################################################################
-
-
-#### Construct index using the 'bwtsw' algorithm implemented in BWT-SW. This method works with the whole human genome
-
-mkdir index_bwa_0.7.15_bwtsw
-
-cp hg38.fa index_bwa_0.7.15_bwtsw
-
-cd index_bwa_0.7.15_bwtsw
-
-$HOME/bin/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15_bwtsw/hg38.fa
-
-
-
-####################################################################################################
-
-#### Perform alignment using the 'bwa aln' and 'bwa sampe' combination
-
-########################################### use BWA mem instead ###########################################
-#
-# for this use the index generated 'IS' algorithm
-
-# Run 'BWA_aln_sampe.sh' script
+Sequencing batch 1
 
 # Sample 45_1_B
-nohup ./BWA_aln_sampe.sh 45_1_B SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1 SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_2 > SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.BWA_aln_sampe.log &
 
-
-# Sample 45_2_C
-nohup ./BWA_aln_sampe.sh 45_2_C SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.r_1 SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.r_2 > SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.BWA_aln_sampe.log &
-
-
-# Sample 45_3_D
-nohup ./BWA_aln_sampe.sh 45_3_D SLX-12721.iPCRtagT005.HGJWLBBXX.s_5.r_1 SLX-12721.iPCRtagT005.HGJWLBBXX.s_5.r_2 > SLX-12721.iPCRtagT005.HGJWLBBXX.s_5.BWA_aln_sampe.log &
-
-
-# Sample 45_4_E
-nohup ./BWA_aln_sampe.sh 45_4_E SLX-12721.iPCRtagT006.HGJWLBBXX.s_5.r_1 SLX-12721.iPCRtagT006.HGJWLBBXX.s_5.r_2 > SLX-12721.iPCRtagT006.HGJWLBBXX.s_5.BWA_aln_sampe.log &
-
-
-# Sample 95_1_A
-nohup ./BWA_aln_sampe.sh 95_1_A SLX-12721.iPCRtagT007.HGJWLBBXX.s_5.r_1 SLX-12721.iPCRtagT007.HGJWLBBXX.s_5.r_2 > SLX-12721.iPCRtagT007.HGJWLBBXX.s_5.BWA_aln_sampe.log &
-
-
-# Sample 95_2_B
-nohup ./BWA_aln_sampe.sh 95_2_B SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.r_1 SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.r_2 > SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.BWA_aln_sampe.log &
-
-
-# Sample 95_3_C
-nohup ./BWA_aln_sampe.sh 95_3_C SLX-12721.iPCRtagT010.HGJWLBBXX.s_5.r_1 SLX-12721.iPCRtagT010.HGJWLBBXX.s_5.r_2 > SLX-12721.iPCRtagT010.HGJWLBBXX.s_5.BWA_aln_sampe.log &
-
-
-# Sample 95_4_D
-nohup ./BWA_aln_sampe.sh 95_4_D SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.r_1 SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.r_2 > SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.BWA_aln_sampe.log &
-#
-###########################################################################################################
-
-
-####################################################################################################
-
-#### Perform alignment using the latest 'mem' algorithm, which is generally recommended for high-quality queries as it is faster and more accurate
-# for this use the index generated 'bwtsw' algorithm
-
-#### Run 'BWA_mem.sh' script
-
-#### Batch 1
-
-# Sample 45_1_B
-nohup ./BWA_mem.sh 45_1_B SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.BWA_mem.log &
-
+```
+        nohup ./BWA_mem.sh 45_1_B SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.BWA_mem.log &
+```
 
 # Sample 45_2_C
 nohup ./BWA_mem.sh 45_2_C SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.BWA_mem.log &
