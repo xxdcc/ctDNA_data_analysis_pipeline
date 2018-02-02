@@ -855,23 +855,33 @@ plot-bamstats -p 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats.plot 95_4_D
 ```
 
 
-####################################################################################################
+----------------------
+#### 7. Calculate the coverage after marking PCR duplicates
 
-#### Calculate the coverage after marking PCR duplicates
+First, download the *Agilent Human Exon V6 exome capture bed* files and use *liftOver* to change the coordinates from *hg19* to *hg38*
+**Note**: one needs to remove the header before and add again after *liftover*.
 
-# First, download the Agilent Human Exon V6 exome capture  bed files and use liftOver to change the coordinates from hg19 to hg38
-# Note: need to remove the header before and add again after liftover! Do it on local machine
+This step was done on local machine
 
+```
 ./liftOver /Users/marzec01/data/PC_ctDNA/WES_data/Agilent_Human_Exon_V6/S07604514_Covered.bed /Users/marzec01/Desktop/applications/liftOver/hg19ToHg38.over.chain.gz /Users/marzec01/data/PC_ctDNA/WES_data/Agilent_Human_Exon_V6/S07604514_Covered_hg38.bed /Users/marzec01/data/PC_ctDNA/WES_data/Agilent_Human_Exon_V6/S07604514_Covered_hg38unlifted.bed
+```
+**Note**: Remove from the converted file unspecific contigs (*chr1_KI270766v1_alt* etc.).
 
-#### Note: remove from the converted file unspecific contigs (chr1_KI270766v1_alt etc.)! Do it on local machine
+```
 grep '^chr[0-9XY]\{1,2\}\t' /Users/marzec01/data/PC_ctDNA/WES_data/Agilent_Human_Exon_V6/S07604514_Covered_hg38.bed > /Users/marzec01/data/PC_ctDNA/WES_data/Agilent_Human_Exon_V6/S07604514_Covered_hg38_clean.bed
+```
 
+Paramter | Value | Description
+------------ | ------------ | ------------
+METRICS_FILE | \[samplename\]\.DuplicationMetrics\.txt | File to write duplication metrics to
+VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
+CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
+<br /> 
 
-#### Run 'GATK_coverage.sh' script
+Run *[GATK_coverage.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/GATK_coverage.sh)* script for each sample
 
-
-#### Batch 1
+* **Sequencing batch 1**
 
 # Sample 45_1_B
 nohup ./GATK_coverage.sh  45_1_B > 45_1_B.GATK_coverage.log &
