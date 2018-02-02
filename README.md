@@ -1062,15 +1062,15 @@ nohup ./GATK_coverage.sh  95_4_D.4 > 95_4_D.4.GATK_coverage.log &
 
 At thie step 7 files are creates per each sample
 
-Suffix | Description
+File suffix | Description
 ------------ | ------------
 no suffix | per locus coverage
-/_summary | total, mean, median, quartiles, and threshold proportions, aggregated over all bases
-/_statistics | coverage histograms (# locus with X coverage), aggregated over all bases
-/_interval_summary | total, mean, median, quartiles, and threshold proportions, aggregated per interval
-/_interval_statistics | 2x2 table of # of intervals covered to >= X depth in >=Y samples
-/_cumulative_coverage_counts | coverage histograms (# locus with >= X coverage), aggregated over all bases
-/_cumulative_coverage_proportions | proprotions of loci with >= X coverage, aggregated over all bases
+\_summary | total, mean, median, quartiles, and threshold proportions, aggregated over all bases
+\_statistics | coverage histograms (# locus with X coverage), aggregated over all bases
+\_interval_summary | total, mean, median, quartiles, and threshold proportions, aggregated per interval
+\_interval_statistics | 2x2 table of # of intervals covered to >= X depth in >=Y samples
+\_cumulative_coverage_counts | coverage histograms (# locus with >= X coverage), aggregated over all bases
+\_cumulative_coverage_proportions | proprotions of loci with >= X coverage, aggregated over all bases
 <br /> 
 
 
