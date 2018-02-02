@@ -58,7 +58,7 @@ This method is recommended for *BWA-MEM* alignment algorithm.
 
 *BWA-MEM* is generally recommended for high-quality queries as it is faster and more accurate. For this use the index generated '*bwtsw*' algorithm.
 
-Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/BWA_mem.sh)* script
+Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/BWA_mem.sh)* script for each sample
 
 * **Sequencing batch 1**
 
@@ -233,7 +233,7 @@ nohup ./BWA_mem.sh 95_4_D.4 SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_1.fq.gz SLX-12
 
 #### 4. Convert SAM to BAM files using Picard
 
-Run *[Picard_SAM2BAM.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_SAM2BAM.sh)* script
+Run *[Picard_SAM2BAM.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_SAM2BAM.sh)* script for each sample
 
 * **Sequencing batch 1**
 
@@ -406,14 +406,11 @@ Sample 95_4_D
 nohup ./Picard_SAM2BAM.sh  95_4_D.4 > 95_4_D.4.Picard_SAM2BAM.log &
 ```
 
+#### 5. Mark PCR duplicates using Picard
 
-####################################################################################################
+Run *[Picard_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_markDupl.sh)* script for each sample
 
-#### Mark PCR duplicates using Picard
-#### Run 'Picard_markDupl.sh' script
-
-
-#### Batch 1
+* **Sequencing batch 1**
 
 # Sample 45_1_B
 nohup ./Picard_markDupl.sh  45_1_B > 45_1_B.Picard_markDupl.log &
