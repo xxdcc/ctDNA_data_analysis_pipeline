@@ -58,7 +58,7 @@ Download *GATK* from [here](https://software.broadinstitute.org/gatk/download/) 
 <br><br>
 
 ----------------------
-## Alignment
+## 1. Alignment
 
 **Tool**: *BWA*
 **Algorithm**: *mem*
