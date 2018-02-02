@@ -63,7 +63,7 @@ Download *GATK* from [here](https://software.broadinstitute.org/gatk/download/) 
 **Tool**: *BWA*<br>
 **Algorithm**: *mem*
 
-#### 1. Construct the FM-index for the reference genome
+#### 1.1 Construct the FM-index for the reference genome
 
 ```
 mkdir /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15
@@ -71,7 +71,7 @@ cd /data/BCI-BioInformatics/Jun/reference_hg38/
 ```
 <br>
 
-#### 2. Construct index using the '*bwtsw*' algorithm implemented in *BWT-SW*
+#### 1.2 Construct index using the '*bwtsw*' algorithm implemented in *BWT-SW*
 
 This method is recommended for *BWA-MEM* alignment algorithm.
 
@@ -83,7 +83,7 @@ $HOME/applications/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/re
 ```
 <br>
 
-#### 3. Perform alignment using '*mem*' algorithm
+#### 1.3. Perform alignment using '*mem*' algorithm
 
 *BWA-MEM* is generally recommended for high-quality queries as it is faster and more accurate. For this use the index generated '*bwtsw*' algorithm.
 
@@ -270,7 +270,7 @@ nohup ./BWA_mem.sh 95_4_D.4 SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_1.fq.gz SLX-12
 ----------------------
 ## 2. Sort and convert SAM to BAM files
 
-**Tool**: *Picard*
+**Tool**: *Picard*<br>
 **Algorithm**: *SortSam*
 
 Sort the input SAM file by coordinate and output in a binary BAM format.
@@ -458,7 +458,7 @@ nohup ./Picard_SAM2BAM.sh  95_4_D.4 > 95_4_D.4.Picard_SAM2BAM.log &
 ----------------------
 ## 3. Mark PCR duplicates
 
-**Tool**: *Picard*
+**Tool**: *Picard*<br>
 **Algorithm**: *MarkDuplicates*
 
 Locates and tag duplicate reads in a BAM files, where duplicate reads are defined as originating from a single fragment of DNA.
@@ -648,7 +648,7 @@ nohup ./Picard_markDupl.sh  95_4_D.4 > 95_4_D.4.Picard_markDupl.log &
 ----------------------
 ## 4. Collect statistics for *BAM* files using *SAMtools stats*
 
-**Tool**: *SAMtools*
+**Tool**: *SAMtools*<br>
 **Algorithm**: *stats*
 
 *SAMtools stats* collects statistics (e.g. GC content, insert size, per-base sequence content, quality per cycle) from *BAM* files and outputs in a text format. The output is then visualized graphically using *plot-bamstats*.
@@ -892,10 +892,10 @@ plot-bamstats -p 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats.plot 95_4_D
 ----------------------
 ## 5. Calculate the coverage (after marking PCR duplicates)
 
-**Tool**: *GATK*
+**Tool**: *GATK*<br>
 **Algorithm**: *DepthOfCoverage*
 
-#### 1. Download the *Agilent Human Exon V6 exome capture bed* files and use *liftOver* to change the coordinates from *hg19* to *hg38*.<br><br>
+#### 5.1. Download the *Agilent Human Exon V6 exome capture bed* files and use *liftOver* to change the coordinates from *hg19* to *hg38*.<br><br>
 **Note**: one needs to remove the header before and add again after *liftover*.
 
 This step was done on local machine
@@ -912,7 +912,7 @@ grep '^chr[0-9XY]\{1,2\}\t' /Users/marzec01/data/PC_ctDNA/WES_data/Agilent_Human
 ```
 <br>
 
-#### 2. Use *GATK DepthOfCoverage*  to processes *BAM*  files to determine coverage at different levels of partitioning and aggregation.
+#### 5.2. Use *GATK DepthOfCoverage*  to processes *BAM*  files to determine coverage at different levels of partitioning and aggregation.
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
