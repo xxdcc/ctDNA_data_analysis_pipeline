@@ -858,7 +858,7 @@ plot-bamstats -p 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats.plot 95_4_D
 ----------------------
 #### 7. Calculate the coverage after marking PCR duplicates
 
-First, download the *Agilent Human Exon V6 exome capture bed* files and use *liftOver* to change the coordinates from *hg19* to *hg38*
+First, download the *Agilent Human Exon V6 exome capture bed* files and use *liftOver* to change the coordinates from *hg19* to *hg38*.<br>
 **Note**: one needs to remove the header before and add again after *liftover*.
 
 This step was done on local machine
