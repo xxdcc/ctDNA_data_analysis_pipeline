@@ -243,13 +243,13 @@ nohup ./BWA_mem.sh 95_4_D.4 SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_1.fq.gz SLX-12
 ```
 
 ----------------------
-#### 4. Convert SAM to BAM files using Picard
+#### 4. Sort and convert SAM to BAM files using Picard
 
-Sort the input SAM file by coordinate and output as BAM file
+Sort the input SAM file by coordinate and output in a binary BAM format.
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
-SO | coordinate | Sort order of output file
+SO | coordinate | Sort order of output file by coordinate
 VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
 <br /> 
