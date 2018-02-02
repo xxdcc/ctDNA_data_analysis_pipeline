@@ -63,7 +63,7 @@ $HOME/applications/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/re
 *BWA-MEM* is generally recommended for high-quality queries as it is faster and more accurate. For this use the index generated '*bwtsw*' algorithm.
 
 Paramter | Value | Description
------------- | ------------
+------------ | ------------ | ------------
 -M | NA | Mark shorter split hits as secondary (for Picard compatibility)
 -t | 4 | Number of threads
 <br />
