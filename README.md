@@ -14,7 +14,7 @@ Step | Analysis | Tool | Algorithm
 2 | [Sort and convert SAM to BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#2-sort-and-convert-sam-to-bam-files) | *[Picard](https://broadinstitute.github.io/picard/)* | *SortSam*
 3 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#3-mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
 4 | [Collect statistics for BAM file](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#4-collect-statistics-for-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *stats*
-5 | [Calculate the coverage (after marking PCR duplicates)](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#5-calculate-the-coverage-after-marking-pcr-duplicates) | *[Genome Analysis Toolkit](https://software.broadinstitute.org/gatk/)* (GATK) | *DepthOfCoverage*
+5 | [Calculate the coverage (after marking PCR duplicates)](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#5-calculate-the-coverage) | *[Genome Analysis Toolkit](https://software.broadinstitute.org/gatk/)* (GATK) | *DepthOfCoverage*
 6 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
 7 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
 8 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
@@ -890,7 +890,7 @@ plot-bamstats -p 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats.plot 95_4_D
 
 
 ----------------------
-## 5. Calculate the coverage (after marking PCR duplicates)
+## 5. Calculate the coverage
 
 **Tool**: *GATK*<br>
 **Algorithm**: *DepthOfCoverage*
@@ -1111,29 +1111,21 @@ no suffix | per locus coverage
 ----------------------
 ## 6. Merge *BAM* files
 
-Locates and tag duplicate reads in a BAM files, where duplicate reads are defined as originating from a single fragment of DNA.
-Duplicates can arise during sample preparation e.g. library construction using PCR. Duplicate reads can also result from a single amplification cluster, incorrectly detected as multiple clusters by the optical sensor of the sequencing instrument. These duplication artifacts are referred to as optical duplicates.
-*Picard MarkDuplicates* produces a metrics file indicating the numbers of duplicates for both single- and paired-end reads.
+**Tool**: *Picard*<br>
+**Algorithm**: *MarkDuplicates*
+
+Following Broad Institute recommendation for [pre-processing data from multiplexed sequencing and multi-library designs](https://software.broadinstitute.org/gatk/guide/article?id=3060), after running the initial steps of the pre-processing workflow (mapping, sorting and marking duplicates) separately on individual BAM files, we merge the data into a single BAM file for each sample. This is done by re-running *Picard MarkDuplicates* algorithm, this time using all read group BAM files for each sample.
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
-METRICS_FILE | \[samplename\]\.DuplicationMetrics\.txt | File to write duplication metrics to
+METRICS_FILE | \[samplename\]\.merged\.DuplicationMetrics\.txt | File to write duplication metrics to
 VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
 <br /> 
 
-Run *[Picard_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_markDupl.sh)* script for each sample
+Run *[Picard_merge_4BAMs_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_merge_4BAMs_markDupl.sh)* script for each sample
 
 * **Sequencing batch 1**
-
-####################################################################################################
-
-#### According to Broad Institute recommendation for pre-processing data from multiplexed sequencing and multi-library designs ( https://software.broadinstitute.org/gatk/guide/article?id=3060 ), after running the initial steps of the pre-processing workflow (mapping, sorting and marking duplicates) separately on each individual BAM file, we merge the data to produce a single BAM file for each sample (aggregation). This is done by re-running Mark Duplicates, this time on all read group BAM files for a sample at the same time. The Indel Realignment and Base Recalibration is then run on the aggregated per-sample BAM files
-
-
-#### Merge BAM files and mark duplicates per sample (aggregation + dedup)
-
-#### Run 'Picard_merge_4BAMs_markDupl.sh' script
 
 # Sample 45_1_B
 nohup ./Picard_merge_4BAMs_markDupl.sh  45_1_B  45_1_B.recalib.bam  45_1_B.2.recalib.bam  45_1_B.3.recalib.bam  45_1_B.4.recalib.bam  >  45_1_B.Picard_merge_4BAMs_markDupl.log &
@@ -1170,6 +1162,10 @@ nohup ./Picard_merge_4BAMs_markDupl.sh  95_4_D  95_4_D.recalib.bam  95_4_D.2.rec
 
 
 ####################################################################################################
+
+
+The Indel Realignment and Base Recalibration is then run on the aggregated per-sample BAM files
+
 
 #### Perform local alignment around indels using GATK
 
