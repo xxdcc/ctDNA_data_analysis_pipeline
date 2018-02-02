@@ -68,6 +68,7 @@ Download *GATK* from [here](https://software.broadinstitute.org/gatk/download/) 
 mkdir /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15
 cd /data/BCI-BioInformatics/Jun/reference_hg38/
 ```
+<br>
 
 #### 2. Construct index using the '*bwtsw*' algorithm implemented in *BWT-SW*
 
@@ -79,6 +80,7 @@ cp hg38.fa index_bwa_0.7.15_bwtsw
 cd index_bwa_0.7.15_bwtsw
 $HOME/applications/bwa index -p hg38bwa -a bwtsw /data/BCI-BioInformatics/Jun/reference_hg38/index_bwa_0.7.15_bwtsw/hg38.fa
 ```
+<br>
 
 #### 3. Perform alignment using '*mem*' algorithm
 
