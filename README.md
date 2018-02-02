@@ -16,7 +16,7 @@ Step | Analysis | Tool | Algorithm
 4 | [Collect statistics for BAM file](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#4-collect-statistics-for-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *stats*
 5 | [Calculate the coverage (after marking PCR duplicates)](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#5-calculate-the-coverage) | *[Genome Analysis Toolkit](https://software.broadinstitute.org/gatk/)* (GATK) | *DepthOfCoverage*
 6 | [Merge BAM files per sample](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#6-merge-bam-files-per-sample) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
-7 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
+7 | [Local alignment around indels](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#7-local-alignment-around-indels) | *[GATK](https://software.broadinstitute.org/gatk/)*, *[Picard](https://broadinstitute.github.io/picard/)*  | *RealignerTargetCreator*, *IndelRealigner*, *FixMateInformation*
 8 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
 
 <br />
@@ -1173,6 +1173,7 @@ nohup ./Picard_merge_4BAMs_markDupl.sh  95_4_D  95_4_D.recalib.bam  95_4_D.2.rec
 
 The local realignment process is designed to locally realign reads such that the number of mismatching bases is minimized across all the reads. In general, a large percent of regions requiring local realignment are due to the presence of an insertion or deletion (indels) in the individual's genome with respect to the reference genome. Such alignment artifacts result in many bases mismatching the reference near the misalignment, which are easily mistaken as SNPs. Moreover, since read mapping algorithms operate on each read independently, it is impossible to place reads on the reference genome such at mismatches are minimized across all reads. Consequently, even when some reads are correctly mapped with indels, reads covering the indel near just the start or end of the read are often incorrectly mapped with respect the true indel, also requiring realignment. Local realignment serves to transform regions with misalignments due to indels into clean reads containing a consensus indel suitable for standard variant discovery approaches.<br><br>
 **NOTE**: Local realignment is not necessary for variant callers that perform a haplotype assembly step, such as HaplotypeCaller or MuTect2. We perfrom this step since we adapted the *mpileup* appraoch for calling variants.
+<br>
 
 #### 7.1 Create the reference fasta sequence dictionary file
 
