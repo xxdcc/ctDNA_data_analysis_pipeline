@@ -56,6 +56,7 @@ This method is recommended for *BWA-MEM* alignment algorithm.
 
 #### 3. Perform alignment using '*mem*' algorithm
 
+
 *BWA-MEM* is generally recommended for high-quality queries as it is faster and more accurate. For this use the index generated '*bwtsw*' algorithm.
 
 Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/BWA_mem.sh)* script
