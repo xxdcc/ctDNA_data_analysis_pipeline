@@ -35,9 +35,8 @@ cp bwa $HOME/applications
 <br>
 
 Download *Picard* from [here](https://github.com/broadinstitute/picard/zipball/master) and install in home directory on *sm11* (*$HOME/applications*)
-<br>
-Download *GATK* from [here](https://software.broadinstitute.org/gatk/download/) and install in home directory on *sm11* (*$HOME/applications*)
 <br><br>
+Download *GATK* from [here](https://software.broadinstitute.org/gatk/download/) and install in home directory on *sm11* (*$HOME/applications*)
 <br><br>
 
 ## Alignment with *BWA*
