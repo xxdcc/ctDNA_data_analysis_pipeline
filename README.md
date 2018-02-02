@@ -891,123 +891,187 @@ Run *[GATK_coverage.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_
 
 * **Sequencing batch 1**
 
-# Sample 45_1_B
+Sample 45_1_B
+```
 nohup ./GATK_coverage.sh  45_1_B > 45_1_B.GATK_coverage.log &
+```
 
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./GATK_coverage.sh  45_2_C > 45_2_C.GATK_coverage.log &
+```
 
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./GATK_coverage.sh  45_3_D > 45_3_D.GATK_coverage.log &
+```
 
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./GATK_coverage.sh  45_4_E > 45_4_E.GATK_coverage.log &
+```
 
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./GATK_coverage.sh  95_1_A > 95_1_A.GATK_coverage.log &
+```
 
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./GATK_coverage.sh  95_2_B > 95_2_B.GATK_coverage.log &
+```
 
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./GATK_coverage.sh  95_3_C > 95_3_C.GATK_coverage.log &
+```
 
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./GATK_coverage.sh  95_4_D > 95_4_D.GATK_coverage.log &
+```
+<br>
 
+* **Sequencing batch 2**
 
-#### Batch 2
-
-# Sample 45_1_B
+Sample 45_1_B
+```
 nohup ./GATK_coverage.sh  45_1_B.2 > 45_1_B.2.GATK_coverage.log &
+```
 
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./GATK_coverage.sh  45_2_C.2 > 45_2_C.2.GATK_coverage.log &
+```
 
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./GATK_coverage.sh  45_3_D.2 > 45_3_D.2.GATK_coverage.log &
+```
 
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./GATK_coverage.sh  45_4_E.2 > 45_4_E.2.GATK_coverage.log &
+```
 
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./GATK_coverage.sh  95_1_A.2 > 95_1_A.2.GATK_coverage.log &
+```
 
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./GATK_coverage.sh  95_2_B.2 > 95_2_B.2.GATK_coverage.log &
+```
 
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./GATK_coverage.sh  95_3_C.2 > 95_3_C.2.GATK_coverage.log &
+```
 
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./GATK_coverage.sh  95_4_D.2 > 95_4_D.2.GATK_coverage.log &
+```
+<br>
 
+* **Sequencing batch 3**
 
-#### Batch 3
-
-# Sample 45_1_B
+Sample 45_1_B
+```
 nohup ./GATK_coverage.sh  45_1_B.3 > 45_1_B.3.GATK_coverage.log &
+```
 
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./GATK_coverage.sh  45_2_C.3 > 45_2_C.3.GATK_coverage.log &
+```
 
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./GATK_coverage.sh  45_3_D.3 > 45_3_D.3.GATK_coverage.log &
+```
 
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./GATK_coverage.sh  45_4_E.3 > 45_4_E.3.GATK_coverage.log &
+```
 
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./GATK_coverage.sh  95_1_A.3 > 95_1_A.3.GATK_coverage.log &
+```
 
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./GATK_coverage.sh  95_2_B.3 > 95_2_B.3.GATK_coverage.log &
+```
 
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./GATK_coverage.sh  95_3_C.3 > 95_3_C.3.GATK_coverage.log &
+```
 
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./GATK_coverage.sh  95_4_D.3 > 95_4_D.3.GATK_coverage.log &
+```
+<br>
 
+* **Sequencing batch 4**
 
-#### Batch 4
-
-# Sample 45_1_B
+Sample 45_1_B
+```
 nohup ./GATK_coverage.sh  45_1_B.4 > 45_1_B.4.GATK_coverage.log &
+```
 
-# Sample 45_2_C
+Sample 45_2_C
+```
 nohup ./GATK_coverage.sh  45_2_C.4 > 45_2_C.4.GATK_coverage.log &
+```
 
-# Sample 45_3_D
+Sample 45_3_D
+```
 nohup ./GATK_coverage.sh  45_3_D.4 > 45_3_D.4.GATK_coverage.log &
+```
 
-# Sample 45_4_E
+Sample 45_4_E
+```
 nohup ./GATK_coverage.sh  45_4_E.4 > 45_4_E.4.GATK_coverage.log &
+```
 
-# Sample 95_1_A
+Sample 95_1_A
+```
 nohup ./GATK_coverage.sh  95_1_A.4 > 95_1_A.4.GATK_coverage.log &
+```
 
-# Sample 95_2_B
+Sample 95_2_B
+```
 nohup ./GATK_coverage.sh  95_2_B.4 > 95_2_B.4.GATK_coverage.log &
+```
 
-# Sample 95_3_C
+Sample 95_3_C
+```
 nohup ./GATK_coverage.sh  95_3_C.4 > 95_3_C.4.GATK_coverage.log &
+```
 
-# Sample 95_4_D
+Sample 95_4_D
+```
 nohup ./GATK_coverage.sh  95_4_D.4 > 95_4_D.4.GATK_coverage.log &
+```
 
+At thie step 7 files are creates per each sample
 
-
-
-# This creates 7 files per each sample:
-1. no suffix: per locus coverage
-2. _summary: total, mean, median, quartiles, and threshold proportions, aggregated over all bases
-3. _statistics: coverage histograms (# locus with X coverage), aggregated over all bases
-4. _interval_summary: total, mean, median, quartiles, and threshold proportions, aggregated per interval
-5. _interval_statistics: 2x2 table of # of intervals covered to >= X depth in >=Y samples
-6. _cumulative_coverage_counts: coverage histograms (# locus with >= X coverage), aggregated over all bases
-7. _cumulative_coverage_proportions: proprotions of loci with >= X coverage, aggregated over all bases
-
+Suffix | Description
+------------ | ------------
+no suffix | per locus coverage
+/_summary | total, mean, median, quartiles, and threshold proportions, aggregated over all bases
+/_statistics | coverage histograms (# locus with X coverage), aggregated over all bases
+/_interval_summary | total, mean, median, quartiles, and threshold proportions, aggregated per interval
+/_interval_statistics | 2x2 table of # of intervals covered to >= X depth in >=Y samples
+/_cumulative_coverage_counts | coverage histograms (# locus with >= X coverage), aggregated over all bases
+/_cumulative_coverage_proportions | proprotions of loci with >= X coverage, aggregated over all bases
+<br /> 
 
 
 ####################################################################################################
