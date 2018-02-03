@@ -1374,5 +1374,51 @@ Sample 95_4_D
 samtools flagstat 95_4_D.merged.recalib.bam > 95_4_D.merged.recalib.flagstat.txt
 ```
 
+----------------------
+## 10. Index BAM files
+
+**Tool**: *SAMtools*<br>
+**Algorithm**: *index*
+
+Sample 45_1_B
+```
+samtools index 45_1_B.merged.recalib.bam
+```
+
+Sample 45_2_C
+```
+samtools index 45_2_C.merged.recalib.bam
+```
+
+Sample 45_3_D
+```
+samtools index 45_3_D.merged.recalib.bam
+```
+
+Sample 45_4_E
+```
+samtools index 45_4_E.merged.recalib.bam
+```
+
+Sample 95_1_A
+```
+samtools index 95_1_A.merged.recalib.bam
+```
+
+Sample 95_2_B
+```
+samtools index 95_2_B.merged.recalib.bam
+```
+
+Sample 95_3_C
+```
+samtools index 95_3_C.merged.recalib.bam
+```
+
+Sample 95_4_D
+```
+samtools index 95_4_D.merged.recalib.bam
+```
+
 
 
