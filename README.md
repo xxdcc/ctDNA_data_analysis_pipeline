@@ -290,8 +290,8 @@ Paramter | Value | Description
 SO | coordinate | Sort order of output file by coordinate
 VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
-<br /> 
- 
+<br />
+
 Run *[Picard_SAM2BAM.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_SAM2BAM.sh)* script for each sample
 
 * **Sequencing batch 1**
@@ -480,7 +480,7 @@ Paramter | Value | Description
 METRICS_FILE | \[samplename\]\.DuplicationMetrics\.txt | File to write duplication metrics to
 VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
-<br /> 
+<br />
 
 Run *[Picard_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_markDupl.sh)* script for each sample
 
@@ -928,7 +928,7 @@ Paramter | Value | Description
 ------------ | ------------ | ------------
 -ct | 20, 50, 80, 100, 150, 200 | Coverage threshold (in percent) for summarising statistics
 -L  | Agilent_Human_Exon_V6/S07604514_Covered_hg38_clean\.bed | Restrict processing to specific genomic intervals
-<br /> 
+<br />
 
 Run *[GATK_coverage.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/GATK_coverage.sh)* script for each sample
 
@@ -1115,7 +1115,7 @@ no suffix | per locus coverage
 \_interval_statistics | 2x2 table of # of intervals covered to >= X depth in >=Y samples
 \_cumulative_coverage_counts | coverage histograms (# locus with >= X coverage), aggregated over all bases
 \_cumulative_coverage_proportions | proprotions of loci with >= X coverage, aggregated over all bases
-<br /> 
+<br />
 
 
 ----------------------
@@ -1131,7 +1131,7 @@ Paramter | Value | Description
 METRICS_FILE | \[samplename\]\.merged\.DuplicationMetrics\.txt | File to write duplication metrics to
 VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
-<br /> 
+<br />
 
 Run *[Picard_merge_4BAMs_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_merge_4BAMs_markDupl.sh)* script for each sample
 
@@ -1208,7 +1208,7 @@ Paramter | Value | Description
 SO | coordinate | Sort order of output file by coordinate
 VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
-<br /> 
+<br />
 
 
 
@@ -1423,35 +1423,34 @@ samtools index 95_4_D.merged.recalib.bam
 ----------------------
 ## 11. Variant calling
 
-Since we expect little tumour content in the plasma DNA vartiant detection algorithms like Mutect2, which rely on statistical models, are not "sensitive" enough to detect variants in plasma samples. Thus, we try an alternative approach based on reporting any variants, compared to reference genome, across all samples followed by relevant filtering (see paper by Murtaza M et al, 2013, [Non-invasive analysis of acquired resistance to cancer therapy by sequencing of plasma DNA](https://www.ncbi.nlm.nih.gov/pubmed/23563269)).
+Since we expect little tumour content in the plasma DNA variant detection algorithms like *Mutect2*, which rely on statistical models, are not "sensitive" enough. For that reason, we adopted a *pileup* approach based on reporting any variants, compared to reference genome, across all samples followed by relevant filtering (see paper by Murtaza M et al, 2013, [Non-invasive analysis of acquired resistance to cancer therapy by sequencing of plasma DNA](https://www.ncbi.nlm.nih.gov/pubmed/23563269)).
 
 **Tool**: *SAMtools*<br>
 **Algorithm**: *mpileup*
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
--B | N/A | 
--q  | 20 | 
--Q | 15 | 
--R | N/A | 
-<br /> 
+-B | N/A | Disable probabilistic realignment for the computation of base alignment quality (BAQ) to reduce false SNPs caused by misalignments
+-q  | 20 | Minimum mapping quality for an alignment
+-Q | 15 | Minimum base quality for a base to be considered
+-R | N/A | Ignore RG tags. Treat all reads in one BAM as one sample
+<br />
 
-**Tool**: *SAMtools*<br>
+**Tool**: *VarScan*<br>
 **Algorithm**: *mpileup2cns*
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
---min-coverage | 10 | 
---min-reads2  | 1 | 
---min-avg-qual | 15 | 
---min-var-freq | 0.001 | 
---p-value | 0.99 | 
---strand-filter | 0 | 
---output-vcf | 1 | 
---variants | 1 | 
-<br /> 
+--min-coverage | 10 | Minimum read depth at a position to make a call
+--min-reads2  | 1 | Minimum supporting reads at a position to call variants
+--min-avg-qual | 15 | Minimum base quality at a position to count a read
+--min-var-freq | 0.001 | Minimum variant allele frequency threshold
+--p-value | 0.99 | Default p-value threshold for calling variants
+--strand-filter | 0 | Do not ignore variants with >90% support on one strand
+--output-vcf | 1 | Output in VCF format
+--variants | 1 | Report only variant (SNP/indel) positions
+<br />
 
 **Note**: NOTE: Run this analysis from WGS directory including all samples (normal tissue + tumour tissue + plasma 1 + plasma 2 + plasma 3 + plasma 4).
 
 Run *[Varscan_pileup2cns_3samples.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Varscan_pileup2cns_3samples.sh)* script for each sample
-
