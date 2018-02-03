@@ -1451,6 +1451,6 @@ Paramter | Value | Description
 --variants | 1 | Report only variant (SNP/indel) positions
 <br />
 
-**Note**: NOTE: Run this analysis from WGS directory including all samples (normal tissue + tumour tissue + plasma 1 + plasma 2 + plasma 3 + plasma 4).
+**Note**: NOTE: Run this analysis from whole-genome sequencing (WGS) directory including all samples (normal tissue + tumour tissue + plasma 1 + plasma 2 + plasma 3 + plasma 4).
 
 Run *[Varscan_pileup2cns_3samples.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Varscan_pileup2cns_3samples.sh)* script for each sample
