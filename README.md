@@ -1328,3 +1328,56 @@ rm [sample_name].merged.marked.realigned.fixed.bam
 rm [sample_name].merged.marked.realigned.fixed.bai
 ```
 
+----------------------
+## 9. Check merged and recalibrated BAM files
+
+Variant calling algorithms rely heavily on the quality scores assigned to the individual base calls in each sequence read. These scores are per-base estimates of error emitted by the sequencing machines. Unfortunately, the scores produced by the machines are subject to various sources of systematic technical error, leading to over- or under-estimated base quality scores in the data. *Base quality score recalibration* (*BQSR*) is a process in which machine learning is applied to model these errors empirically and adjust the quality scores accordingly. This allows to get more accurate base qualities, which in turn improves the accuracy of our variant calls. The base recalibration process involves two key steps: first the program builds a model of covariation based on the data and a set of known variants, then it adjusts the base quality scores in the data based on the model.
+<br>
+
+#### 8.1 Perform base quality score recalibration
+
+**Tool**: *SAMtools*<br>
+**Algorithm**: *flagstat*
+
+Sample 45_1_B
+```
+samtools flagstat 45_1_B.merged.recalib.bam > 45_1_B.merged.recalib.flagstat.txt
+```
+
+Sample 45_2_C
+```
+samtools flagstat 45_2_C.merged.recalib.bam > 45_2_C.merged.recalib.flagstat.txt
+```
+
+Sample 45_3_D
+```
+samtools flagstat 45_3_D.merged.recalib.bam > 45_3_D.merged.recalib.flagstat.txt
+```
+
+Sample 45_4_E
+```
+samtools flagstat 45_4_E.merged.recalib.bam > 45_4_E.merged.recalib.flagstat.txt
+```
+
+Sample 95_1_A
+```
+samtools flagstat 95_1_A.merged.recalib.bam > 95_1_A.merged.recalib.flagstat.txt
+```
+
+Sample 95_2_B
+```
+samtools flagstat 95_2_B.merged.recalib.bam > 95_2_B.merged.recalib.flagstat.txt
+```
+
+Sample 95_3_C
+```
+samtools flagstat 95_3_C.merged.recalib.bam > 95_3_C.merged.recalib.flagstat.txt
+```
+
+Sample 95_4_D
+```
+samtools flagstat 95_4_D.merged.recalib.bam > 95_4_D.merged.recalib.flagstat.txt
+```
+
+
+
