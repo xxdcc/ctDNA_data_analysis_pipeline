@@ -24,7 +24,7 @@ Step | Analysis | Tools | Algorithms
 8 | [Base quality score recalibration](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#8-base-quality-score-recalibration) | *[GATK](https://software.broadinstitute.org/gatk/)* | *BaseRecalibrator* <br> *PrintReads*
 9 | [Check merged and recalibrated BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#9-check-merged-and-recalibrated-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *flagstat*
 10 | [Index BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#10-index-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *index*
-11 | Variant calling | *[SAMtools](http://samtools.sourceforge.net/)* <br> *[VarScan](http://varscan.sourceforge.net/)* | *mpileup* <br> *mpileup2cns*
+11 | [Variant calling](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#11-variant-calling) | *[SAMtools](http://samtools.sourceforge.net/)* <br> *[VarScan](http://varscan.sourceforge.net/)* | *mpileup* <br> *mpileup2cns*
 
 <br />
 
@@ -1423,7 +1423,7 @@ samtools index 95_4_D.merged.recalib.bam
 ----------------------
 ## 11. Variant calling
 
-Since we expect little tumour content in the plasma DNA vartiant detection algorithms like Mutect2, which rely on statistical models, are not "sensitive" enough to detect variants in plasma samples. Thus, we try an alternative approach based on reporting any variants, compared to reference genome, across all samples followed by relevant filtering (see paper by Murtaza M et al, 2013, [Non-invasive analysis of acquired resistance to cancer therapy by sequencing of plasma DNA](https://www.ncbi.nlm.nih.gov/pubmed/23563269).
+Since we expect little tumour content in the plasma DNA vartiant detection algorithms like Mutect2, which rely on statistical models, are not "sensitive" enough to detect variants in plasma samples. Thus, we try an alternative approach based on reporting any variants, compared to reference genome, across all samples followed by relevant filtering (see paper by Murtaza M et al, 2013, [Non-invasive analysis of acquired resistance to cancer therapy by sequencing of plasma DNA](https://www.ncbi.nlm.nih.gov/pubmed/23563269)).
 
 **Tool**: *SAMtools*<br>
 **Algorithm**: *mpileup*
@@ -1453,5 +1453,5 @@ Paramter | Value | Description
 
 **Note**: NOTE: Run this analysis from WGS directory including all samples (normal tissue + tumour tissue + plasma 1 + plasma 2 + plasma 3 + plasma 4).
 
-Run *[Varscan_pileup2cns_3samples.sh.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Varscan_pileup2cns_3samples.sh.sh)* script for each sample
+Run *[Varscan_pileup2cns_3samples.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Varscan_pileup2cns_3samples.sh)* script for each sample
 
