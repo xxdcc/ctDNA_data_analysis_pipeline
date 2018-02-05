@@ -903,7 +903,7 @@ plot-bamstats -p 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats.plot 95_4_D
 ## 5. Calculate coverage
 
 #### 5.1. Download the *Agilent Human Exon V6 exome capture bed* files and use *liftOver* to change the coordinates from *hg19* to *hg38*.<br><br>
-**Note**: one needs to remove the header before and add again after *liftover*.
+**NOTE**: one needs to remove the header before and add again after *liftover*.
 
 This step was done on local machine
 
@@ -912,7 +912,7 @@ This step was done on local machine
 ```
 <br>
 
-**Note**: Remove from the converted file unspecific contigs (*chr1_KI270766v1_alt* etc.).
+**NOTE**: Remove from the converted file unspecific contigs (*chr1_KI270766v1_alt* etc.).
 
 ```
 grep '^chr[0-9XY]\{1,2\}\t' /Users/marzec01/data/PC_ctDNA/WES_data/Agilent_Human_Exon_V6/S07604514_Covered_hg38.bed > /Users/marzec01/data/PC_ctDNA/WES_data/Agilent_Human_Exon_V6/S07604514_Covered_hg38_clean.bed
@@ -1423,7 +1423,7 @@ samtools index 95_4_D.merged.recalib.bam
 ----------------------
 ## 11. Variant calling
 
-Since we expect little tumour content in the plasma DNA variant detection algorithms like *Mutect2*, which rely on statistical models, are not "sensitive" enough. For that reason, we adopted a *pileup* approach based on reporting any variants, compared to reference genome, across all samples followed by relevant filtering (see paper by Murtaza M *et al.*, 2013, [Non-invasive analysis of acquired resistance to cancer therapy by sequencing of plasma DNA](https://www.ncbi.nlm.nih.gov/pubmed/23563269)).
+Since we expect little tumour content in the plasma DNA variant detection algorithms like [*GATK Mutect2*](https://software.broadinstitute.org/gatk/documentation/tooldocs/4.beta.4/org_broadinstitute_hellbender_tools_walkers_mutect_Mutect2.php), which rely on statistical models, are not "sensitive" enough. For that reason, we adopted a *pileup* approach based on reporting any variants, compared to reference genome, across all samples followed by relevant filtering (see paper by Murtaza M *et al.*, 2013, [Non-invasive analysis of acquired resistance to cancer therapy by sequencing of plasma DNA](https://www.ncbi.nlm.nih.gov/pubmed/23563269)).
 
 **Tool**: *SAMtools*<br>
 **Algorithm**: *mpileup*
@@ -1451,6 +1451,6 @@ Paramter | Value | Description
 --variants | 1 | Report only variant (SNP/indel) positions
 <br />
 
-**Note**: NOTE: Run this analysis from whole-genome sequencing (WGS) directory including all samples (normal tissue + tumour tissue + plasma 1 + plasma 2 + plasma 3 + plasma 4).
+**NOTE**: Run this analysis from whole-genome sequencing (WGS) directory including all samples (normal tissue + tumour tissue + plasma 1 + plasma 2 + plasma 3 + plasma 4).
 
 Run *[Varscan_pileup2cns_3samples.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Varscan_pileup2cns_3samples.sh)* script for each sample
