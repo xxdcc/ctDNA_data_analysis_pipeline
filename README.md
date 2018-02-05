@@ -111,42 +111,42 @@ Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analy
 
 * **Sequencing batch 1**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./BWA_mem.sh 45_1_B SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.BWA_mem.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./BWA_mem.sh 45_2_C SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.BWA_mem.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./BWA_mem.sh 45_3_D SLX-12721.iPCRtagT005.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT005.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT005.HGJWLBBXX.s_5.BWA_mem.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./BWA_mem.sh 45_4_E SLX-12721.iPCRtagT006.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT006.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT006.HGJWLBBXX.s_5.BWA_mem.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./BWA_mem.sh 95_1_A SLX-12721.iPCRtagT007.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT007.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT007.HGJWLBBXX.s_5.BWA_mem.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./BWA_mem.sh 95_2_B SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.BWA_mem.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./BWA_mem.sh 95_3_C SLX-12721.iPCRtagT010.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT010.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT010.HGJWLBBXX.s_5.BWA_mem.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./BWA_mem.sh 95_4_D SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.r_1.fq.gz SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.r_2.fq.gz > SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.BWA_mem.log &
 ```
@@ -154,42 +154,42 @@ nohup ./BWA_mem.sh 95_4_D SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.r_1.fq.gz SLX-1272
 
 * **Sequencing batch 2**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./BWA_mem.sh 45_1_B.2 SLX-12721.iPCRtagT002.HGYHFBBXX.s_2.r_1.fq.gz SLX-12721.iPCRtagT002.HGYHFBBXX.s_2.r_2.fq.gz > SLX-12721.iPCRtagT002.HGYHFBBXX.s_2.BWA_mem.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./BWA_mem.sh 45_2_C.2 SLX-12721.iPCRtagT004.HGYHFBBXX.s_2.r_1.fq.gz SLX-12721.iPCRtagT004.HGYHFBBXX.s_2.r_2.fq.gz > SLX-12721.iPCRtagT004.HGYHFBBXX.s_2.BWA_mem.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./BWA_mem.sh 45_3_D.2 SLX-12721.iPCRtagT005.HGYHFBBXX.s_2.r_1.fq.gz SLX-12721.iPCRtagT005.HGYHFBBXX.s_2.r_2.fq.gz > SLX-12721.iPCRtagT005.HGYHFBBXX.s_2.BWA_mem.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./BWA_mem.sh 45_4_E.2 SLX-12721.iPCRtagT006.HGYHFBBXX.s_2.r_1.fq.gz SLX-12721.iPCRtagT006.HGYHFBBXX.s_2.r_2.fq.gz > SLX-12721.iPCRtagT006.HGYHFBBXX.s_2.BWA_mem.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./BWA_mem.sh 95_1_A.2 SLX-12721.iPCRtagT007.HGYHFBBXX.s_2.r_1.fq.gz SLX-12721.iPCRtagT007.HGYHFBBXX.s_2.r_2.fq.gz > SLX-12721.iPCRtagT007.HGYHFBBXX.s_2.BWA_mem.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./BWA_mem.sh 95_2_B.2 SLX-12721.iPCRtagT009.HGYHFBBXX.s_2.r_1.fq.gz SLX-12721.iPCRtagT009.HGYHFBBXX.s_2.r_2.fq.gz > SLX-12721.iPCRtagT009.HGYHFBBXX.s_2.BWA_mem.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./BWA_mem.sh 95_3_C.2 SLX-12721.iPCRtagT010.HGYHFBBXX.s_2.r_1.fq.gz SLX-12721.iPCRtagT010.HGYHFBBXX.s_2.r_2.fq.gz > SLX-12721.iPCRtagT010.HGYHFBBXX.s_2.BWA_mem.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./BWA_mem.sh 95_4_D.2 SLX-12721.iPCRtagT012.HGYHFBBXX.s_2.r_1.fq.gz SLX-12721.iPCRtagT012.HGYHFBBXX.s_2.r_2.fq.gz > SLX-12721.iPCRtagT012.HGYHFBBXX.s_2.BWA_mem.log &
 ```
@@ -197,42 +197,42 @@ nohup ./BWA_mem.sh 95_4_D.2 SLX-12721.iPCRtagT012.HGYHFBBXX.s_2.r_1.fq.gz SLX-12
 
 * **Sequencing batch 3**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./BWA_mem.sh 45_1_B.3 SLX-12721.iPCRtagT002.HGYHFBBXX.s_3.r_1.fq.gz SLX-12721.iPCRtagT002.HGYHFBBXX.s_3.r_2.fq.gz > SLX-12721.iPCRtagT002.HGYHFBBXX.s_3.BWA_mem.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./BWA_mem.sh 45_2_C.3 SLX-12721.iPCRtagT004.HGYHFBBXX.s_3.r_1.fq.gz SLX-12721.iPCRtagT004.HGYHFBBXX.s_3.r_2.fq.gz > SLX-12721.iPCRtagT004.HGYHFBBXX.s_3.BWA_mem.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./BWA_mem.sh 45_3_D.3 SLX-12721.iPCRtagT005.HGYHFBBXX.s_3.r_1.fq.gz SLX-12721.iPCRtagT005.HGYHFBBXX.s_3.r_2.fq.gz > SLX-12721.iPCRtagT005.HGYHFBBXX.s_3.BWA_mem.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./BWA_mem.sh 45_4_E.3 SLX-12721.iPCRtagT006.HGYHFBBXX.s_3.r_1.fq.gz SLX-12721.iPCRtagT006.HGYHFBBXX.s_3.r_2.fq.gz > SLX-12721.iPCRtagT006.HGYHFBBXX.s_3.BWA_mem.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./BWA_mem.sh 95_1_A.3 SLX-12721.iPCRtagT007.HGYHFBBXX.s_3.r_1.fq.gz SLX-12721.iPCRtagT007.HGYHFBBXX.s_3.r_2.fq.gz > SLX-12721.iPCRtagT007.HGYHFBBXX.s_3.BWA_mem.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./BWA_mem.sh 95_2_B.3 SLX-12721.iPCRtagT009.HGYHFBBXX.s_3.r_1.fq.gz SLX-12721.iPCRtagT009.HGYHFBBXX.s_3.r_2.fq.gz > SLX-12721.iPCRtagT009.HGYHFBBXX.s_3.BWA_mem.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./BWA_mem.sh 95_3_C.3 SLX-12721.iPCRtagT010.HGYHFBBXX.s_3.r_1.fq.gz SLX-12721.iPCRtagT010.HGYHFBBXX.s_3.r_2.fq.gz > SLX-12721.iPCRtagT010.HGYHFBBXX.s_3.BWA_mem.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./BWA_mem.sh 95_4_D.3 SLX-12721.iPCRtagT012.HGYHFBBXX.s_3.r_1.fq.gz SLX-12721.iPCRtagT012.HGYHFBBXX.s_3.r_2.fq.gz > SLX-12721.iPCRtagT012.HGYHFBBXX.s_3.BWA_mem.log &
 ```
@@ -240,42 +240,42 @@ nohup ./BWA_mem.sh 95_4_D.3 SLX-12721.iPCRtagT012.HGYHFBBXX.s_3.r_1.fq.gz SLX-12
 
 * **Sequencing batch 4**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./BWA_mem.sh 45_1_B.4 SLX-12721.iPCRtagT002.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT002.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT002.HGYHFBBXX.s_4.BWA_mem.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./BWA_mem.sh 45_2_C.4 SLX-12721.iPCRtagT004.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT004.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT004.HGYHFBBXX.s_4.BWA_mem.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./BWA_mem.sh 45_3_D.4 SLX-12721.iPCRtagT005.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT005.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT005.HGYHFBBXX.s_4.BWA_mem.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./BWA_mem.sh 45_4_E.4 SLX-12721.iPCRtagT006.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT006.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT006.HGYHFBBXX.s_4.BWA_mem.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./BWA_mem.sh 95_1_A.4 SLX-12721.iPCRtagT007.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT007.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT007.HGYHFBBXX.s_4.BWA_mem.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./BWA_mem.sh 95_2_B.4 SLX-12721.iPCRtagT009.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT009.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT009.HGYHFBBXX.s_4.BWA_mem.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./BWA_mem.sh 95_3_C.4 SLX-12721.iPCRtagT010.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT010.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT010.HGYHFBBXX.s_4.BWA_mem.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./BWA_mem.sh 95_4_D.4 SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_1.fq.gz SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_2.fq.gz > SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.BWA_mem.log &
 ```
@@ -299,42 +299,42 @@ Run *[Picard_SAM2BAM.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_dat
 
 * **Sequencing batch 1**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  45_1_B > 45_1_B.Picard_SAM2BAM.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  45_2_C > 45_2_C.Picard_SAM2BAM.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  45_3_D > 45_3_D.Picard_SAM2BAM.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  45_4_E > 45_4_E.Picard_SAM2BAM.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  95_1_A > 95_1_A.Picard_SAM2BAM.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  95_2_B > 95_2_B.Picard_SAM2BAM.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  95_3_C > 95_3_C.Picard_SAM2BAM.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  95_4_D > 95_4_D.Picard_SAM2BAM.log &
 ```
@@ -342,42 +342,42 @@ nohup ./Picard_SAM2BAM.sh  95_4_D > 95_4_D.Picard_SAM2BAM.log &
 
 * **Sequencing batch 2**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  45_1_B.2 > 45_1_B.2.Picard_SAM2BAM.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  45_2_C.2 > 45_2_C.2.Picard_SAM2BAM.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  45_3_D.2 > 45_3_D.2.Picard_SAM2BAM.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  45_4_E.2 > 45_4_E.2.Picard_SAM2BAM.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  95_1_A.2 > 95_1_A.2.Picard_SAM2BAM.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  95_2_B.2 > 95_2_B.2.Picard_SAM2BAM.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  95_3_C.2 > 95_3_C.2.Picard_SAM2BAM.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  95_4_D.2 > 95_4_D.2.Picard_SAM2BAM.log &
 ```
@@ -385,42 +385,42 @@ nohup ./Picard_SAM2BAM.sh  95_4_D.2 > 95_4_D.2.Picard_SAM2BAM.log &
 
 * **Sequencing batch 3**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  45_1_B.3 > 45_1_B.3.Picard_SAM2BAM.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  45_2_C.3 > 45_2_C.3.Picard_SAM2BAM.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  45_3_D.3 > 45_3_D.3.Picard_SAM2BAM.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  45_4_E.3 > 45_4_E.3.Picard_SAM2BAM.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  95_1_A.3 > 95_1_A.3.Picard_SAM2BAM.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  95_2_B.3 > 95_2_B.3.Picard_SAM2BAM.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  95_3_C.3 > 95_3_C.3.Picard_SAM2BAM.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  95_4_D.3 > 95_4_D.3.Picard_SAM2BAM.log &
 ```
@@ -428,42 +428,42 @@ nohup ./Picard_SAM2BAM.sh  95_4_D.3 > 95_4_D.3.Picard_SAM2BAM.log &
 
 * **Sequencing batch 4**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  45_1_B.4 > 45_1_B.4.Picard_SAM2BAM.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  45_2_C.4 > 45_2_C.4.Picard_SAM2BAM.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  45_3_D.4 > 45_3_D.4.Picard_SAM2BAM.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  45_4_E.4 > 45_4_E.4.Picard_SAM2BAM.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  95_1_A.4 > 95_1_A.4.Picard_SAM2BAM.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  95_2_B.4 > 95_2_B.4.Picard_SAM2BAM.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  95_3_C.4 > 95_3_C.4.Picard_SAM2BAM.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./Picard_SAM2BAM.sh  95_4_D.4 > 95_4_D.4.Picard_SAM2BAM.log &
 ```
@@ -489,42 +489,42 @@ Run *[Picard_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_da
 
 * **Sequencing batch 1**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  45_1_B > 45_1_B.Picard_markDupl.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  45_2_C > 45_2_C.Picard_markDupl.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  45_3_D > 45_3_D.Picard_markDupl.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  45_4_E > 45_4_E.Picard_markDupl.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  95_1_A > 95_1_A.Picard_markDupl.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  95_2_B > 95_2_B.Picard_markDupl.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  95_3_C > 95_3_C.Picard_markDupl.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  95_4_D > 95_4_D.Picard_markDupl.log &
 ```
@@ -532,42 +532,42 @@ nohup ./Picard_markDupl.sh  95_4_D > 95_4_D.Picard_markDupl.log &
 
 * **Sequencing batch 2**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  45_1_B.2 > 45_1_B.2.Picard_markDupl.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  45_2_C.2 > 45_2_C.2.Picard_markDupl.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  45_3_D.2 > 45_3_D.2.Picard_markDupl.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  45_4_E.2 > 45_4_E.2.Picard_markDupl.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  95_1_A.2 > 95_1_A.2.Picard_markDupl.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  95_2_B.2 > 95_2_B.2.Picard_markDupl.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  95_3_C.2 > 95_3_C.2.Picard_markDupl.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  95_4_D.2 > 95_4_D.2.Picard_markDupl.log &
 ```
@@ -575,42 +575,42 @@ nohup ./Picard_markDupl.sh  95_4_D.2 > 95_4_D.2.Picard_markDupl.log &
 
 * **Sequencing batch 3**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  45_1_B.3 > 45_1_B.3.Picard_markDupl.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  45_2_C.3 > 45_2_C.3.Picard_markDupl.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  45_3_D.3 > 45_3_D.3.Picard_markDupl.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  45_4_E.3 > 45_4_E.3.Picard_markDupl.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  95_1_A.3 > 95_1_A.3.Picard_markDupl.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  95_2_B.3 > 95_2_B.3.Picard_markDupl.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  95_3_C.3 > 95_3_C.3.Picard_markDupl.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  95_4_D.3 > 95_4_D.3.Picard_markDupl.log &
 ```
@@ -618,42 +618,42 @@ nohup ./Picard_markDupl.sh  95_4_D.3 > 95_4_D.3.Picard_markDupl.log &
 
 * **Sequencing batch 4**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  45_1_B.4 > 45_1_B.4.Picard_markDupl.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  45_2_C.4 > 45_2_C.4.Picard_markDupl.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  45_3_D.4 > 45_3_D.4.Picard_markDupl.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  45_4_E.4 > 45_4_E.4.Picard_markDupl.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  95_1_A.4 > 95_1_A.4.Picard_markDupl.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  95_2_B.4 > 95_2_B.4.Picard_markDupl.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  95_3_C.4 > 95_3_C.4.Picard_markDupl.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./Picard_markDupl.sh  95_4_D.4 > 95_4_D.4.Picard_markDupl.log &
 ```
@@ -669,56 +669,56 @@ nohup ./Picard_markDupl.sh  95_4_D.4 > 95_4_D.4.Picard_markDupl.log &
 
 * **Sequencing batch 1**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 mkdir 45_1_B.marked.bam.stats
 samtools stats 45_1_B.marked.bam > 45_1_B.marked.bam.stats/45_1_B.marked.bam.stats
 plot-bamstats -p 45_1_B.marked.bam.stats/45_1_B.marked.bam.stats.plot 45_1_B.marked.bam.stats/45_1_B.marked.bam.stats
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 mkdir 45_2_C.marked.bam.stats
 samtools stats 45_2_C.marked.bam > 45_2_C.marked.bam.stats/45_2_C.marked.bam.stats
 plot-bamstats -p 45_2_C.marked.bam.stats/45_2_C.marked.bam.stats.plot 45_2_C.marked.bam.stats/45_2_C.marked.bam.stats
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 mkdir 45_3_D.marked.bam.stats
 samtools stats 45_3_D.marked.bam > 45_3_D.marked.bam.stats/45_3_D.marked.bam.stats
 plot-bamstats -p 45_3_D.marked.bam.stats/45_3_D.marked.bam.stats.plot 45_3_D.marked.bam.stats/45_3_D.marked.bam.stats
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 mkdir 45_4_E.marked.bam.stats
 samtools stats 45_4_E.marked.bam > 45_4_E.marked.bam.stats/45_4_E.marked.bam.stats
 plot-bamstats -p 45_4_E.marked.bam.stats/45_4_E.marked.bam.stats.plot 45_4_E.marked.bam.stats/45_4_E.marked.bam.stats
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 mkdir 95_1_A.marked.bam.stats
 samtools stats 95_1_A.marked.bam > 95_1_A.marked.bam.stats/95_1_A.marked.bam.stats
 plot-bamstats -p 95_1_A.marked.bam.stats/95_1_A.marked.bam.stats.plot 95_1_A.marked.bam.stats/95_1_A.marked.bam.stats
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 mkdir 95_2_B.marked.bam.stats
 samtools stats 95_2_B.marked.bam > 95_2_B.marked.bam.stats/95_2_B.marked.bam.stats
 plot-bamstats -p 95_2_B.marked.bam.stats/95_2_B.marked.bam.stats.plot 95_2_B.marked.bam.stats/95_2_B.marked.bam.stats
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 mkdir 95_3_C.marked.bam.stats
 samtools stats 95_3_C.marked.bam > 95_3_C.marked.bam.stats/95_3_C.marked.bam.stats
 plot-bamstats -p 95_3_C.marked.bam.stats/95_3_C.marked.bam.stats.plot 95_3_C.marked.bam.stats/95_3_C.marked.bam.stats
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 mkdir 95_4_D.marked.bam.stats
 samtools stats 95_4_D.marked.bam > 95_4_D.marked.bam.stats/95_4_D.marked.bam.stats
@@ -728,56 +728,56 @@ plot-bamstats -p 95_4_D.marked.bam.stats/95_4_D.marked.bam.stats.plot 95_4_D.mar
 
 * **Sequencing batch 2**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 mkdir 45_1_B.2.marked.bam.stats
 samtools stats 45_1_B.2.marked.bam > 45_1_B.2.marked.bam.stats/45_1_B.2.marked.bam.stats
 plot-bamstats -p 45_1_B.2.marked.bam.stats/45_1_B.2.marked.bam.stats.plot 45_1_B.2.marked.bam.stats/45_1_B.2.marked.bam.stats
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 mkdir 45_2_C.2.marked.bam.stats
 samtools stats 45_2_C.2.marked.bam > 45_2_C.2.marked.bam.stats/45_2_C.2.marked.bam.stats
 plot-bamstats -p 45_2_C.2.marked.bam.stats/45_2_C.2.marked.bam.stats.plot 45_2_C.2.marked.bam.stats/45_2_C.2.marked.bam.stats
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 mkdir 45_3_D.2.marked.bam.stats
 samtools stats 45_3_D.2.marked.bam > 45_3_D.2.marked.bam.stats/45_3_D.2.marked.bam.stats
 plot-bamstats -p 45_3_D.2.marked.bam.stats/45_3_D.2.marked.bam.stats.plot 45_3_D.2.marked.bam.stats/45_3_D.2.marked.bam.stats
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 mkdir 45_4_E.2.marked.bam.stats
 samtools stats 45_4_E.2.marked.bam > 45_4_E.2.marked.bam.stats/45_4_E.2.marked.bam.stats
 plot-bamstats -p 45_4_E.2.marked.bam.stats/45_4_E.2.marked.bam.stats.plot 45_4_E.2.marked.bam.stats/45_4_E.2.marked.bam.stats
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 mkdir 95_1_A.2.marked.bam.stats
 samtools stats 95_1_A.2.marked.bam > 95_1_A.2.marked.bam.stats/95_1_A.2.marked.bam.stats
 plot-bamstats -p 95_1_A.2.marked.bam.stats/95_1_A.2.marked.bam.stats.plot 95_1_A.2.marked.bam.stats/95_1_A.2.marked.bam.stats
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 mkdir 95_2_B.2.marked.bam.stats
 samtools stats 95_2_B.2.marked.bam > 95_2_B.2.marked.bam.stats/95_2_B.2.marked.bam.stats
 plot-bamstats -p 95_2_B.2.marked.bam.stats/95_2_B.2.marked.bam.stats.plot 95_2_B.2.marked.bam.stats/95_2_B.2.marked.bam.stats
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 mkdir 95_3_C.2.marked.bam.stats
 samtools stats 95_3_C.2.marked.bam > 95_3_C.2.marked.bam.stats/95_3_C.2.marked.bam.stats
 plot-bamstats -p 95_3_C.2.marked.bam.stats/95_3_C.2.marked.bam.stats.plot 95_3_C.2.marked.bam.stats/95_3_C.2.marked.bam.stats
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 mkdir 95_4_D.2.marked.bam.stats
 samtools stats 95_4_D.2.marked.bam > 95_4_D.2.marked.bam.stats/95_4_D.2.marked.bam.stats
@@ -787,55 +787,55 @@ plot-bamstats -p 95_4_D.2.marked.bam.stats/95_4_D.2.marked.bam.stats.plot 95_4_D
 
 * **Sequencing batch 3**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 mkdir 45_1_B.3.marked.bam.stats
 samtools stats 45_1_B.3.marked.bam > 45_1_B.3.marked.bam.stats/45_1_B.3.marked.bam.stats
 plot-bamstats -p 45_1_B.3.marked.bam.stats/45_1_B.3.marked.bam.stats.plot 45_1_B.3.marked.bam.stats/45_1_B.3.marked.bam.stats
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 mkdir 45_2_C.3.marked.bam.stats
 samtools stats 45_2_C.3.marked.bam > 45_2_C.3.marked.bam.stats/45_2_C.3.marked.bam.stats
 plot-bamstats -p 45_2_C.3.marked.bam.stats/45_2_C.3.marked.bam.stats.plot 45_2_C.3.marked.bam.stats/45_2_C.3.marked.bam.stats
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 mkdir 45_3_D.3.marked.bam.stats
 samtools stats 45_3_D.3.marked.bam > 45_3_D.3.marked.bam.stats/45_3_D.3.marked.bam.stats
 plot-bamstats -p 45_3_D.3.marked.bam.stats/45_3_D.3.marked.bam.stats.plot 45_3_D.3.marked.bam.stats/45_3_D.3.marked.bam.stats
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 mkdir 45_4_E.3.marked.bam.stats
 samtools stats 45_4_E.3.marked.bam > 45_4_E.3.marked.bam.stats/45_4_E.3.marked.bam.stats
 plot-bamstats -p 45_4_E.3.marked.bam.stats/45_4_E.3.marked.bam.stats.plot 45_4_E.3.marked.bam.stats/45_4_E.3.marked.bam.stats
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```mkdir 95_1_A.3.marked.bam.stats
 samtools stats 95_1_A.3.marked.bam > 95_1_A.3.marked.bam.stats/95_1_A.3.marked.bam.stats
 plot-bamstats -p 95_1_A.3.marked.bam.stats/95_1_A.3.marked.bam.stats.plot 95_1_A.3.marked.bam.stats/95_1_A.3.marked.bam.stats
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 mkdir 95_2_B.3.marked.bam.stats
 samtools stats 95_2_B.3.marked.bam > 95_2_B.3.marked.bam.stats/95_2_B.3.marked.bam.stats
 plot-bamstats -p 95_2_B.3.marked.bam.stats/95_2_B.3.marked.bam.stats.plot 95_2_B.3.marked.bam.stats/95_2_B.3.marked.bam.stats
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 mkdir 95_3_C.3.marked.bam.stats
 samtools stats 95_3_C.3.marked.bam > 95_3_C.3.marked.bam.stats/95_3_C.3.marked.bam.stats
 plot-bamstats -p 95_3_C.3.marked.bam.stats/95_3_C.3.marked.bam.stats.plot 95_3_C.3.marked.bam.stats/95_3_C.3.marked.bam.stats
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 mkdir 95_4_D.3.marked.bam.stats
 samtools stats 95_4_D.3.marked.bam > 95_4_D.3.marked.bam.stats/95_4_D.3.marked.bam.stats
@@ -845,56 +845,56 @@ plot-bamstats -p 95_4_D.3.marked.bam.stats/95_4_D.3.marked.bam.stats.plot 95_4_D
 
 * **Sequencing batch 4**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 mkdir 45_1_B.4.marked.bam.stats
 samtools stats 45_1_B.4.marked.bam > 45_1_B.4.marked.bam.stats/45_1_B.4.marked.bam.stats
 plot-bamstats -p 45_1_B.4.marked.bam.stats/45_1_B.4.marked.bam.stats.plot 45_1_B.4.marked.bam.stats/45_1_B.4.marked.bam.stats
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 mkdir 45_2_C.4.marked.bam.stats
 samtools stats 45_2_C.4.marked.bam > 45_2_C.4.marked.bam.stats/45_2_C.4.marked.bam.stats
 plot-bamstats -p 45_2_C.4.marked.bam.stats/45_2_C.4.marked.bam.stats.plot 45_2_C.4.marked.bam.stats/45_2_C.4.marked.bam.stats
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 mkdir 45_3_D.4.marked.bam.stats
 samtools stats 45_3_D.4.marked.bam > 45_3_D.4.marked.bam.stats/45_3_D.4.marked.bam.stats
 plot-bamstats -p 45_3_D.4.marked.bam.stats/45_3_D.4.marked.bam.stats.plot 45_3_D.4.marked.bam.stats/45_3_D.4.marked.bam.stats
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 mkdir 45_4_E.4.marked.bam.stats
 samtools stats 45_4_E.4.marked.bam > 45_4_E.4.marked.bam.stats/45_4_E.4.marked.bam.stats
 plot-bamstats -p 45_4_E.4.marked.bam.stats/45_4_E.4.marked.bam.stats.plot 45_4_E.4.marked.bam.stats/45_4_E.4.marked.bam.stats
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 mkdir 95_1_A.4.marked.bam.stats
 samtools stats 95_1_A.4.marked.bam > 95_1_A.4.marked.bam.stats/95_1_A.4.marked.bam.stats
 plot-bamstats -p 95_1_A.4.marked.bam.stats/95_1_A.4.marked.bam.stats.plot 95_1_A.4.marked.bam.stats/95_1_A.4.marked.bam.stats
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 mkdir 95_2_B.4.marked.bam.stats
 samtools stats 95_2_B.4.marked.bam > 95_2_B.4.marked.bam.stats/95_2_B.4.marked.bam.stats
 plot-bamstats -p 95_2_B.4.marked.bam.stats/95_2_B.4.marked.bam.stats.plot 95_2_B.4.marked.bam.stats/95_2_B.4.marked.bam.stats
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 mkdir 95_3_C.4.marked.bam.stats
 samtools stats 95_3_C.4.marked.bam > 95_3_C.4.marked.bam.stats/95_3_C.4.marked.bam.stats
 plot-bamstats -p 95_3_C.4.marked.bam.stats/95_3_C.4.marked.bam.stats.plot 95_3_C.4.marked.bam.stats/95_3_C.4.marked.bam.stats
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 mkdir 95_4_D.4.marked.bam.stats
 samtools stats 95_4_D.4.marked.bam > 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats
@@ -937,42 +937,42 @@ Run *[GATK_coverage.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data
 
 * **Sequencing batch 1**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./GATK_coverage.sh  45_1_B > 45_1_B.GATK_coverage.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./GATK_coverage.sh  45_2_C > 45_2_C.GATK_coverage.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./GATK_coverage.sh  45_3_D > 45_3_D.GATK_coverage.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./GATK_coverage.sh  45_4_E > 45_4_E.GATK_coverage.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./GATK_coverage.sh  95_1_A > 95_1_A.GATK_coverage.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./GATK_coverage.sh  95_2_B > 95_2_B.GATK_coverage.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./GATK_coverage.sh  95_3_C > 95_3_C.GATK_coverage.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./GATK_coverage.sh  95_4_D > 95_4_D.GATK_coverage.log &
 ```
@@ -980,42 +980,42 @@ nohup ./GATK_coverage.sh  95_4_D > 95_4_D.GATK_coverage.log &
 
 * **Sequencing batch 2**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./GATK_coverage.sh  45_1_B.2 > 45_1_B.2.GATK_coverage.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./GATK_coverage.sh  45_2_C.2 > 45_2_C.2.GATK_coverage.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./GATK_coverage.sh  45_3_D.2 > 45_3_D.2.GATK_coverage.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./GATK_coverage.sh  45_4_E.2 > 45_4_E.2.GATK_coverage.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./GATK_coverage.sh  95_1_A.2 > 95_1_A.2.GATK_coverage.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./GATK_coverage.sh  95_2_B.2 > 95_2_B.2.GATK_coverage.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./GATK_coverage.sh  95_3_C.2 > 95_3_C.2.GATK_coverage.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./GATK_coverage.sh  95_4_D.2 > 95_4_D.2.GATK_coverage.log &
 ```
@@ -1023,42 +1023,42 @@ nohup ./GATK_coverage.sh  95_4_D.2 > 95_4_D.2.GATK_coverage.log &
 
 * **Sequencing batch 3**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./GATK_coverage.sh  45_1_B.3 > 45_1_B.3.GATK_coverage.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./GATK_coverage.sh  45_2_C.3 > 45_2_C.3.GATK_coverage.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./GATK_coverage.sh  45_3_D.3 > 45_3_D.3.GATK_coverage.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./GATK_coverage.sh  45_4_E.3 > 45_4_E.3.GATK_coverage.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./GATK_coverage.sh  95_1_A.3 > 95_1_A.3.GATK_coverage.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./GATK_coverage.sh  95_2_B.3 > 95_2_B.3.GATK_coverage.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./GATK_coverage.sh  95_3_C.3 > 95_3_C.3.GATK_coverage.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./GATK_coverage.sh  95_4_D.3 > 95_4_D.3.GATK_coverage.log &
 ```
@@ -1066,42 +1066,42 @@ nohup ./GATK_coverage.sh  95_4_D.3 > 95_4_D.3.GATK_coverage.log &
 
 * **Sequencing batch 4**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./GATK_coverage.sh  45_1_B.4 > 45_1_B.4.GATK_coverage.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./GATK_coverage.sh  45_2_C.4 > 45_2_C.4.GATK_coverage.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./GATK_coverage.sh  45_3_D.4 > 45_3_D.4.GATK_coverage.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./GATK_coverage.sh  45_4_E.4 > 45_4_E.4.GATK_coverage.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./GATK_coverage.sh  95_1_A.4 > 95_1_A.4.GATK_coverage.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./GATK_coverage.sh  95_2_B.4 > 95_2_B.4.GATK_coverage.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./GATK_coverage.sh  95_3_C.4 > 95_3_C.4.GATK_coverage.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./GATK_coverage.sh  95_4_D.4 > 95_4_D.4.GATK_coverage.log &
 ```
@@ -1140,42 +1140,42 @@ Run *[Picard_merge_4BAMs_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw
 
 * **Sequencing batch 1**
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./Picard_merge_4BAMs_markDupl.sh  45_1_B  45_1_B.recalib.bam  45_1_B.2.recalib.bam  45_1_B.3.recalib.bam  45_1_B.4.recalib.bam  >  45_1_B.Picard_merge_4BAMs_markDupl.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./Picard_merge_4BAMs_markDupl.sh  45_2_C  45_2_C.recalib.bam  45_2_C.2.recalib.bam  45_2_C.3.recalib.bam  45_2_C.4.recalib.bam  >  45_2_C.Picard_merge_4BAMs_markDupl.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./Picard_merge_4BAMs_markDupl.sh  45_3_D  45_3_D.recalib.bam  45_3_D.2.recalib.bam  45_3_D.3.recalib.bam  45_3_D.4.recalib.bam  >  45_3_D.Picard_merge_4BAMs_markDupl.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./Picard_merge_4BAMs_markDupl.sh  45_4_E  45_4_E.recalib.bam  45_4_E.2.recalib.bam  45_4_E.3.recalib.bam  45_4_E.4.recalib.bam  >  45_4_E.Picard_merge_4BAMs_markDupl.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./Picard_merge_4BAMs_markDupl.sh  95_1_A  95_1_A.recalib.bam  95_1_A.2.recalib.bam  95_1_A.3.recalib.bam  95_1_A.4.recalib.bam  >  95_1_A.Picard_merge_4BAMs_markDupl.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./Picard_merge_4BAMs_markDupl.sh  95_2_B  95_2_B.recalib.bam  95_2_B.2.recalib.bam  95_2_B.3.recalib.bam  95_2_B.4.recalib.bam  >  95_2_B.Picard_merge_4BAMs_markDupl.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./Picard_merge_4BAMs_markDupl.sh  95_3_C  95_3_C.recalib.bam  95_3_C.2.recalib.bam  95_3_C.3.recalib.bam  95_3_C.4.recalib.bam  >  95_3_C.Picard_merge_4BAMs_markDupl.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./Picard_merge_4BAMs_markDupl.sh  95_4_D  95_4_D.recalib.bam  95_4_D.2.recalib.bam  95_4_D.3.recalib.bam  95_4_D.4.recalib.bam  >  95_4_D.Picard_merge_4BAMs_markDupl.log &
 ```
@@ -1217,42 +1217,42 @@ CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM fi
 
 Run *[Picard_GATK_localAlign_indels.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Picard_GATK_localAlign_indels.sh)* script for each sample
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./Picard_GATK_localAlign_indels.sh  45_1_B.merged > 45_1_B.merged.Picard_GATK_localAlign_indels.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./Picard_GATK_localAlign_indels.sh  45_2_C.merged > 45_2_C.merged.Picard_GATK_localAlign_indels.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./Picard_GATK_localAlign_indels.sh  45_3_D.merged > 45_3_D.merged.Picard_GATK_localAlign_indels.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./Picard_GATK_localAlign_indels.sh  45_4_E.merged > 45_4_E.merged.Picard_GATK_localAlign_indels.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./Picard_GATK_localAlign_indels.sh  95_1_A.merged > 95_1_A.merged.Picard_GATK_localAlign_indels.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./Picard_GATK_localAlign_indels.sh  95_2_B.merged > 95_2_B.merged.Picard_GATK_localAlign_indels.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./Picard_GATK_localAlign_indels.sh  95_3_C.merged > 95_3_C.merged.Picard_GATK_localAlign_indels.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./Picard_GATK_localAlign_indels.sh  95_4_D.merged > 95_4_D.merged.Picard_GATK_localAlign_indels.log &
 ```
@@ -1277,42 +1277,42 @@ Variant calling algorithms rely heavily on the quality scores assigned to the in
 
 Run *[GATK_baseQrecalib.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/GATK_baseQrecalib.sh)* script for each sample
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 nohup ./GATK_baseQrecalib.sh  45_1_B.merged > 45_1_B.merged.GATK_baseQrecalib.log &
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 nohup ./GATK_baseQrecalib.sh  45_2_C.merged > 45_2_C.merged.GATK_baseQrecalib.log &
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 nohup ./GATK_baseQrecalib.sh  45_3_D.merged > 45_3_D.merged.GATK_baseQrecalib.log &
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 nohup ./GATK_baseQrecalib.sh  45_4_E.merged > 45_4_E.merged.GATK_baseQrecalib.log &
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 nohup ./GATK_baseQrecalib.sh  95_1_A.merged > 95_1_A.merged.GATK_baseQrecalib.log &
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 nohup ./GATK_baseQrecalib.sh  95_2_B.merged > 95_2_B.merged.GATK_baseQrecalib.log &
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 nohup ./GATK_baseQrecalib.sh  95_3_C.merged > 95_3_C.merged.GATK_baseQrecalib.log &
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 nohup ./GATK_baseQrecalib.sh  95_4_D.merged > 95_4_D.merged.GATK_baseQrecalib.log &
 ```
@@ -1337,67 +1337,67 @@ rm [sample_name].merged.marked.realigned.fixed.bai
 **Tool**: *SAMtools*<br>
 **Algorithm**: *flagstat*
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 samtools flagstat 45_1_B.merged.recalib.bam > 45_1_B.merged.recalib.flagstat.txt
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 samtools flagstat 45_2_C.merged.recalib.bam > 45_2_C.merged.recalib.flagstat.txt
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 samtools flagstat 45_3_D.merged.recalib.bam > 45_3_D.merged.recalib.flagstat.txt
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 samtools flagstat 45_4_E.merged.recalib.bam > 45_4_E.merged.recalib.flagstat.txt
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 samtools flagstat 95_1_A.merged.recalib.bam > 95_1_A.merged.recalib.flagstat.txt
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 samtools flagstat 95_2_B.merged.recalib.bam > 95_2_B.merged.recalib.flagstat.txt
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 samtools flagstat 95_3_C.merged.recalib.bam > 95_3_C.merged.recalib.flagstat.txt
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 samtools flagstat 95_4_D.merged.recalib.bam > 95_4_D.merged.recalib.flagstat.txt
 ```
 
 ----------------------
 
-Sample 45 (normal)
+Sample 45 (normal DNA)
 ```
 cd /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001A01
 samtools flagstat B01P0045_BBC03_normal.bam > B01P0045_BBC03_normal.flagstat.txt
 ```
 
-Sample 45 (tumour)
+Sample 45 (tumour DNA)
 ```
 cd /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001B01
 samtools flagstat B01P0095_ABC03_normal.bam > B01P0095_ABC03_normal.flagstat.txt
 ```
 
-Sample 95 (normal)
+Sample 95 (normal DNA)
 ```
 cd /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001C01
 samtools flagstat B01P0045BAA07_tumour.bam > B01P0045BAA07_tumour.flagstat.txt
 ```
 
-Sample 95 (tumour)
+Sample 95 (tumour DNA)
 ```
 cd /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001D01
 samtools flagstat B01P0095AAA03_tumour.bam > B01P0095AAA03_tumour.flagstat.txt
@@ -1410,42 +1410,42 @@ samtools flagstat B01P0095AAA03_tumour.bam > B01P0095AAA03_tumour.flagstat.txt
 **Tool**: *SAMtools*<br>
 **Algorithm**: *index*
 
-Sample 45_1_B
+Sample 45_1_B (ctDNA)
 ```
 samtools index 45_1_B.merged.recalib.bam
 ```
 
-Sample 45_2_C
+Sample 45_2_C (ctDNA)
 ```
 samtools index 45_2_C.merged.recalib.bam
 ```
 
-Sample 45_3_D
+Sample 45_3_D (ctDNA)
 ```
 samtools index 45_3_D.merged.recalib.bam
 ```
 
-Sample 45_4_E
+Sample 45_4_E (ctDNA)
 ```
 samtools index 45_4_E.merged.recalib.bam
 ```
 
-Sample 95_1_A
+Sample 95_1_A (ctDNA)
 ```
 samtools index 95_1_A.merged.recalib.bam
 ```
 
-Sample 95_2_B
+Sample 95_2_B (ctDNA)
 ```
 samtools index 95_2_B.merged.recalib.bam
 ```
 
-Sample 95_3_C
+Sample 95_3_C (ctDNA)
 ```
 samtools index 95_3_C.merged.recalib.bam
 ```
 
-Sample 95_4_D
+Sample 95_4_D (ctDNA)
 ```
 samtools index 95_4_D.merged.recalib.bam
 ```
