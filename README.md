@@ -101,7 +101,7 @@ Paramter | Value | Description
 ------------ | ------------ | ------------
 -M | N/A | Mark shorter split hits as secondary (for Picard compatibility)
 -t | 4 | Number of threads
--R | @RG:[samplename\] LB:[samplename\] SM:\[samplename\] PL:Illumina | Complete read group header line
+-R | @RG:[sample_name\] LB:[sample_name\] SM:\[sample_name\] PL:Illumina | Complete read group header line
 <br />
 
 Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/BWA_mem.sh)* script for each sample
@@ -477,7 +477,7 @@ Duplicates can arise during sample preparation e.g. library construction using P
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
-METRICS_FILE | \[samplename\]\.DuplicationMetrics\.txt | File to write duplication metrics to
+METRICS_FILE | \[sample_name\]\.DuplicationMetrics\.txt | File to write duplication metrics to
 VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
 <br />
@@ -1128,7 +1128,7 @@ According to Broad Institute recommendation for [pre-processing data from multip
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
-METRICS_FILE | \[samplename\]\.merged\.DuplicationMetrics\.txt | File to write duplication metrics to
+METRICS_FILE | \[sample_name\]\.merged\.DuplicationMetrics\.txt | File to write duplication metrics to
 VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
 <br />
@@ -1182,7 +1182,7 @@ nohup ./Picard_merge_4BAMs_markDupl.sh  95_4_D  95_4_D.recalib.bam  95_4_D.2.rec
 ## 7. Local alignment around indels
 
 The local realignment process is designed to locally realign reads such that the number of mismatching bases is minimized across all the reads. In general, a large percent of regions requiring local realignment are due to the presence of an insertion or deletion (indels) in the individual's genome with respect to the reference genome. Such alignment artifacts result in many bases mismatching the reference near the misalignment, which are easily mistaken as SNPs. Moreover, since read mapping algorithms operate on each read independently, it is impossible to place reads on the reference genome such at mismatches are minimized across all reads. Consequently, even when some reads are correctly mapped with indels, reads covering the indel near just the start or end of the read are often incorrectly mapped with respect the true indel, also requiring realignment. Local realignment serves to transform regions with misalignments due to indels into clean reads containing a consensus indel suitable for standard variant discovery approaches.<br><br>
-**NOTE**: Local realignment is not necessary for variant callers that perform a haplotype assembly step, such as HaplotypeCaller or MuTect2. We perfrom this step since we adapted the [*mpileup*](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#11-variant-calling) approach for calling variants.
+**NOTE**: Local realignment is not necessary for variant callers that perform a haplotype assembly step, such as HaplotypeCaller or MuTect2. We perfrom this step since we adapted the [*pileup approach*](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#11-variant-calling) for calling variants.
 <br>
 
 #### 7.1 Create the reference fasta sequence dictionary file
@@ -1423,7 +1423,7 @@ samtools index 95_4_D.merged.recalib.bam
 ----------------------
 ## 11. Variant calling
 
-Since we expect little tumour content in the plasma DNA variant detection algorithms like *Mutect2*, which rely on statistical models, are not "sensitive" enough. For that reason, we adopted a *pileup* approach based on reporting any variants, compared to reference genome, across all samples followed by relevant filtering (see paper by Murtaza M et al, 2013, [Non-invasive analysis of acquired resistance to cancer therapy by sequencing of plasma DNA](https://www.ncbi.nlm.nih.gov/pubmed/23563269)).
+Since we expect little tumour content in the plasma DNA variant detection algorithms like *Mutect2*, which rely on statistical models, are not "sensitive" enough. For that reason, we adopted a *pileup* approach based on reporting any variants, compared to reference genome, across all samples followed by relevant filtering (see paper by Murtaza M *et al.*, 2013, [Non-invasive analysis of acquired resistance to cancer therapy by sequencing of plasma DNA](https://www.ncbi.nlm.nih.gov/pubmed/23563269)).
 
 **Tool**: *SAMtools*<br>
 **Algorithm**: *mpileup*
