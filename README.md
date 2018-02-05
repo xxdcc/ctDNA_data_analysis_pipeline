@@ -10,7 +10,7 @@ The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computi
 
 * **tissue WGS** data is located in the following directory:<br>
 
-    */data/BCI-BioInformatics/PC_ctDNA/WGS_data/**X16018***
+    */data/BCI-BioInformatics/PC_ctDNA/**WGS_data/X16018***
 <br>
 
 * The pipeline containts the following steps:
