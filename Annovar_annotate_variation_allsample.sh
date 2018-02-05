@@ -23,6 +23,6 @@ avinput=$samplename\.avinput
 echo "####MESS Convert VCF into ANNOVAR format"
 $ANNOVARDIR/convert2annovar.pl -format vcf4 -allsample -withfreq $samplename -outfile $avinput -includeinfo -comment
 echo "####MESS Step 7: functional annotation of genetic variants"
-$ANNOVARDIR/annotate_variation.pl -geneanno $avinput $ANNOVARDBDIR --buildver hg38
+$ANNOVARDIR/annotate_variation.pl --geneanno $avinput $ANNOVARDBDIR --buildver hg38
 
 date
