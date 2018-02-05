@@ -26,8 +26,9 @@ Step | Data | Analysis | Tools | Algorithms
 7 | WES | [Local alignment around indels](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#7-local-alignment-around-indels) | *[GATK](https://software.broadinstitute.org/gatk/)* <br> *[Picard](https://broadinstitute.github.io/picard/)*  | *RealignerTargetCreator* <br> *IndelRealigner* <br> *FixMateInformation*
 8 | WES | [Base quality score recalibration](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#8-base-quality-score-recalibration) | *[GATK](https://software.broadinstitute.org/gatk/)* | *BaseRecalibrator* <br> *PrintReads*
 9 | WES <br> WGS | [Check merged and recalibrated BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#9-check-merged-and-recalibrated-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *flagstat*
-10 | WES | [Index BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#11-index-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *index*
-11 | WES <br> WGS | [Variant calling](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#12-variant-calling) | *[SAMtools](http://samtools.sourceforge.net/)* <br> *[VarScan](http://varscan.sourceforge.net/)* | *mpileup* <br> *mpileup2cns*
+10 | WES | [Index BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#10-index-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *index*
+11 | WES <br> WGS | [Variant calling](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#11-variant-calling) | *[SAMtools](http://samtools.sourceforge.net/)* <br> *[VarScan](http://varscan.sourceforge.net/)* | *mpileup* <br> *mpileup2cns*
+12 | WES <br> WGS | [Variants functional annotation](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#12-variants-functional-annotation) | *[ANNOVAR](http://annovar.openbioinformatics.org/en/latest/)* | *convert2annovar.pl* <br> *annotate_variation.pl*
 
 <br />
 
@@ -1529,4 +1530,42 @@ nohup ./Varscan_pileup2cns_6samples.sh P_45 /data/BCI-BioInformatics/PC_ctDNA/WG
 Patient 95
 ```
 nohup ./Varscan_pileup2cns_6samples.sh P_95  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001B01/B01P0095_ABC03_normal.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001D01/B01P0095AAA03_tumour.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_1_A.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_2_B.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_3_C.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_4_D.merged.recalib.bam  > P_95.Varscan_pileup2cns_6samples.log &
+```
+
+----------------------
+## 12. Variants functional annotation
+
+**Tool**: *ANNOVAR*<br>
+**Algorithm**: *convert2annovar.pl*
+
+Paramter | Value | Description
+------------ | ------------ | ------------
+-format | vcf4 | Convert VCF files to ANNOVAR input format
+-allsample  | N/A | Add all samples into the output file
+-withfreq | N/A | Report the allele frequency of each SNP in the VCF file, based on all samples within the file (the output will contain all loci from the input file)
+-includeinfo | N/A | Include all genotype records for all samples in the output file
+-comment | N/A | Add VCF header information
+<br />
+
+**Tool**: *ANNOVAR*<br>
+**Algorithm**: *annotate_variation.pl*
+
+Paramter | Value | Description
+------------ | ------------ | ------------
+--geneanno  | N/A | Gene-based annotation
+--buildver | hg38 | Genome build number
+<br />
+
+Run *[Annovar_annotate_variation_allsample.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Annovar_annotate_variation_allsample.sh)* script to annotate detected variants
+
+Patient 45
+```
+cd /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018
+nohup ./Annovar_annotate_variation_allsample.sh  P_45.cns > P_45.Annovar_allsample.log &
+```
+
+Patient 95
+```
+cd /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018
+nohup ./Annovar_annotate_variation_allsample.sh  P_95.cns > P_95.Annovar_allsample.log &
 ```
