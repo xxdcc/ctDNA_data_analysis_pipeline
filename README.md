@@ -15,19 +15,19 @@ The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computi
 
 * The pipeline containts the following steps:
 
-Step | Analysis | Tools | Algorithms
------------- | ------------ | ------------ | ------------
-1 | [Alignment](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#1-alignment) | *[Burrows-Wheeler Alignmer](http://bio-bwa.sourceforge.net/)* (*BWA*) | *mem*
-2 | [Sort and convert SAM to BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#2-sort-and-convert-sam-to-bam-files) | *[Picard](https://broadinstitute.github.io/picard/)* | *SortSam*
-3 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#3-mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
-4 | [Collect statistics for BAM file](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#4-collect-statistics-for-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *stats*
-5 | [Calculate coverage (after marking PCR duplicates)](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#5-calculate-coverage) | *[Genome Analysis Toolkit](https://software.broadinstitute.org/gatk/)* (GATK) | *DepthOfCoverage*
-6 | [Merge BAM files per sample](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#6-merge-bam-files-per-sample) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
-7 | [Local alignment around indels](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#7-local-alignment-around-indels) | *[GATK](https://software.broadinstitute.org/gatk/)* <br> *[Picard](https://broadinstitute.github.io/picard/)*  | *RealignerTargetCreator* <br> *IndelRealigner* <br> *FixMateInformation*
-8 | [Base quality score recalibration](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#8-base-quality-score-recalibration) | *[GATK](https://software.broadinstitute.org/gatk/)* | *BaseRecalibrator* <br> *PrintReads*
-9 | [Check merged and recalibrated BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#9-check-merged-and-recalibrated-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *flagstat*
-10 | [Index BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#10-index-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *index*
-11 | [Variant calling](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#11-variant-calling) | *[SAMtools](http://samtools.sourceforge.net/)* <br> *[VarScan](http://varscan.sourceforge.net/)* | *mpileup* <br> *mpileup2cns*
+Step | Data | Analysis | Tools | Algorithms
+------------ | ------------ | ------------ | ------------ | ------------
+1 | WES | [Alignment](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#1-alignment) | *[Burrows-Wheeler Alignmer](http://bio-bwa.sourceforge.net/)* (*BWA*) | *mem*
+2 | WES | [Sort and convert SAM to BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#2-sort-and-convert-sam-to-bam-files) | *[Picard](https://broadinstitute.github.io/picard/)* | *SortSam*
+3 | WES | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#3-mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
+4 | WES | [Collect statistics for BAM file](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#4-collect-statistics-for-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *stats*
+5 | WES | [Calculate coverage (after marking PCR duplicates)](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#5-calculate-coverage) | *[Genome Analysis Toolkit](https://software.broadinstitute.org/gatk/)* (GATK) | *DepthOfCoverage*
+6 | WES | [Merge BAM files per sample](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#6-merge-bam-files-per-sample) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
+7 | WES | [Local alignment around indels](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#7-local-alignment-around-indels) | *[GATK](https://software.broadinstitute.org/gatk/)* <br> *[Picard](https://broadinstitute.github.io/picard/)*  | *RealignerTargetCreator* <br> *IndelRealigner* <br> *FixMateInformation*
+8 | WES | [Base quality score recalibration](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#8-base-quality-score-recalibration) | *[GATK](https://software.broadinstitute.org/gatk/)* | *BaseRecalibrator* <br> *PrintReads*
+9 | WES | [Check merged and recalibrated BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#9-check-merged-and-recalibrated-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *flagstat*
+10 | WES | [Index BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#10-index-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *index*
+11 | WES <br> WGS | [Variant calling](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#11-variant-calling) | *[SAMtools](http://samtools.sourceforge.net/)* <br> *[VarScan](http://varscan.sourceforge.net/)* | *mpileup* <br> *mpileup2cns*
 
 <br />
 
