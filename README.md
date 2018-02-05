@@ -25,8 +25,8 @@ Step | Data | Analysis | Tools | Algorithms
 6 | WES | [Merge BAM files per sample](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#6-merge-bam-files-per-sample) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
 7 | WES | [Local alignment around indels](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#7-local-alignment-around-indels) | *[GATK](https://software.broadinstitute.org/gatk/)* <br> *[Picard](https://broadinstitute.github.io/picard/)*  | *RealignerTargetCreator* <br> *IndelRealigner* <br> *FixMateInformation*
 8 | WES | [Base quality score recalibration](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#8-base-quality-score-recalibration) | *[GATK](https://software.broadinstitute.org/gatk/)* | *BaseRecalibrator* <br> *PrintReads*
-9 | WES <br> WGS | [Check merged and recalibrated BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#9-check-merged-and-recalibrated-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *flagstat*
-10 | WES | [Index BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#10-index-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *index*
+9 | WES | [Index BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#9-index-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *index*
+10 | WES <br> WGS | [Check merged and recalibrated BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#10-check-merged-and-recalibrated-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *flagstat*
 11 | WES <br> WGS | [Variant calling](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#11-variant-calling) | *[SAMtools](http://samtools.sourceforge.net/)* <br> *[VarScan](http://varscan.sourceforge.net/)* | *mpileup* <br> *mpileup2cns*
 12 | WES <br> WGS | [Variants functional annotation](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#12-variants-functional-annotation) | *[ANNOVAR](http://annovar.openbioinformatics.org/en/latest/)* | *convert2annovar.pl* <br> *annotate_variation.pl*
 
@@ -1369,7 +1369,53 @@ rm [sample_name].merged.marked.realigned.fixed.bai
 ```
 
 ----------------------
-## 9. Check merged and recalibrated BAM files
+## 9. Index BAM files
+
+**Tool**: *SAMtools*<br>
+**Algorithm**: *index*
+
+Sample 45_1_B (plasma DNA)
+```
+samtools index 45_1_B.merged.recalib.bam
+```
+
+Sample 45_2_C (plasma DNA)
+```
+samtools index 45_2_C.merged.recalib.bam
+```
+
+Sample 45_3_D (plasma DNA)
+```
+samtools index 45_3_D.merged.recalib.bam
+```
+
+Sample 45_4_E (plasma DNA)
+```
+samtools index 45_4_E.merged.recalib.bam
+```
+
+Sample 95_1_A (plasma DNA)
+```
+samtools index 95_1_A.merged.recalib.bam
+```
+
+Sample 95_2_B (plasma DNA)
+```
+samtools index 95_2_B.merged.recalib.bam
+```
+
+Sample 95_3_C (plasma DNA)
+```
+samtools index 95_3_C.merged.recalib.bam
+```
+
+Sample 95_4_D (plasma DNA)
+```
+samtools index 95_4_D.merged.recalib.bam
+```
+
+----------------------
+## 10. Check merged and recalibrated BAM files
 
 **Tool**: *SAMtools*<br>
 **Algorithm**: *flagstat*
@@ -1438,53 +1484,6 @@ Sample 95 (tumour DNA)
 ```
 cd /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001D01
 samtools flagstat B01P0095AAA03_tumour.bam > B01P0095AAA03_tumour.flagstat.txt
-```
-
-
-----------------------
-## 10. Index BAM files
-
-**Tool**: *SAMtools*<br>
-**Algorithm**: *index*
-
-Sample 45_1_B (plasma DNA)
-```
-samtools index 45_1_B.merged.recalib.bam
-```
-
-Sample 45_2_C (plasma DNA)
-```
-samtools index 45_2_C.merged.recalib.bam
-```
-
-Sample 45_3_D (plasma DNA)
-```
-samtools index 45_3_D.merged.recalib.bam
-```
-
-Sample 45_4_E (plasma DNA)
-```
-samtools index 45_4_E.merged.recalib.bam
-```
-
-Sample 95_1_A (plasma DNA)
-```
-samtools index 95_1_A.merged.recalib.bam
-```
-
-Sample 95_2_B (plasma DNA)
-```
-samtools index 95_2_B.merged.recalib.bam
-```
-
-Sample 95_3_C (plasma DNA)
-```
-samtools index 95_3_C.merged.recalib.bam
-```
-
-Sample 95_4_D (plasma DNA)
-```
-samtools index 95_4_D.merged.recalib.bam
 ```
 
 ----------------------
