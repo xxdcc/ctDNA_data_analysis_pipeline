@@ -40,6 +40,7 @@ Step | Data | Analysis | Tools | Algorithms
 - *[Picard](https://broadinstitute.github.io/picard/)*
 - *[Genome Analysis Toolkit](https://software.broadinstitute.org/gatk/)* (GATK)
 - *[VarScan](http://varscan.sourceforge.net/)*
+- *[ANNOVAR](http://annovar.openbioinformatics.org/en/latest/)*
 <br>
 
 ```
@@ -68,6 +69,8 @@ Download *Picard* from [here](https://github.com/broadinstitute/picard/zipball/m
 Download *GATK* from [here](https://software.broadinstitute.org/gatk/download/) and install in home directory on *sm11* (*$HOME/applications*)
 <br><br>
 Download *VarScan* from [here](https://sourceforge.net/projects/varscan/files/) and install in home directory on *sm11* (*$HOME/applications*)
+<br><br>
+Download *ANNOVAR* from [here](http://annovar.openbioinformatics.org/en/latest/user-guide/download/) and install in home directory on *sm11* (*$HOME/applications*)
 <br><br>
 
 ----------------------
