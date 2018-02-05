@@ -20,7 +20,7 @@ Step | Data | Analysis | Tools | Algorithms
 1 | WES | [Alignment](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#1-alignment) | *[Burrows-Wheeler Alignmer](http://bio-bwa.sourceforge.net/)* (*BWA*) | *mem*
 2 | WES | [Sort and convert SAM to BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#2-sort-and-convert-sam-to-bam-files) | *[Picard](https://broadinstitute.github.io/picard/)* | *SortSam*
 3 | WES | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#3-mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
-4 | WES | [Collect statistics for BAM file](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#4-collect-statistics-for-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *stats*
+4 | WES <br> WGS | [Collect statistics for BAM file](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#4-collect-statistics-for-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *stats*
 5 | WES | [Calculate coverage (after marking PCR duplicates)](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#5-calculate-coverage) | *[Genome Analysis Toolkit](https://software.broadinstitute.org/gatk/)* (GATK) | *DepthOfCoverage*
 6 | WES | [Merge BAM files per sample](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#6-merge-bam-files-per-sample) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
 7 | WES | [Local alignment around indels](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#7-local-alignment-around-indels) | *[GATK](https://software.broadinstitute.org/gatk/)* <br> *[Picard](https://broadinstitute.github.io/picard/)*  | *RealignerTargetCreator* <br> *IndelRealigner* <br> *FixMateInformation*
@@ -901,6 +901,39 @@ samtools stats 95_4_D.4.marked.bam > 95_4_D.4.marked.bam.stats/95_4_D.4.marked.b
 plot-bamstats -p 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats.plot 95_4_D.4.marked.bam.stats/95_4_D.4.marked.bam.stats
 ```
 
+----------------------
+
+Sample 45 (normal DNA)
+```
+cd /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001A01
+mkdir B01P0045_BBC03_normal.bam.stats
+samtools stats B01P0045_BBC03_normal.bam > B01P0045_BBC03_normal.bam.stats/B01P0045_BBC03_normal.bam.stats
+plot-bamstats -p B01P0045_BBC03_normal.bam.stats/B01P0045_BBC03_normal.bam.stats.plot B01P0045_BBC03_normal.bam.stats/B01P0045_BBC03_normal.bam.stats
+```
+
+Sample 45 (tumour DNA)
+```
+cd /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001B01
+mkdir B01P0095_ABC03_normal.bam.stats
+samtools stats B01P0095_ABC03_normal.bam > B01P0095_ABC03_normal.bam.stats/B01P0095_ABC03_normal.bam.stats
+plot-bamstats -p B01P0095_ABC03_normal.bam.stats/B01P0095_ABC03_normal.bam.stats.plot B01P0095_ABC03_normal.bam.stats/B01P0095_ABC03_normal.bam.stats
+```
+
+Sample 95 (normal DNA)
+```
+cd /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001C01
+mkdir B01P0045BAA07_tumour.bam.stats
+samtools stats B01P0045BAA07_tumour.bam > B01P0045BAA07_tumour.bam.stats/B01P0045BAA07_tumour.bam.stats
+plot-bamstats -p B01P0045BAA07_tumour.bam.stats/B01P0045BAA07_tumour.bam.stats.plot B01P0045BAA07_tumour.bam.stats/B01P0045BAA07_tumour.bam.stats
+```
+
+Sample 95 (tumour DNA)
+```
+cd /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001D01
+mkdir B01P0095AAA03_tumour.bam.stats
+samtools stats B01P0095AAA03_tumour.bam > B01P0095AAA03_tumour.bam.stats/B01P0095AAA03_tumour.bam.stats
+plot-bamstats -p B01P0095AAA03_tumour.bam.stats/B01P0095AAA03_tumour.bam.stats.plot B01P0095AAA03_tumour.bam.stats/B01P0095AAA03_tumour.bam.stats
+```
 
 ----------------------
 ## 5. Calculate coverage
