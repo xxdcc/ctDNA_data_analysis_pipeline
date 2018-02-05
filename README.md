@@ -14,17 +14,17 @@ The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computi
 
 Step | Analysis | Tools | Algorithms
 ------------ | ------------ | ------------ | ------------
-1 | [Alignment](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#1-alignment) | *[Burrows-Wheeler Alignmer](http://bio-bwa.sourceforge.net/)* (*BWA*) | *mem*
-2 | [Sort and convert SAM to BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#2-sort-and-convert-sam-to-bam-files) | *[Picard](https://broadinstitute.github.io/picard/)* | *SortSam*
-3 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#3-mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
-4 | [Collect statistics for BAM file](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#4-collect-statistics-for-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *stats*
-5 | [Calculate coverage (after marking PCR duplicates)](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#5-calculate-coverage) | *[Genome Analysis Toolkit](https://software.broadinstitute.org/gatk/)* (GATK) | *DepthOfCoverage*
-6 | [Merge BAM files per sample](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#6-merge-bam-files-per-sample) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
-7 | [Local alignment around indels](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#7-local-alignment-around-indels) | *[GATK](https://software.broadinstitute.org/gatk/)* <br> *[Picard](https://broadinstitute.github.io/picard/)*  | *RealignerTargetCreator* <br> *IndelRealigner* <br> *FixMateInformation*
-8 | [Base quality score recalibration](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#8-base-quality-score-recalibration) | *[GATK](https://software.broadinstitute.org/gatk/)* | *BaseRecalibrator* <br> *PrintReads*
-9 | [Check merged and recalibrated BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#9-check-merged-and-recalibrated-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *flagstat*
-10 | [Index BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#10-index-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *index*
-11 | [Variant calling](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#11-variant-calling) | *[SAMtools](http://samtools.sourceforge.net/)* <br> *[VarScan](http://varscan.sourceforge.net/)* | *mpileup* <br> *mpileup2cns*
+1 | [Alignment](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#1-alignment) | *[Burrows-Wheeler Alignmer](http://bio-bwa.sourceforge.net/)* (*BWA*) | *mem*
+2 | [Sort and convert SAM to BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#2-sort-and-convert-sam-to-bam-files) | *[Picard](https://broadinstitute.github.io/picard/)* | *SortSam*
+3 | [Mark PCR duplicates](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#3-mark-pcr-duplicates) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
+4 | [Collect statistics for BAM file](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#4-collect-statistics-for-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *stats*
+5 | [Calculate coverage (after marking PCR duplicates)](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#5-calculate-coverage) | *[Genome Analysis Toolkit](https://software.broadinstitute.org/gatk/)* (GATK) | *DepthOfCoverage*
+6 | [Merge BAM files per sample](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#6-merge-bam-files-per-sample) | *[Picard](https://broadinstitute.github.io/picard/)* | *MarkDuplicates*
+7 | [Local alignment around indels](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#7-local-alignment-around-indels) | *[GATK](https://software.broadinstitute.org/gatk/)* <br> *[Picard](https://broadinstitute.github.io/picard/)*  | *RealignerTargetCreator* <br> *IndelRealigner* <br> *FixMateInformation*
+8 | [Base quality score recalibration](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#8-base-quality-score-recalibration) | *[GATK](https://software.broadinstitute.org/gatk/)* | *BaseRecalibrator* <br> *PrintReads*
+9 | [Check merged and recalibrated BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#9-check-merged-and-recalibrated-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *flagstat*
+10 | [Index BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#10-index-bam-files) | *[SAMtools](http://samtools.sourceforge.net/)* | *index*
+11 | [Variant calling](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#11-variant-calling) | *[SAMtools](http://samtools.sourceforge.net/)* <br> *[VarScan](http://varscan.sourceforge.net/)* | *mpileup* <br> *mpileup2cns*
 
 <br />
 
@@ -104,7 +104,7 @@ Paramter | Value | Description
 -R | @RG:[sample_name\] LB:[sample_name\] SM:\[sample_name\] PL:Illumina | Complete read group header line
 <br />
 
-Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/BWA_mem.sh)* script for each sample
+Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/BWA_mem.sh)* script for each sample
 
 * **Sequencing batch 1**
 
@@ -292,7 +292,7 @@ VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
 <br />
 
-Run *[Picard_SAM2BAM.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_SAM2BAM.sh)* script for each sample
+Run *[Picard_SAM2BAM.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Picard_SAM2BAM.sh)* script for each sample
 
 * **Sequencing batch 1**
 
@@ -482,7 +482,7 @@ VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
 <br />
 
-Run *[Picard_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_markDupl.sh)* script for each sample
+Run *[Picard_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Picard_markDupl.sh)* script for each sample
 
 * **Sequencing batch 1**
 
@@ -930,7 +930,7 @@ Paramter | Value | Description
 -L  | Agilent_Human_Exon_V6/S07604514_Covered_hg38_clean\.bed | Restrict processing to specific genomic intervals
 <br />
 
-Run *[GATK_coverage.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/GATK_coverage.sh)* script for each sample
+Run *[GATK_coverage.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/GATK_coverage.sh)* script for each sample
 
 * **Sequencing batch 1**
 
@@ -1133,7 +1133,7 @@ VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
 <br />
 
-Run *[Picard_merge_4BAMs_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_merge_4BAMs_markDupl.sh)* script for each sample
+Run *[Picard_merge_4BAMs_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Picard_merge_4BAMs_markDupl.sh)* script for each sample
 
 * **Sequencing batch 1**
 
@@ -1182,7 +1182,7 @@ nohup ./Picard_merge_4BAMs_markDupl.sh  95_4_D  95_4_D.recalib.bam  95_4_D.2.rec
 ## 7. Local alignment around indels
 
 The local realignment process is designed to locally realign reads such that the number of mismatching bases is minimized across all the reads. In general, a large percent of regions requiring local realignment are due to the presence of an insertion or deletion (indels) in the individual's genome with respect to the reference genome. Such alignment artifacts result in many bases mismatching the reference near the misalignment, which are easily mistaken as SNPs. Moreover, since read mapping algorithms operate on each read independently, it is impossible to place reads on the reference genome such at mismatches are minimized across all reads. Consequently, even when some reads are correctly mapped with indels, reads covering the indel near just the start or end of the read are often incorrectly mapped with respect the true indel, also requiring realignment. Local realignment serves to transform regions with misalignments due to indels into clean reads containing a consensus indel suitable for standard variant discovery approaches.<br><br>
-**NOTE**: Local realignment is not necessary for variant callers that perform a haplotype assembly step, such as HaplotypeCaller or MuTect2. We perfrom this step since we adapted the [*pileup approach*](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline#11-variant-calling) for calling variants.
+**NOTE**: Local realignment is not necessary for variant callers that perform a haplotype assembly step, such as HaplotypeCaller or MuTect2. We perfrom this step since we adapted the [*pileup approach*](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#11-variant-calling) for calling variants.
 <br>
 
 #### 7.1 Create the reference fasta sequence dictionary file
@@ -1212,7 +1212,7 @@ CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM fi
 
 
 
-Run *[Picard_GATK_localAlign_indels.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Picard_GATK_localAlign_indels.sh)* script for each sample
+Run *[Picard_GATK_localAlign_indels.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Picard_GATK_localAlign_indels.sh)* script for each sample
 
 Sample 45_1_B
 ```
@@ -1272,7 +1272,7 @@ Variant calling algorithms rely heavily on the quality scores assigned to the in
 **Algorithm**: *PrintReads*
 
 
-Run *[GATK_baseQrecalib.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/GATK_baseQrecalib.sh)* script for each sample
+Run *[GATK_baseQrecalib.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/GATK_baseQrecalib.sh)* script for each sample
 
 Sample 45_1_B
 ```
@@ -1453,4 +1453,4 @@ Paramter | Value | Description
 
 **NOTE**: Run this analysis from whole-genome sequencing (WGS) directory including all samples (normal tissue + tumour tissue + plasma 1 + plasma 2 + plasma 3 + plasma 4).
 
-Run *[Varscan_pileup2cns_3samples.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_WES_pipeline/blob/master/Varscan_pileup2cns_3samples.sh)* script for each sample
+Run *[Varscan_pileup2cns_6samples.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Varscan_pileup2cns_6samples.sh)* script for each sample
