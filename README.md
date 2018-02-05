@@ -1,13 +1,16 @@
-# ctDNA WES data analysis pipeline
+# ctDNA data analysis pipeline
 
-This repository describes pipeline for analysing data from whole-exome sequencing (WES) of circulating tumour DNA (ctDNA).
+This repository describes pipeline for analysing data from whole-exome sequencing (WES) of circulating tumour DNA (ctDNA) and whole-genome sequencing (WGS) tissue samples.
 
-The pipeline is implemented using ctDNA from plasma samples derived from pancreatic cancer patients.
+The pipeline is implemented using ctDNA from plasma samples and tumour with corresponding normal DNA samples derived from pancreatic cancer patients.
 The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computing](https://docs.hpc.qmul.ac.uk/) (HPC) cluster.
 * ctDNA WES data is located in the following directory:<br>
 
     */data/BCI-BioInformatics/PC_ctDNA/WES_data*
 
+* tissue WGS data is located in the following directory:<br>
+
+    */data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018*
 <br>
 
 * The pipeline containts the following steps:
