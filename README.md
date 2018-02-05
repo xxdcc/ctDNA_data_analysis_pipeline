@@ -6,11 +6,11 @@ The pipeline is implemented using ctDNA from plasma samples and tumour with corr
 The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computing](https://docs.hpc.qmul.ac.uk/) (HPC) cluster.
 * ctDNA WES data is located in the following directory:<br>
 
-    */data/BCI-BioInformatics/PC_ctDNA/WES_data*
+    */data/BCI-BioInformatics/PC_ctDNA/**WES_data***
 
 * tissue WGS data is located in the following directory:<br>
 
-    */data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018*
+    */data/BCI-BioInformatics/PC_ctDNA/WGS_data/**X16018***
 <br>
 
 * The pipeline containts the following steps:
