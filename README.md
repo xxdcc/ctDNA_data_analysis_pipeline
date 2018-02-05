@@ -1514,6 +1514,16 @@ Paramter | Value | Description
 --variants | 1 | Report only variant (SNP/indel) positions
 <br />
 
-**NOTE**: Run this analysis from whole-genome sequencing (WGS) directory including all samples (normal tissue + tumour tissue + plasma 1 + plasma 2 + plasma 3 + plasma 4).
+**NOTE**: Run this analysis using all samples: normal DNA (WGS) + tumour DNA (WGS) + plasma 1 (ctDNA) + plasma 2 (ctDNA) + plasma 3 (ctDNA) + plasma 4 (ctDNA).
 
-Run *[Varscan_pileup2cns_6samples.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Varscan_pileup2cns_6samples.sh)* script for each sample
+Run *[Varscan_pileup2cns_6samples.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Varscan_pileup2cns_6samples.sh)* script to call variants (SNPs and indels) using *VarScan mpileup2cns* algorithm using data from all 6 samples
+
+Patient 45
+```
+nohup ./Varscan_pileup2cns_6samples.sh P_45 /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001A01/B01P0045_BBC03_normal.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001C01/B01P0045BAA07_tumour.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_1_B.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_2_C.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_3_D.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_4_E.merged.recalib.bam  > P_45.Varscan_pileup2cns_6samples.log &
+```
+
+Patient 95
+```
+nohup ./Varscan_pileup2cns_6samples.sh P_95  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001B01/B01P0095_ABC03_normal.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001D01/B01P0095AAA03_tumour.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_1_A.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_2_B.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_3_C.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_4_D.merged.recalib.bam  > P_95.Varscan_pileup2cns_6samples.log &
+```
