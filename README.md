@@ -1542,7 +1542,7 @@ Paramter | Value | Description
 ------------ | ------------ | ------------
 -format | vcf4 | Convert VCF files to ANNOVAR input format
 -allsample  | N/A | Add all samples into the output file
--withfreq | N/A | Report the allele frequency of each SNP in the VCF file, based on all samples within the file (the output will contain all loci from the input file)
+-withfreq | N/A | Report the allele frequency of each SNP in the VCF file, based on all samples within the file (the output will contain all loci from the VCF input file)
 -includeinfo | N/A | Include all genotype records for all samples in the output file
 -comment | N/A | Add VCF header information
 <br />
