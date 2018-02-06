@@ -21,10 +21,10 @@ mkdir $TEMPDIR
 
 ## Define some output files for Picard and GATK
 reference=/data/BCI-BioInformatics/Jun/reference_hg38/hg38\.fa
-outputbammarked=$samplename\.merged\.bam
+outputbammarked=$samplename\.bam
 realignmentlist=$samplename\.bam\.list
-realignmentbam=$samplename\.merged\.realigned\.bam
-realignmentfixbam=$samplename\.merged\.realigned\.fixed\.bam
+realignmentbam=$samplename\.realigned\.bam
+realignmentfixbam=$samplename\.realigned\.fixed\.bam
 
 
 ## step 4: local alignment around indels
