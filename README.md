@@ -3,7 +3,7 @@
 This repository describes pipeline for analysing circulating tumour DNA (ctDNA) data derived from whole-exome sequencing (WES) of plasma DNA, whole-genome sequencing (WGS) of tumour DNA and corresponding normal DNA samples from pancreatic cancer patients.
 
 The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computing](https://docs.hpc.qmul.ac.uk/) (HPC) cluster.
-* **plasma WES** data is located in the following directory:<br>
+* **plasma WES** RAW data is located in the following directory:<br>
 
     */data/BCI-BioInformatics/PC_ctDNA/**WES_data**/raw_data*
 
@@ -50,9 +50,17 @@ The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computi
 
 ----------------------
 
-* **tumour and normal DNA WGS** data is located in the following directory:<br>
+* **tumour and normal DNA WGS** ALIGNMENT data is located in the following directory:<br>
 
-    */data/BCI-BioInformatics/PC_ctDNA/**WGS_data/X16018***
+    */data/BCI-BioInformatics/PC_ctDNA/**WGS_data**/X16018/2016-11-21*
+
+    Sample | Files
+    ------------ | ------------
+    45 (normal DNA) | X16018P001A01/B01P0045_BBC03_normal.bam <br> X16018P001A01/B01P0045_BBC03_normal.bai
+    45 (tumour DNA) | X16018P001C01/B01P0045BAA07_tumour.bam.bam <br> X16018P001C01/B01P0045BAA07_tumour.bam.bai
+    95 (normal DNA) | X16018P001B01/B01P0095_ABC03_normal.bam <br> X16018P001B01/B01P0095_ABC03_normal.bai
+    95 (tumour DNA) | X16018P001D01/B01P0095AAA03_tumour.bam <br> X16018P001D01/B01P0095AAA03_tumour.bai
+    <br />
 
 * **tumour and normal DNA WGS** data is located in the following directory:<br>
 
