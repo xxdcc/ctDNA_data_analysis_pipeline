@@ -622,38 +622,38 @@ Run *[Picard_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_da
 
 Batch | Sample | Input file(s) | Output file(s)
 ------------ | ------------ | ------------ | ------------
-1 | 45_1_B | 45_1_B.sam | 45_1_B.bam
-1 | 45_2_C | 45_2_C.sam | 45_2_C.bam
-1 | 45_3_D | 45_3_D.sam | 45_3_D.bam
-1 | 45_4_E | 45_4_E.sam | 45_4_E.bam
-1 | 95_1_A | 95_1_A.sam | 95_1_A.bam
-1 | 95_2_B | 95_2_B.sam | 95_2_B.bam
-1 | 95_3_C | 95_3_C.sam | 95_3_C.bam
-1 | 95_4_D | 95_4_D.sam | 95_4_D.bam
-2 | 45_1_B | 45_1_B.2.sam | 45_1_B.2.bam
-2 | 45_2_C | 45_2_C.2.sam | 45_2_C.2.bam
-2 | 45_3_D | 45_3_D.2.sam | 45_3_D.2.bam
-2 | 45_4_E | 45_4_E.2.sam | 45_4_E.2.bam
-2 | 95_1_A | 95_1_A.2.sam | 95_1_A.2.bam
-2 | 95_2_B | 95_2_B.2.sam | 95_2_B.2.bam
-2 | 95_3_C | 95_3_C.2.sam | 95_3_C.2.bam
-2 | 95_4_D | 95_4_D.2.sam | 95_4_D.2.bam
-3 | 45_1_B | 45_1_B.3.sam | 45_1_B.3.bam
-3 | 45_2_C | 45_2_C.3.sam | 45_2_C.3.bam
-3 | 45_3_D | 45_3_D.3.sam | 45_3_D.3.bam
-3 | 45_4_E | 45_4_E.3.sam | 45_4_E.3.bam
-3 | 95_1_A | 95_1_A.3.sam | 95_1_A.3.bam
-3 | 95_2_B | 95_2_B.3.sam | 95_2_B.3.bam
-3 | 95_3_C | 95_3_C.3.sam | 95_3_C.3.bam
-3 | 95_4_D | 95_4_D.3.sam | 95_4_D.3.bam
-4 | 45_1_B | 45_1_B.4.sam | 45_1_B.4.bam
-4 | 45_2_C | 45_2_C.4.sam | 45_2_C.4.bam
-4 | 45_3_D | 45_3_D.4.sam | 45_3_D.4.bam
-4 | 45_4_E | 45_4_E.4.sam | 45_4_E.4.bam
-4 | 95_1_A | 95_1_A.4.sam | 95_1_A.4.bam
-4 | 95_2_B | 95_2_B.4.sam | 95_2_B.4.bam
-4 | 95_3_C | 95_3_C.4.sam | 95_3_C.4.bam
-4 | 95_4_D | 95_4_D.4.sam | 95_4_D.4.bam
+1 | 45_1_B | 45_1_B.bam | 45_1_B.marked.bam
+1 | 45_2_C | 45_2_C.bam | 45_2_C.marked.bam
+1 | 45_3_D | 45_3_D.bam | 45_3_D.marked.bam
+1 | 45_4_E | 45_4_E.bam | 45_4_E.marked.bam
+1 | 95_1_A | 95_1_A.bam | 95_1_A.marked.bam
+1 | 95_2_B | 95_2_B.bam | 95_2_B.marked.bam
+1 | 95_3_C | 95_3_C.bam | 95_3_C.marked.bam
+1 | 95_4_D | 95_4_D.bam | 95_4_D.marked.bam
+2 | 45_1_B | 45_1_B.2.sam | 45_1_B.2.marked.bam
+2 | 45_2_C | 45_2_C.2.bam | 45_2_C.2.marked.bam
+2 | 45_3_D | 45_3_D.2.bam | 45_3_D.2.marked.bam
+2 | 45_4_E | 45_4_E.2.bam | 45_4_E.2.marked.bam
+2 | 95_1_A | 95_1_A.2.bam | 95_1_A.2.marked.bam
+2 | 95_2_B | 95_2_B.2.bam | 95_2_B.2.marked.bam
+2 | 95_3_C | 95_3_C.2.bam | 95_3_C.2.marked.bam
+2 | 95_4_D | 95_4_D.2.bam | 95_4_D.2.marked.bam
+3 | 45_1_B | 45_1_B.3.bam | 45_1_B.3.marked.bam
+3 | 45_2_C | 45_2_C.3.bam | 45_2_C.3.marked.bam
+3 | 45_3_D | 45_3_D.3.bam | 45_3_D.3.marked.bam
+3 | 45_4_E | 45_4_E.3.bam | 45_4_E.3.marked.bam
+3 | 95_1_A | 95_1_A.3.bam | 95_1_A.3.marked.bam
+3 | 95_2_B | 95_2_B.3.bam | 95_2_B.3.marked.bam
+3 | 95_3_C | 95_3_C.3.bam | 95_3_C.3.marked.bam
+3 | 95_4_D | 95_4_D.3.bam | 95_4_D.3.marked.bam
+4 | 45_1_B | 45_1_B.4.bam | 45_1_B.4.marked.bam
+4 | 45_2_C | 45_2_C.4.bam | 45_2_C.4.marked.bam
+4 | 45_3_D | 45_3_D.4.bam | 45_3_D.4.marked.bam
+4 | 45_4_E | 45_4_E.4.bam | 45_4_E.4.marked.bam
+4 | 95_1_A | 95_1_A.4.bam | 95_1_A.4.marked.bam
+4 | 95_2_B | 95_2_B.4.bam | 95_2_B.4.marked.bam
+4 | 95_3_C | 95_3_C.4.bam | 95_3_C.4.marked.bam
+4 | 95_4_D | 95_4_D.4.bam | 95_4_D.4.marked.bam
 <br />
 
 * **Sequencing batch 1**
@@ -834,6 +834,42 @@ nohup ./Picard_markDupl.sh  95_4_D.4 > 95_4_D.4.Picard_markDupl.log &
 **Algorithm**: *stats*
 
 *SAMtools stats* collects statistics (e.g. GC content, insert size, per-base sequence content, quality per cycle) from *BAM* files and outputs in a text format. The output is then visualized graphically using *plot-bamstats*.
+
+Batch | Sample | Input file(s) | Output file(s)
+------------ | ------------ | ------------ | ------------
+1 | 45_1_B | 45_1_B.bam | 45_1_B.marked.bam
+1 | 45_2_C | 45_2_C.bam | 45_2_C.marked.bam
+1 | 45_3_D | 45_3_D.bam | 45_3_D.marked.bam
+1 | 45_4_E | 45_4_E.bam | 45_4_E.marked.bam
+1 | 95_1_A | 95_1_A.bam | 95_1_A.marked.bam
+1 | 95_2_B | 95_2_B.bam | 95_2_B.marked.bam
+1 | 95_3_C | 95_3_C.bam | 95_3_C.marked.bam
+1 | 95_4_D | 95_4_D.bam | 95_4_D.marked.bam
+2 | 45_1_B | 45_1_B.2.sam | 45_1_B.2.marked.bam
+2 | 45_2_C | 45_2_C.2.bam | 45_2_C.2.marked.bam
+2 | 45_3_D | 45_3_D.2.bam | 45_3_D.2.marked.bam
+2 | 45_4_E | 45_4_E.2.bam | 45_4_E.2.marked.bam
+2 | 95_1_A | 95_1_A.2.bam | 95_1_A.2.marked.bam
+2 | 95_2_B | 95_2_B.2.bam | 95_2_B.2.marked.bam
+2 | 95_3_C | 95_3_C.2.bam | 95_3_C.2.marked.bam
+2 | 95_4_D | 95_4_D.2.bam | 95_4_D.2.marked.bam
+3 | 45_1_B | 45_1_B.3.bam | 45_1_B.3.marked.bam
+3 | 45_2_C | 45_2_C.3.bam | 45_2_C.3.marked.bam
+3 | 45_3_D | 45_3_D.3.bam | 45_3_D.3.marked.bam
+3 | 45_4_E | 45_4_E.3.bam | 45_4_E.3.marked.bam
+3 | 95_1_A | 95_1_A.3.bam | 95_1_A.3.marked.bam
+3 | 95_2_B | 95_2_B.3.bam | 95_2_B.3.marked.bam
+3 | 95_3_C | 95_3_C.3.bam | 95_3_C.3.marked.bam
+3 | 95_4_D | 95_4_D.3.bam | 95_4_D.3.marked.bam
+4 | 45_1_B | 45_1_B.4.bam | 45_1_B.4.marked.bam
+4 | 45_2_C | 45_2_C.4.bam | 45_2_C.4.marked.bam
+4 | 45_3_D | 45_3_D.4.bam | 45_3_D.4.marked.bam
+4 | 45_4_E | 45_4_E.4.bam | 45_4_E.4.marked.bam
+4 | 95_1_A | 95_1_A.4.bam | 95_1_A.4.marked.bam
+4 | 95_2_B | 95_2_B.4.bam | 95_2_B.4.marked.bam
+4 | 95_3_C | 95_3_C.4.bam | 95_3_C.4.marked.bam
+4 | 95_4_D | 95_4_D.4.bam | 95_4_D.4.marked.bam
+<br />
 
 
 * **Sequencing batch 1**
