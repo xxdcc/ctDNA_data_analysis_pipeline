@@ -5,45 +5,44 @@ This repository describes pipeline for analysing circulating tumour DNA (ctDNA) 
 ## Data and files
 
 The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computing](https://docs.hpc.qmul.ac.uk/) (HPC) cluster.
-* **plasma WES** RAW data is located in the following directory:<br>
+* **plasma WES raw** data is located in the following directory:<br>
 
     */data/BCI-BioInformatics/PC_ctDNA/**WES_data**/raw_data*
 
     Batch | Sample | Files
     ------------ | ------------ | ------------
-    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam <br>
-    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    2 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    2 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    2 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    2 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    2 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    2 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    2 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    2 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    3 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    3 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    3 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    3 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    3 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    3 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    3 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    3 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    4 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    4 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    4 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    4 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    4 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    4 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    4 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    4 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_2.fq.gz
+    1 | 45_2_C | SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.r_2.fq.gz
+    1 | 45_3_D | SLX-12721.iPCRtagT005.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT005.HGJWLBBXX.s_5.r_2.fq.gz
+    1 | 45_4_E | SLX-12721.iPCRtagT006.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT006.HGJWLBBXX.s_5.r_2.fq.gz
+    1 | 95_1_A | SLX-12721.iPCRtagT007.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT007.HGJWLBBXX.s_5.r_2.fq.gz
+    1 | 95_2_B | SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.r_2.fq.gz
+    1 | 95_3_C | SLX-12721.iPCRtagT010.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT010.HGJWLBBXX.s_5.r_2.fq.gz
+    1 | 95_4_D | SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.r_2.fq.gz
+    2 | 45_1_B | SLX-12721.iPCRtagT002.HGYHFBBXX.s_2.r_1.fq.gz <br> SLX-12721.iPCRtagT002.HGYHFBBXX.s_2.r_2.fq.gz
+    2 | 45_2_C | SLX-12721.iPCRtagT004.HGYHFBBXX.s_2.r_1.fq.gz <br> SLX-12721.iPCRtagT004.HGYHFBBXX.s_2.r_2.fq.gz
+    2 | 45_3_D | SLX-12721.iPCRtagT005.HGYHFBBXX.s_2.r_1.fq.gz <br> SLX-12721.iPCRtagT005.HGYHFBBXX.s_2.r_2.fq.gz
+    2 | 45_4_E | SLX-12721.iPCRtagT006.HGYHFBBXX.s_2.r_1.fq.gz <br> SLX-12721.iPCRtagT006.HGYHFBBXX.s_2.r_2.fq.gz
+    2 | 95_1_A | SLX-12721.iPCRtagT007.HGYHFBBXX.s_2.r_1.fq.gz <br> SLX-12721.iPCRtagT007.HGYHFBBXX.s_2.r_2.fq.gz
+    2 | 95_2_B | SLX-12721.iPCRtagT009.HGYHFBBXX.s_2.r_1.fq.gz <br> SLX-12721.iPCRtagT009.HGYHFBBXX.s_2.r_2.fq.gz
+    2 | 95_3_C | SLX-12721.iPCRtagT010.HGYHFBBXX.s_2.r_1.fq.gz <br> SLX-12721.iPCRtagT010.HGYHFBBXX.s_2.r_2.fq.gz
+    2 | 95_4_D | SLX-12721.iPCRtagT012.HGYHFBBXX.s_2.r_1.fq.gz <br> SLX-12721.iPCRtagT012.HGYHFBBXX.s_2.r_2.fq.gz
+    3 | 45_1_B | SLX-12721.iPCRtagT002.HGYHFBBXX.s_3.r_1.fq.gz <br> SLX-12721.iPCRtagT002.HGYHFBBXX.s_3.r_2.fq.gz
+    3 | 45_2_C | SLX-12721.iPCRtagT004.HGYHFBBXX.s_3.r_1.fq.gz <br> SLX-12721.iPCRtagT004.HGYHFBBXX.s_3.r_2.fq.gz
+    3 | 45_3_D | SLX-12721.iPCRtagT005.HGYHFBBXX.s_3.r_1.fq.gz <br> SLX-12721.iPCRtagT005.HGYHFBBXX.s_3.r_2.fq.gz
+    3 | 45_4_E | SLX-12721.iPCRtagT006.HGYHFBBXX.s_3.r_1.fq.gz <br> SLX-12721.iPCRtagT006.HGYHFBBXX.s_3.r_2.fq.gz
+    3 | 95_1_A | SLX-12721.iPCRtagT007.HGYHFBBXX.s_3.r_1.fq.gz <br> SLX-12721.iPCRtagT007.HGYHFBBXX.s_3.r_2.fq.gz
+    3 | 95_2_B | SLX-12721.iPCRtagT009.HGYHFBBXX.s_3.r_1.fq.gz <br> SLX-12721.iPCRtagT009.HGYHFBBXX.s_3.r_2.fq.gz
+    3 | 95_3_C | SLX-12721.iPCRtagT010.HGYHFBBXX.s_3.r_1.fq.gz <br> SLX-12721.iPCRtagT010.HGYHFBBXX.s_3.r_2.fq.gz
+    3 | 95_4_D | SLX-12721.iPCRtagT012.HGYHFBBXX.s_3.r_1.fq.gz <br> SLX-12721.iPCRtagT012.HGYHFBBXX.s_3.r_2.fq.gz
+    4 | 45_1_B | SLX-12721.iPCRtagT002.HGYHFBBXX.s_4.r_1.fq.gz <br> SLX-12721.iPCRtagT002.HGYHFBBXX.s_4.r_2.fq.gz
+    4 | 45_2_C | SLX-12721.iPCRtagT004.HGYHFBBXX.s_4.r_1.fq.gz <br> SLX-12721.iPCRtagT004.HGYHFBBXX.s_4.r_2.fq.gz
+    4 | 45_3_D | SLX-12721.iPCRtagT005.HGYHFBBXX.s_4.r_1.fq.gz <br> SLX-12721.iPCRtagT005.HGYHFBBXX.s_4.r_2.fq.gz
+    4 | 45_4_E | SLX-12721.iPCRtagT006.HGYHFBBXX.s_4.r_1.fq.gz <br> SLX-12721.iPCRtagT006.HGYHFBBXX.s_4.r_2.fq.gz
+    4 | 95_1_A | SLX-12721.iPCRtagT007.HGYHFBBXX.s_4.r_1.fq.gz <br> SLX-12721.iPCRtagT007.HGYHFBBXX.s_4.r_2.fq.gz
+    4 | 95_2_B | SLX-12721.iPCRtagT009.HGYHFBBXX.s_4.r_1.fq.gz <br> SLX-12721.iPCRtagT009.HGYHFBBXX.s_4.r_2.fq.gz
+    4 | 95_3_C | SLX-12721.iPCRtagT010.HGYHFBBXX.s_4.r_1.fq.gz <br> SLX-12721.iPCRtagT010.HGYHFBBXX.s_4.r_2.fq.gz
+    4 | 95_4_D | SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_1.fq.gz <br> SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_2.fq.gz
     <br />
 
 * **plasma DNA WES** data analyses are performed in the following directory:<br>
@@ -52,16 +51,16 @@ The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computi
 
 ----------------------
 
-* **tumour and normal DNA WGS** ALIGNMENT data is located in the following directory:<br>
+* **tumour and normal DNA WGS alignment** data is located in the following directory:<br>
 
     */data/BCI-BioInformatics/PC_ctDNA/**WGS_data**/X16018/2016-11-21*
 
-    Sample | Files
+    Sample | File
     ------------ | ------------
-    45 (normal DNA) | X16018P001A01/B01P0045_BBC03_normal.bam <br> X16018P001A01/B01P0045_BBC03_normal.bai
-    45 (tumour DNA) | X16018P001C01/B01P0045BAA07_tumour.bam.bam <br> X16018P001C01/B01P0045BAA07_tumour.bam.bai
-    95 (normal DNA) | X16018P001B01/B01P0095_ABC03_normal.bam <br> X16018P001B01/B01P0095_ABC03_normal.bai
-    95 (tumour DNA) | X16018P001D01/B01P0095AAA03_tumour.bam <br> X16018P001D01/B01P0095AAA03_tumour.bai
+    45 (normal DNA) | X16018P001A01/B01P0045_BBC03_normal.bam
+    45 (tumour DNA) | X16018P001C01/B01P0045BAA07_tumour.bam
+    95 (normal DNA) | X16018P001B01/B01P0095_ABC03_normal.bam
+    95 (tumour DNA) | X16018P001D01/B01P0095AAA03_tumour.bam
     <br />
 
 * **tumour and normal DNA WGS** data is located in the following directory:<br>
@@ -70,7 +69,7 @@ The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computi
 <br>
 
 
-## Pipeline steps
+## Pipeline summary
 
 * The pipeline contains the following steps:
 
@@ -173,7 +172,7 @@ Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analy
 
 Batch | Sample | Input file(s) | Output file(s)
 ------------ | ------------ | ------------ | ------------
-1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam | 45_1_B.sam
+1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_2.fq.gz | 45_1_B.sam
 <br />
 
 * **Sequencing batch 1**
