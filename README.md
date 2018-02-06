@@ -173,6 +173,37 @@ Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analy
 Batch | Sample | Input file(s) | Output file(s)
 ------------ | ------------ | ------------ | ------------
 1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_2.fq.gz | 45_1_B.sam
+1 | 45_2_C | SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT004.HGJWLBBXX.s_5.r_2.fq.gz | 45_2_C.sam
+1 | 45_3_D | SLX-12721.iPCRtagT005.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT005.HGJWLBBXX.s_5.r_2.fq.gz | 45_3_D.sam
+1 | 45_4_E | SLX-12721.iPCRtagT006.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT006.HGJWLBBXX.s_5.r_2.fq.gz | 45_4_E.sam
+1 | 95_1_A | SLX-12721.iPCRtagT007.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT007.HGJWLBBXX.s_5.r_2.fq.gz | 95_1_A.sam
+1 | 95_2_B | SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.r_2.fq.gz | 95_2_B.sam
+1 | 95_3_C | SLX-12721.iPCRtagT010.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT010.HGJWLBBXX.s_5.r_2.fq.gz | 95_3_C.sam
+1 | 95_4_D | SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.r_1.fq.gz <br> SLX-12721.iPCRtagT012.HGJWLBBXX.s_5.r_2.fq.gz | 95_4_D.sam
+2 | 45_1_B | SLX-12721.iPCRtagT002.HGYHFBBXX.s_2.r_1.fq.gz <br> SLX-12721.iPCRtagT002.HGYHFBBXX.s_2.r_2.fq.gz | 45_1_B.2.sam
+2 | 45_2_C | SLX-12721.iPCRtagT004.HGYHFBBXX.s_2.r_1.fq.gz <br> SLX-12721.iPCRtagT004.HGYHFBBXX.s_2.r_2.fq.gz | 45_2_C.2.sam
+2 | 45_3_D | SLX-12721.iPCRtagT005.HGYHFBBXX.s_2.r_1.fq.gz <br> SLX-12721.iPCRtagT005.HGYHFBBXX.s_2.r_2.fq.gz | 45_3_D.2.sam
+2 | 45_4_E | SLX-12721.iPCRtagT006.HGYHFBBXX.s_2.r_1.fq.gz <br> SLX-12721.iPCRtagT006.HGYHFBBXX.s_2.r_2.fq.gz | 45_4_E.2.sam
+2 | 95_1_A | SLX-12721.iPCRtagT007.HGYHFBBXX.s_2.r_1.fq.gz <br> SLX-12721.iPCRtagT007.HGYHFBBXX.s_2.r_2.fq.gz | 95_1_A.2.sam
+2 | 95_2_B | SLX-12721.iPCRtagT009.HGYHFBBXX.s_2.r_1.fq.gz <br> SLX-12721.iPCRtagT009.HGYHFBBXX.s_2.r_2.fq.gz | 95_2_B.2.sam
+2 | 95_3_C | SLX-12721.iPCRtagT010.HGYHFBBXX.s_2.r_1.fq.gz <br> SLX-12721.iPCRtagT010.HGYHFBBXX.s_2.r_2.fq.gz | 95_3_C.2.sam
+2 | 95_4_D | SLX-12721.iPCRtagT012.HGYHFBBXX.s_2.r_1.fq.gz <br> SLX-12721.iPCRtagT012.HGYHFBBXX.s_2.r_2.fq.gz | 95_4_D.2.sam
+3 | 45_1_B | SLX-12721.iPCRtagT002.HGYHFBBXX.s_3.r_1.fq.gz <br> SLX-12721.iPCRtagT002.HGYHFBBXX.s_3.r_2.fq.gz | 45_1_B.3.sam
+3 | 45_2_C | SLX-12721.iPCRtagT004.HGYHFBBXX.s_3.r_1.fq.gz <br> SLX-12721.iPCRtagT004.HGYHFBBXX.s_3.r_2.fq.gz | 45_2_C.3.sam
+3 | 45_3_D | SLX-12721.iPCRtagT005.HGYHFBBXX.s_3.r_1.fq.gz <br> SLX-12721.iPCRtagT005.HGYHFBBXX.s_3.r_2.fq.gz | 45_3_D.3.sam
+3 | 45_4_E | SLX-12721.iPCRtagT006.HGYHFBBXX.s_3.r_1.fq.gz <br> SLX-12721.iPCRtagT006.HGYHFBBXX.s_3.r_2.fq.gz | 45_4_E.3.sam
+3 | 95_1_A | SLX-12721.iPCRtagT007.HGYHFBBXX.s_3.r_1.fq.gz <br> SLX-12721.iPCRtagT007.HGYHFBBXX.s_3.r_2.fq.gz | 95_1_A.3.sam
+3 | 95_2_B | SLX-12721.iPCRtagT009.HGYHFBBXX.s_3.r_1.fq.gz <br> SLX-12721.iPCRtagT009.HGYHFBBXX.s_3.r_2.fq.gz | 95_2_B.3.sam
+3 | 95_3_C | SLX-12721.iPCRtagT010.HGYHFBBXX.s_3.r_1.fq.gz <br> SLX-12721.iPCRtagT010.HGYHFBBXX.s_3.r_2.fq.gz | 95_3_C.3.sam
+3 | 95_4_D | SLX-12721.iPCRtagT012.HGYHFBBXX.s_3.r_1.fq.gz <br> SLX-12721.iPCRtagT012.HGYHFBBXX.s_3.r_2.fq.gz | 95_4_D.3.sam
+4 | 45_1_B | SLX-12721.iPCRtagT002.HGYHFBBXX.s_4.r_1.fq.gz <br> SLX-12721.iPCRtagT002.HGYHFBBXX.s_4.r_2.fq.gz | 45_1_B.4.sam
+4 | 45_2_C | SLX-12721.iPCRtagT004.HGYHFBBXX.s_4.r_1.fq.gz <br> SLX-12721.iPCRtagT004.HGYHFBBXX.s_4.r_2.fq.gz | 45_2_C.4.sam
+4 | 45_3_D | SLX-12721.iPCRtagT005.HGYHFBBXX.s_4.r_1.fq.gz <br> SLX-12721.iPCRtagT005.HGYHFBBXX.s_4.r_2.fq.gz | 45_3_D.4.sam
+4 | 45_4_E | SLX-12721.iPCRtagT006.HGYHFBBXX.s_4.r_1.fq.gz <br> SLX-12721.iPCRtagT006.HGYHFBBXX.s_4.r_2.fq.gz | 45_4_E.4.sam
+4 | 95_1_A | SLX-12721.iPCRtagT007.HGYHFBBXX.s_4.r_1.fq.gz <br> SLX-12721.iPCRtagT007.HGYHFBBXX.s_4.r_2.fq.gz | 95_1_A.4.sam
+4 | 95_2_B | SLX-12721.iPCRtagT009.HGYHFBBXX.s_4.r_1.fq.gz <br> SLX-12721.iPCRtagT009.HGYHFBBXX.s_4.r_2.fq.gz | 95_2_B.4.sam
+4 | 95_3_C | SLX-12721.iPCRtagT010.HGYHFBBXX.s_4.r_1.fq.gz <br> SLX-12721.iPCRtagT010.HGYHFBBXX.s_4.r_2.fq.gz | 95_3_C.4.sam
+4 | 95_4_D | SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_1.fq.gz <br> SLX-12721.iPCRtagT012.HGYHFBBXX.s_4.r_2.fq.gz | 95_4_D.4.sam
 <br />
 
 * **Sequencing batch 1**
