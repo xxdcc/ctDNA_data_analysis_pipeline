@@ -1113,7 +1113,7 @@ Sample | Input file(s) | Output file(s)
 45 (normal DNA) | X16018P001A01/B01P0045_BBC03_normal.bam | X16018P001A01/B01P0045_BBC03_normal.bam.stats/B01P0045_BBC03_normal.bam.stats <br> X16018P001A01/B01P0045_BBC03_normal.bam.stats/B01P0045_BBC03_normal.bam.stats.plot[...]
 45 (tumour DNA) | X16018P001C01/B01P0045BAA07_tumour.bam | X16018P001C01/B01P0045BAA07_tumour.bam.stats/B01P0045BAA07_tumour.bam.stats <br> X16018P001C01/B01P0045BAA07_tumour.bam.stats/B01P0045BAA07_tumour.bam.stats.plot[...]
 95 (normal DNA) | X16018P001B01/B01P0095_ABC03_normal.bam | X16018P001B01/B01P0095_ABC03_normal.bam.stats/B01P0095_ABC03_normal.bam.stats <br> X16018P001B01/B01P0095_ABC03_normal.bam.stats/B01P0095_ABC03_normal.bam.stats.plot[...]
-95 (tumour DNA) | X16018P001D01/B01P0095AAA03_tumour.bam | X16018P001D01/B01P0095AAA03_tumour.bam.stats/B01P0095AAA03_tumour.bam.stats <br> X16018P001D01/B01P0095AAA03_tumour.bam.stats/B01P0095AAA03_tumour.bam.stats.stats.plot[...]
+95 (tumour DNA) | X16018P001D01/B01P0095AAA03_tumour.bam | X16018P001D01/B01P0095AAA03_tumour.bam.stats/B01P0095AAA03_tumour.bam.stats <br> X16018P001D01/B01P0095AAA03_tumour.bam.stats/B01P0095AAA03_tumour.bam.stats.plot[...]
 <br />
 
 Sample 45 (normal DNA)
