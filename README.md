@@ -1653,6 +1653,18 @@ rm [sample_name].merged.realigned.fixed.bai
 **Tool**: *SAMtools*<br>
 **Algorithm**: *index*
 
+Sample | Input file(s) | Output file(s)
+------------ | ------------ | ------------
+45_1_B | 45_1_B.merged.recalib.bam | 45_1_B.merged.recalib.bai
+45_2_C | 45_2_C.merged.recalib.bam | 45_2_C.merged.recalib.bai
+45_3_D | 45_3_D.merged.recalib.bam | 45_3_D.merged.recalib.bai
+45_4_E | 45_4_E.merged.recalib.bam | 45_4_E.merged.recalib.bai
+95_1_A | 95_1_A.merged.recalib.bam | 95_1_A.merged.recalib.bai
+95_2_B | 95_2_B.merged.recalib.bam | 95_2_B.merged.recalib.bai
+95_3_C | 95_3_C.merged.recalib.bam | 95_3_C.merged.recalib.bai
+95_4_D | 95_4_D.merged.recalib.bam | 95_4_D.merged.recalib.bai
+<br />
+
 Sample 45_1_B (plasma DNA)
 ```
 samtools index 45_1_B.merged.recalib.bam
