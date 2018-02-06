@@ -1835,7 +1835,7 @@ Run *[Varscan_pileup2cns_6samples.sh](https://github.research.its.qmul.ac.uk/hfw
 Patient | Input file(s) | Output file(s)
 ------------ | ------------ | ------------
 45 | X16018P001A01/B01P0045_BBC03_normal.bam <br> X16018P001C01/B01P0045BAA07_tumour.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_1_B.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_2_C.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_3_D.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_4_E.merged.recalib.bam | P_45.cns.vcf
-95 | X16018P001B01/B01P0095_ABC03_normal.bam <br> X16018P001D01/B01P0095AAA03_tumour.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_1_A.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_2_B.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_3_C.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_4_D.merged.recalib.bam | P_95.cns.vcf 
+95 | X16018P001B01/B01P0095_ABC03_normal.bam <br> X16018P001D01/B01P0095AAA03_tumour.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_1_A.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_2_B.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_3_C.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_4_D.merged.recalib.bam | P_95.cns.vcf
 <br />
 
 Patient 45
@@ -1873,6 +1873,12 @@ Paramter | Value | Description
 <br />
 
 Run *[Annovar_annotate_variation_allsample.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Annovar_annotate_variation_allsample.sh)* script to annotate detected variants
+
+Patient | Input file(s) | Output file(s)
+------------ | ------------ | ------------
+45 | P_45.cns.vcf | P_45.cns.vcf.avinput <br> P_45.cns.vcf.avinput <br> P_45.cns.vcf.avinput.exonic_variant_function <br> P_45.cns.vcf.avinput.invalid_input <br> P_45.cns.vcf.avinput.log <br> P_45.cns.vcf.avinput.variant_function
+95 | P_95.cns.vcf | P_95.cns.vcf.avinput <br> P_95.cns.vcf.avinput <br> P_95.cns.vcf.avinput.exonic_variant_function <br> P_95.cns.vcf.avinput.invalid_input <br> P_95.cns.vcf.avinput.log <br> P_95.cns.vcf.avinput.variant_function
+<br />
 
 Patient 45
 ```
