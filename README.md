@@ -1894,7 +1894,7 @@ nohup ./Annovar_annotate_variation_allsample.sh  P_95.cns > P_95.Annovar_allsamp
 <br>
 
 **NOTE**: At this step 5 files are created per each vcf file. These are described [here](http://annovar.openbioinformatics.org/en/latest/user-guide/gene/) and [here](http://annovar.openbioinformatics.org/en/latest/user-guide/startup/).
-The two gene-based annotation files are:
+The 2 gene-based annotation files are:
 
 Annotation file | Description
 ------------ | ------------
