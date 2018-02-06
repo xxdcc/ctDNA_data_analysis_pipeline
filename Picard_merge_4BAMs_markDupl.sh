@@ -18,7 +18,7 @@ bam_4=$5
 PICARDDIR=$HOME/applications/picard-tools-2\.5\.0
 
 ## Define some output files for Picard
-outputbammarked=$samplename\.merged\.marked\.bam
+outputbammarked=$samplename\.merged\.bam
 
 
 ## step 3: Marking PCR duplicates
