@@ -2,6 +2,8 @@
 
 This repository describes pipeline for analysing circulating tumour DNA (ctDNA) data derived from whole-exome sequencing (WES) of plasma DNA, whole-genome sequencing (WGS) of tumour DNA and corresponding normal DNA samples from pancreatic cancer patients.
 
+## Data and files
+
 The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computing](https://docs.hpc.qmul.ac.uk/) (HPC) cluster.
 * **plasma WES** RAW data is located in the following directory:<br>
 
@@ -64,10 +66,13 @@ The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computi
 
 * **tumour and normal DNA WGS** data is located in the following directory:<br>
 
-    */data/BCI-BioInformatics/PC_ctDNA/**WGS_data/X16018***
+    */data/BCI-BioInformatics/PC_ctDNA/**WGS_data**/X16018*
 <br>
 
-* The pipeline containts the following steps:
+
+## Pipeline steps
+
+* The pipeline contains the following steps:
 
 Step | Data | Analysis | Tool(s) | Algorithm(s)
 ------------ | ------------ | ------------ | ------------ | ------------
@@ -85,7 +90,6 @@ Step | Data | Analysis | Tool(s) | Algorithm(s)
 12 | WES <br> WGS | [Variants functional annotation](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#12-variants-functional-annotation) | *[ANNOVAR](http://annovar.openbioinformatics.org/en/latest/)* | *convert2annovar.pl* <br> *annotate_variation.pl*
 
 <br />
-
 
 ----------------------
 #### Start with loading modules and installing necessary tools
