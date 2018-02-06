@@ -16,7 +16,7 @@ GATKDIR=$HOME/applications
 reference=/data/BCI-BioInformatics/Jun/reference_hg38/hg38\.fa
 dbSNP=/data/BCI-BioInformatics/Jun/dbSNP/common_all_20161122_chr_sorted\.vcf\.gz
 baserecaldata=$samplename\.recal_data\.grp
-realignmentfixbam=$samplename\.marked\.realigned\.fixed\.bam
+realignmentfixbam=$samplename\.merged\.realigned\.fixed\.bam
 recalioutbam=$samplename\.recalib\.bam
 
 
