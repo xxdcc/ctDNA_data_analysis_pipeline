@@ -15,7 +15,7 @@ The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computi
 
 * The pipeline containts the following steps:
 
-Step | Data | Analysis | Tools | Algorithms
+Step | Data | Analysis | Tool(s) | Algorithm(s)
 ------------ | ------------ | ------------ | ------------ | ------------
 1 | WES | [Alignment](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#1-alignment) | *[Burrows-Wheeler Alignmer](http://bio-bwa.sourceforge.net/)* (*BWA*) | *mem*
 2 | WES | [Sort and convert SAM to BAM files](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#2-sort-and-convert-sam-to-bam-files) | *[Picard](https://broadinstitute.github.io/picard/)* | *SortSam*
@@ -108,10 +108,18 @@ Paramter | Value | Description
 ------------ | ------------ | ------------
 -M | N/A | Mark shorter split hits as secondary (for Picard compatibility)
 -t | 4 | Number of threads
--R | @RG:[sample_name\] LB:[sample_name\] SM:\[sample_name\] PL:Illumina | Complete read group header line
+-R | @RG:[sample_name] LB:[sample_name] SM:[sample_name] PL:Illumina | Complete read group header line
 <br />
 
 Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/BWA_mem.sh)* script for each sample
+
+Input file(s) | Output file(s)
+------------ | ------------
+-B | N/A
+-q  | 20
+-Q | 15
+-R | N/A
+<br />
 
 * **Sequencing batch 1**
 
