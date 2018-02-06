@@ -1181,6 +1181,42 @@ Paramter | Value | Description
 
 Run *[GATK_coverage.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/GATK_coverage.sh)* script for each sample
 
+Batch | Sample | Input file(s) | Output file(s)
+------------ | ------------ | ------------ | ------------
+1 | 45_1_B | 45_1_B.marked.bam | 45_1_B.bam.coverage[...]
+1 | 45_2_C | 45_2_C.marked.bam | 45_2_C.bam.coverage[...]
+1 | 45_3_D | 45_3_D.marked.bam | 45_3_D.bam.coverage[...]
+1 | 45_4_E | 45_4_E.marked.bam | 45_4_E.bam.coverage[...]
+1 | 95_1_A | 95_1_A.marked.bam | 95_1_A.bam.coverage[...]
+1 | 95_2_B | 95_2_B.marked.bam | 95_2_B.bam.coverage[...]
+1 | 95_3_C | 95_3_C.marked.bam | 95_3_C.bam.coverage[...]
+1 | 95_4_D | 95_4_D.marked.bam | 95_4_D.bam.coverage[...]
+2 | 45_1_B | 45_1_B.2.marked.bam | 45_1_B.2.bam.coverage[...]
+2 | 45_2_C | 45_2_C.2.marked.bam | 45_2_C.2.bam.coverage[...]
+2 | 45_3_D | 45_3_D.2.marked.bam | 45_3_D.2.bam.coverage[...]
+2 | 45_4_E | 45_4_E.2.marked.bam | 45_4_E.2.bam.coverage[...]
+2 | 95_1_A | 95_1_A.2.marked.bam | 95_1_A.2.bam.coverage[...]
+2 | 95_2_B | 95_2_B.2.marked.bam | 95_2_B.2.bam.coverage[...]
+2 | 95_3_C | 95_3_C.2.marked.bam | 95_3_C.2.bam.coverage[...]
+2 | 95_4_D | 95_4_D.2.marked.bam | 95_4_D.2.bam.coverage[...]
+3 | 45_1_B | 45_1_B.3.marked.bam | 45_1_B.3.bam.coverage[...]
+3 | 45_2_C | 45_2_C.3.marked.bam | 45_2_C.3.bam.coverage[...]
+3 | 45_3_D | 45_3_D.3.marked.bam | 45_3_D.3.bam.coverage[...]
+3 | 45_4_E | 45_4_E.3.marked.bam | 45_4_E.3.bam.coverage[...]
+3 | 95_1_A | 95_1_A.3.marked.bam | 95_1_A.3.bam.coverage[...]
+3 | 95_2_B | 95_2_B.3.marked.bam | 95_2_B.3.bam.coverage[...]
+3 | 95_3_C | 95_3_C.3.marked.bam | 95_3_C.3.bam.coverage[...]
+3 | 95_4_D | 95_4_D.3.marked.bam | 95_4_D.3.bam.coverage[...]
+4 | 45_1_B | 45_1_B.4.marked.bam | 45_1_B.4.bam.coverage[...]
+4 | 45_2_C | 45_2_C.4.marked.bam | 45_2_C.4.bam.coverage[...]
+4 | 45_3_D | 45_3_D.4.marked.bam | 45_3_D.4.bam.coverage[...]
+4 | 45_4_E | 45_4_E.4.marked.bam | 45_4_E.4.bam.coverage[...]
+4 | 95_1_A | 95_1_A.4.marked.bam | 95_1_A.4.bam.coverage[...]
+4 | 95_2_B | 95_2_B.4.marked.bam | 95_2_B.4.bam.coverage[...]
+4 | 95_3_C | 95_3_C.4.marked.bam | 95_3_C.4.bam.coverage[...]
+4 | 95_4_D | 95_4_D.4.marked.bam | 95_4_D.4.bam.coverage[...]
+<br />
+
 * **Sequencing batch 1**
 
 Sample 45_1_B (plasma DNA)
@@ -1353,7 +1389,7 @@ nohup ./GATK_coverage.sh  95_4_D.4 > 95_4_D.4.GATK_coverage.log &
 ```
 <br>
 
-At thie step 7 files are creates per each sample
+At this step 7 files are created per each sample
 
 Output file suffix | Description
 ------------ | ------------
