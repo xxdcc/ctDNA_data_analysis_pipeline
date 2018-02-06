@@ -1509,14 +1509,14 @@ CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM fi
 
 Sample | Input file(s) | Output file(s)
 ------------ | ------------ | ------------
-45_1_B | 45_1_B.merged.bam | 45_1_B.merged.realigned.bam
-45_2_C | 45_2_C.merged.bam | 45_2_C.merged.realigned.bam
-45_3_D | 45_3_D.merged.bam | 45_3_D.merged.realigned.bam
-45_4_E | 45_4_E.merged.bam | 45_4_E.merged.realigned.bam
-95_1_A | 95_1_A.merged.bam | 95_1_A.merged.realigned.bam
-95_2_B | 95_2_B.merged.bam | 95_2_B.merged.realigned.bam
-95_3_C | 95_3_C.merged.bam | 95_3_C.merged.realigned.bam
-95_4_D | 95_4_D.merged.bam | 95_4_D.merged.realigned.bam
+45_1_B | 45_1_B.merged.bam | 45_1_B.merged.realigned.bam <br> 45_1_B.merged.realigned.fixed.bam
+45_2_C | 45_2_C.merged.bam | 45_2_C.merged.realigned.bam <br> 45_2_C.merged.realigned.fixed.bam
+45_3_D | 45_3_D.merged.bam | 45_3_D.merged.realigned.bam <br> 45_3_D.merged.realigned.fixed.bam
+45_4_E | 45_4_E.merged.bam | 45_4_E.merged.realigned.bam <br> 45_4_E.merged.realigned.fixed.bam
+95_1_A | 95_1_A.merged.bam | 95_1_A.merged.realigned.bam <br> 95_1_A.merged.realigned.fixed.bam
+95_2_B | 95_2_B.merged.bam | 95_2_B.merged.realigned.bam <br> 95_2_B.merged.realigned.fixed.bam
+95_3_C | 95_3_C.merged.bam | 95_3_C.merged.realigned.bam <br> 95_3_C.merged.realigned.fixed.bam
+95_4_D | 95_4_D.merged.bam | 95_4_D.merged.realigned.bam <br> 95_4_D.merged.realigned.fixed.bam
 <br />
 
 Run *[Picard_GATK_localAlign_indels.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Picard_GATK_localAlign_indels.sh)* script for each sample
@@ -1580,6 +1580,18 @@ Variant calling algorithms rely heavily on the quality scores assigned to the in
 
 
 Run *[GATK_baseQrecalib.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/GATK_baseQrecalib.sh)* script for each sample
+
+Sample | Input file(s) | Output file(s)
+------------ | ------------ | ------------
+45_1_B | 45_1_B.merged.realigned.fixed.bam | 45_1_B.merged.recal_data.grp <br> 45_1_B.recalib.bam
+45_2_C | 45_2_C.merged.realigned.fixed.bam | 45_2_C.merged.recal_data.grp <br> 45_2_C.recalib.bam
+45_3_D | 45_3_D.merged.realigned.fixed.bam | 45_3_D.merged.recal_data.grp <br> 45_3_D.recalib.bam
+45_4_E | 45_4_E.merged.realigned.fixed.bam | 45_4_E.merged.recal_data.grp <br> 45_4_E.recalib.bam
+95_1_A | 95_1_A.merged.realigned.fixed.bam | 95_1_A.merged.recal_data.grp <br> 95_1_A.recalib.bam
+95_2_B | 95_2_B.merged.realigned.fixed.bam | 95_2_B.merged.recal_data.grp <br> 95_2_B.recalib.bam
+95_3_C | 95_3_C.merged.realigned.fixed.bam | 95_3_C.merged.recal_data.grp <br> 95_3_C.recalib.bam
+95_4_D | 95_4_D.merged.realigned.fixed.bam | 95_4_D.merged.recal_data.grp <br> 95_4_D.recalib.bam
+<br />
 
 Sample 45_1_B (plasma DNA)
 ```
