@@ -1891,5 +1891,6 @@ Patient 95
 cd /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018
 nohup ./Annovar_annotate_variation_allsample.sh  P_95.cns > P_95.Annovar_allsample.log &
 ```
+<br>
 
 **NOTE**: At this step 6 files are created per each vcf file. These are described [here](http://annovar.openbioinformatics.org/en/latest/user-guide/gene/)
