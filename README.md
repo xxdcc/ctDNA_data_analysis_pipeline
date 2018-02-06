@@ -1,17 +1,56 @@
 # ctDNA data analysis pipeline
 
-This repository describes pipeline for analysing data from whole-exome sequencing (WES) of circulating tumour DNA (plasma DNA) and whole-genome sequencing (WGS) tissue samples.
+This repository describes pipeline for analysing circulating tumour DNA (ctDNA) data derived from whole-exome sequencing (WES) of plasma DNA, whole-genome sequencing (WGS) tumour DNA and corresponding normal DNA samples from pancreatic cancer patients.
 
-The pipeline is implemented using ctDNA from plasma samples and tumour with corresponding normal DNA samples derived from pancreatic cancer patients.
 The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computing](https://docs.hpc.qmul.ac.uk/) (HPC) cluster.
 * **ctDNA WES** data is located in the following directory:<br>
 
+    */data/BCI-BioInformatics/PC_ctDNA/**WES_data**/raw_data*
+
+    Batch | Sample | Files
+    ------------ | ------------ | ------------
+    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam <br>
+    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    2 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    2 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    2 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    2 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    2 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    2 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    2 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    2 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    3 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    3 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    3 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    3 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    3 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    3 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    3 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    3 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    4 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    4 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    4 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    4 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    4 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    4 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    4 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    4 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    <br />
+
+* **plasma DNA WES** data analyses are performed in the following directory:<br>
+
     */data/BCI-BioInformatics/PC_ctDNA/**WES_data***
 
-    Batch | Sample | File
-    ------------ | ------------ | ------------
-    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
-    <br />
+* **tissue WGS** data is located in the following directory:<br>
+
+    */data/BCI-BioInformatics/PC_ctDNA/**WGS_data/X16018***
 
 * **tissue WGS** data is located in the following directory:<br>
 
