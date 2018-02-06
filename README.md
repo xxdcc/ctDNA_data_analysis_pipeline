@@ -1422,14 +1422,14 @@ Run *[Picard_merge_4BAMs_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw
 
 Sample | Input file(s) | Output file(s)
 ------------ | ------------ | ------------
-1 | 45_1_B | 45_1_B.marked.bam <br> 45_1_B.2.marked.bam <br> 45_1_B.3.marked.bam <br> 45_1_B.4.marked.bam | 45_1_B.merged.marked.bam
-1 | 45_2_C | 45_2_C.marked.bam <br> 45_2_C.2.marked.bam <br> 45_2_C.3.marked.bam <br> 45_2_C.4.marked.bam | 45_2_C.merged.marked.bam
-1 | 45_3_D | 45_3_D.marked.bam <br> 45_3_D.2.marked.bam <br> 45_3_D.3.marked.bam <br> 45_3_D.4.marked.bam | 45_3_D.merged.marked.bam
-1 | 45_4_E | 45_4_E.marked.bam <br> 45_4_E.2.marked.bam <br> 45_4_E.3.marked.bam <br> 45_4_E.4.marked.bam | 45_4_E.merged.marked.bam
-1 | 95_1_A | 95_1_A.marked.bam <br> 95_1_A.2.marked.bam <br> 95_1_A.3.marked.bam <br> 95_1_A.4.marked.bam | 95_1_A.merged.marked.bam
-1 | 95_2_B | 95_2_B.marked.bam <br> 95_2_B.2.marked.bam <br> 95_2_B.3.marked.bam <br> 95_2_B.4.marked.bam | 95_2_B.merged.marked.bam
-1 | 95_3_C | 95_3_C.marked.bam <br> 95_3_C.2.marked.bam <br> 95_3_C.3.marked.bam <br> 95_3_C.4.marked.bam | 95_3_C.merged.marked.bam
-1 | 95_4_D | 95_4_D.marked.bam <br> 95_4_D.2.marked.bam <br> 95_4_D.3.marked.bam <br> 95_4_D.4.marked.bam | 95_4_D.merged.marked.bam
+45_1_B | 45_1_B.marked.bam <br> 45_1_B.2.marked.bam <br> 45_1_B.3.marked.bam <br> 45_1_B.4.marked.bam | 45_1_B.merged.marked.bam
+45_2_C | 45_2_C.marked.bam <br> 45_2_C.2.marked.bam <br> 45_2_C.3.marked.bam <br> 45_2_C.4.marked.bam | 45_2_C.merged.marked.bam
+45_3_D | 45_3_D.marked.bam <br> 45_3_D.2.marked.bam <br> 45_3_D.3.marked.bam <br> 45_3_D.4.marked.bam | 45_3_D.merged.marked.bam
+45_4_E | 45_4_E.marked.bam <br> 45_4_E.2.marked.bam <br> 45_4_E.3.marked.bam <br> 45_4_E.4.marked.bam | 45_4_E.merged.marked.bam
+95_1_A | 95_1_A.marked.bam <br> 95_1_A.2.marked.bam <br> 95_1_A.3.marked.bam <br> 95_1_A.4.marked.bam | 95_1_A.merged.marked.bam
+95_2_B | 95_2_B.marked.bam <br> 95_2_B.2.marked.bam <br> 95_2_B.3.marked.bam <br> 95_2_B.4.marked.bam | 95_2_B.merged.marked.bam
+95_3_C | 95_3_C.marked.bam <br> 95_3_C.2.marked.bam <br> 95_3_C.3.marked.bam <br> 95_3_C.4.marked.bam | 95_3_C.merged.marked.bam
+95_4_D | 95_4_D.marked.bam <br> 95_4_D.2.marked.bam <br> 95_4_D.3.marked.bam <br> 95_4_D.4.marked.bam | 95_4_D.merged.marked.bam
 <br />
 
 * **Sequencing batch 1**
