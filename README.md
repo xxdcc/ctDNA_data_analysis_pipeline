@@ -1893,4 +1893,11 @@ nohup ./Annovar_annotate_variation_allsample.sh  P_95.cns > P_95.Annovar_allsamp
 ```
 <br>
 
-**NOTE**: At this step 6 files are created per each vcf file. These are described [here](http://annovar.openbioinformatics.org/en/latest/user-guide/gene/)
+**NOTE**: At this step 6 files are created per each vcf file. These are described [here](http://annovar.openbioinformatics.org/en/latest/user-guide/gene/) and [here](http://annovar.openbioinformatics.org/en/latest/user-guide/startup/).
+The two gene-based annotation files are:
+
+Annotation file | Description
+------------ | ------------
+[sample_name].cns.vcf.avinput.exonic_variant_function | The 1st and 2nd columns annotate variant effects on gene structure and the genes that are affected. The other columns are reproduced from input file
+[sample_name].cns.vcf.avinput.variant_function | The 1st, 2nd and 3rd columns annotate variant line number in input file, the variant effects on coding sequences and the gene/transcript being affected. The other columns are reproduced from input file
+<br />
