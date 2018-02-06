@@ -113,12 +113,9 @@ Paramter | Value | Description
 
 Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/BWA_mem.sh)* script for each sample
 
-Input file(s) | Output file(s)
+Sample | Input file(s) | Output file(s)
 ------------ | ------------
--B | N/A
--q  | 20
--Q | 15
--R | N/A
+45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam | 45_1_B.sam
 <br />
 
 * **Sequencing batch 1**
