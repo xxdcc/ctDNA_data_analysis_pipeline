@@ -1901,3 +1901,12 @@ Annotation file | Description
 [patient].cns.vcf.avinput.exonic_variant_function | The 1st and 2nd columns annotate variant effects on gene structure and the genes that are affected. The other columns are reproduced from input file
 [patient].cns.vcf.avinput.variant_function | The 1st, 2nd and 3rd columns annotate variant line number in input file, the variant effects on coding sequences and the gene/transcript being affected. The other columns are reproduced from input file
 <br />
+
+The other 3 files are:
+
+Output file | Description
+------------ | ------------
+[patient].cns.vcf.avinput  | *convert2annovar.pl* converted vcf file and input for *annotate_variation.pl*
+[patient].cns.vcf.avinput.invalid_input | Problematic variants rejected by *annotate_variation.pl* (e.g. unknown chromosome)
+[patient].cns.vcf.avinput.log  | Log file
+<br />
