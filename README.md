@@ -394,6 +394,42 @@ CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM fi
 
 Run *[Picard_SAM2BAM.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Picard_SAM2BAM.sh)* script for each sample
 
+Batch | Sample | Input file(s) | Output file(s)
+------------ | ------------ | ------------ | ------------
+1 | 45_1_B | 45_1_B.sam | 45_1_B.bam
+1 | 45_2_C | 45_2_C.sam | 45_2_C.bam
+1 | 45_3_D | 45_3_D.sam | 45_3_D.bam
+1 | 45_4_E | 45_4_E.sam | 45_4_E.bam
+1 | 95_1_A | 95_1_A.sam | 95_1_A.bam
+1 | 95_2_B | 95_2_B.sam | 95_2_B.bam
+1 | 95_3_C | 95_3_C.sam | 95_3_C.bam
+1 | 95_4_D | 95_4_D.sam | 95_4_D.bam
+2 | 45_1_B | 45_1_B.2.sam | 45_1_B.2.bam
+2 | 45_2_C | 45_2_C.2.sam | 45_2_C.2.bam
+2 | 45_3_D | 45_3_D.2.sam | 45_3_D.2.bam
+2 | 45_4_E | 45_4_E.2.sam | 45_4_E.2.bam
+2 | 95_1_A | 95_1_A.2.sam | 95_1_A.2.bam
+2 | 95_2_B | 95_2_B.2.sam | 95_2_B.2.bam
+2 | 95_3_C | 95_3_C.2.sam | 95_3_C.2.bam
+2 | 95_4_D | 95_4_D.2.sam | 95_4_D.2.bam
+3 | 45_1_B | 45_1_B.3.sam | 45_1_B.3.bam
+3 | 45_2_C | 45_2_C.3.sam | 45_2_C.3.bam
+3 | 45_3_D | 45_3_D.3.sam | 45_3_D.3.bam
+3 | 45_4_E | 45_4_E.3.sam | 45_4_E.3.bam
+3 | 95_1_A | 95_1_A.3.sam | 95_1_A.3.bam
+3 | 95_2_B | 95_2_B.3.sam | 95_2_B.3.bam
+3 | 95_3_C | 95_3_C.3.sam | 95_3_C.3.bam
+3 | 95_4_D | 95_4_D.3.sam | 95_4_D.3.bam
+4 | 45_1_B | 45_1_B.4.sam | 45_1_B.4.bam
+4 | 45_2_C | 45_2_C.4.sam | 45_2_C.4.bam
+4 | 45_3_D | 45_3_D.4.sam | 45_3_D.4.bam
+4 | 45_4_E | 45_4_E.4.sam | 45_4_E.4.bam
+4 | 95_1_A | 95_1_A.4.sam | 95_1_A.4.bam
+4 | 95_2_B | 95_2_B.4.sam | 95_2_B.4.bam
+4 | 95_3_C | 95_3_C.4.sam | 95_3_C.4.bam
+4 | 95_4_D | 95_4_D.4.sam | 95_4_D.4.bam
+<br />
+
 * **Sequencing batch 1**
 
 Sample 45_1_B (plasma DNA)
@@ -583,6 +619,42 @@ CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM fi
 <br />
 
 Run *[Picard_markDupl.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Picard_markDupl.sh)* script for each sample
+
+Batch | Sample | Input file(s) | Output file(s)
+------------ | ------------ | ------------ | ------------
+1 | 45_1_B | 45_1_B.sam | 45_1_B.bam
+1 | 45_2_C | 45_2_C.sam | 45_2_C.bam
+1 | 45_3_D | 45_3_D.sam | 45_3_D.bam
+1 | 45_4_E | 45_4_E.sam | 45_4_E.bam
+1 | 95_1_A | 95_1_A.sam | 95_1_A.bam
+1 | 95_2_B | 95_2_B.sam | 95_2_B.bam
+1 | 95_3_C | 95_3_C.sam | 95_3_C.bam
+1 | 95_4_D | 95_4_D.sam | 95_4_D.bam
+2 | 45_1_B | 45_1_B.2.sam | 45_1_B.2.bam
+2 | 45_2_C | 45_2_C.2.sam | 45_2_C.2.bam
+2 | 45_3_D | 45_3_D.2.sam | 45_3_D.2.bam
+2 | 45_4_E | 45_4_E.2.sam | 45_4_E.2.bam
+2 | 95_1_A | 95_1_A.2.sam | 95_1_A.2.bam
+2 | 95_2_B | 95_2_B.2.sam | 95_2_B.2.bam
+2 | 95_3_C | 95_3_C.2.sam | 95_3_C.2.bam
+2 | 95_4_D | 95_4_D.2.sam | 95_4_D.2.bam
+3 | 45_1_B | 45_1_B.3.sam | 45_1_B.3.bam
+3 | 45_2_C | 45_2_C.3.sam | 45_2_C.3.bam
+3 | 45_3_D | 45_3_D.3.sam | 45_3_D.3.bam
+3 | 45_4_E | 45_4_E.3.sam | 45_4_E.3.bam
+3 | 95_1_A | 95_1_A.3.sam | 95_1_A.3.bam
+3 | 95_2_B | 95_2_B.3.sam | 95_2_B.3.bam
+3 | 95_3_C | 95_3_C.3.sam | 95_3_C.3.bam
+3 | 95_4_D | 95_4_D.3.sam | 95_4_D.3.bam
+4 | 45_1_B | 45_1_B.4.sam | 45_1_B.4.bam
+4 | 45_2_C | 45_2_C.4.sam | 45_2_C.4.bam
+4 | 45_3_D | 45_3_D.4.sam | 45_3_D.4.bam
+4 | 45_4_E | 45_4_E.4.sam | 45_4_E.4.bam
+4 | 95_1_A | 95_1_A.4.sam | 95_1_A.4.bam
+4 | 95_2_B | 95_2_B.4.sam | 95_2_B.4.bam
+4 | 95_3_C | 95_3_C.4.sam | 95_3_C.4.bam
+4 | 95_4_D | 95_4_D.4.sam | 95_4_D.4.bam
+<br />
 
 * **Sequencing batch 1**
 
