@@ -1711,6 +1711,18 @@ samtools index 95_4_D.merged.recalib.bam
 **Tool**: *SAMtools*<br>
 **Algorithm**: *flagstat*
 
+Sample | Input file(s) | Output file(s)
+------------ | ------------ | ------------
+45_1_B | 45_1_B.merged.recalib.bam | 45_1_B.merged.recalib.flagstat.txt
+45_2_C | 45_2_C.merged.recalib.bam | 45_2_C.merged.recalib.flagstat.txt
+45_3_D | 45_3_D.merged.recalib.bam | 45_3_D.merged.recalib.flagstat.txt
+45_4_E | 45_4_E.merged.recalib.bam | 45_4_E.merged.recalib.flagstat.txt
+95_1_A | 95_1_A.merged.recalib.bam | 95_1_A.merged.recalib.flagstat.txt
+95_2_B | 95_2_B.merged.recalib.bam | 95_2_B.merged.recalib.flagstat.txt
+95_3_C | 95_3_C.merged.recalib.bam | 95_3_C.merged.recalib.flagstat.txt
+95_4_D | 95_4_D.merged.recalib.bam | 95_4_D.merged.recalib.flagstat.txt
+<br />
+
 Sample 45_1_B (plasma DNA)
 ```
 samtools flagstat 45_1_B.merged.recalib.bam > 45_1_B.merged.recalib.flagstat.txt
@@ -1752,6 +1764,27 @@ samtools flagstat 95_4_D.merged.recalib.bam > 95_4_D.merged.recalib.flagstat.txt
 ```
 
 ----------------------
+
+Sample | Input file(s) | Output file(s)
+------------ | ------------ | ------------
+45 (normal DNA) | X16018P001A01/B01P0045_BBC03_normal.bam | X16018P001A01/B01P0045_BBC03_normal.flagstat.txt
+45 (tumour DNA) | X16018P001C01/B01P0045BAA07_tumour.bam | X16018P001C01/B01P0045BAA07_tumour.flagstat.txt
+95 (normal DNA) | X16018P001B01/B01P0095_ABC03_normal.bam | X16018P001B01/B01P0095_ABC03_normal.flagstat.txt
+95 (tumour DNA) | X16018P001D01/B01P0095AAA03_tumour.bam | X16018P001D01/B01P0095AAA03_tumour.flagstat.txt
+<br />
+
+
+Sample | Input file(s) | Output file(s)
+------------ | ------------ | ------------
+45_1_B | 45_1_B.merged.recalib.bam | 45_1_B.merged.recalib.flagstat.txt
+45_2_C | 45_2_C.merged.recalib.bam | 45_2_C.merged.recalib.flagstat.txt
+45_3_D | 45_3_D.merged.recalib.bam | 45_3_D.merged.recalib.flagstat.txt
+45_4_E | 45_4_E.merged.recalib.bam | 45_4_E.merged.recalib.flagstat.txt
+95_1_A | 95_1_A.merged.recalib.bam | 95_1_A.merged.recalib.flagstat.txt
+95_2_B | 95_2_B.merged.recalib.bam | 95_2_B.merged.recalib.flagstat.txt
+95_3_C | 95_3_C.merged.recalib.bam | 95_3_C.merged.recalib.flagstat.txt
+95_4_D | 95_4_D.merged.recalib.bam | 95_4_D.merged.recalib.flagstat.txt
+<br />
 
 Sample 45 (normal DNA)
 ```
