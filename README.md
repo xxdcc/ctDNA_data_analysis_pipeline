@@ -837,38 +837,38 @@ nohup ./Picard_markDupl.sh  95_4_D.4 > 95_4_D.4.Picard_markDupl.log &
 
 Batch | Sample | Input file(s) | Output file(s)
 ------------ | ------------ | ------------ | ------------
-1 | 45_1_B | 45_1_B.bam | 45_1_B.marked.bam
-1 | 45_2_C | 45_2_C.bam | 45_2_C.marked.bam
-1 | 45_3_D | 45_3_D.bam | 45_3_D.marked.bam
-1 | 45_4_E | 45_4_E.bam | 45_4_E.marked.bam
-1 | 95_1_A | 95_1_A.bam | 95_1_A.marked.bam
-1 | 95_2_B | 95_2_B.bam | 95_2_B.marked.bam
-1 | 95_3_C | 95_3_C.bam | 95_3_C.marked.bam
-1 | 95_4_D | 95_4_D.bam | 95_4_D.marked.bam
-2 | 45_1_B | 45_1_B.2.sam | 45_1_B.2.marked.bam
-2 | 45_2_C | 45_2_C.2.bam | 45_2_C.2.marked.bam
-2 | 45_3_D | 45_3_D.2.bam | 45_3_D.2.marked.bam
-2 | 45_4_E | 45_4_E.2.bam | 45_4_E.2.marked.bam
-2 | 95_1_A | 95_1_A.2.bam | 95_1_A.2.marked.bam
-2 | 95_2_B | 95_2_B.2.bam | 95_2_B.2.marked.bam
-2 | 95_3_C | 95_3_C.2.bam | 95_3_C.2.marked.bam
-2 | 95_4_D | 95_4_D.2.bam | 95_4_D.2.marked.bam
-3 | 45_1_B | 45_1_B.3.bam | 45_1_B.3.marked.bam
-3 | 45_2_C | 45_2_C.3.bam | 45_2_C.3.marked.bam
-3 | 45_3_D | 45_3_D.3.bam | 45_3_D.3.marked.bam
-3 | 45_4_E | 45_4_E.3.bam | 45_4_E.3.marked.bam
-3 | 95_1_A | 95_1_A.3.bam | 95_1_A.3.marked.bam
-3 | 95_2_B | 95_2_B.3.bam | 95_2_B.3.marked.bam
-3 | 95_3_C | 95_3_C.3.bam | 95_3_C.3.marked.bam
-3 | 95_4_D | 95_4_D.3.bam | 95_4_D.3.marked.bam
-4 | 45_1_B | 45_1_B.4.bam | 45_1_B.4.marked.bam
-4 | 45_2_C | 45_2_C.4.bam | 45_2_C.4.marked.bam
-4 | 45_3_D | 45_3_D.4.bam | 45_3_D.4.marked.bam
-4 | 45_4_E | 45_4_E.4.bam | 45_4_E.4.marked.bam
-4 | 95_1_A | 95_1_A.4.bam | 95_1_A.4.marked.bam
-4 | 95_2_B | 95_2_B.4.bam | 95_2_B.4.marked.bam
-4 | 95_3_C | 95_3_C.4.bam | 95_3_C.4.marked.bam
-4 | 95_4_D | 95_4_D.4.bam | 95_4_D.4.marked.bam
+1 | 45_1_B | 45_1_B.marked.bam | 45_1_B.marked.bam.stats/5_1_B.marked.bam.stats <br> 45_1_B.marked.bam.stats/5_1_B.marked.bam.stats.plot[...]
+1 | 45_2_C | 45_2_C.marked.bam | 45_2_C.marked.bam
+1 | 45_3_D | 45_3_D.marked.bam | 45_3_D.marked.bam
+1 | 45_4_E | 45_4_E.marked.bam | 45_4_E.marked.bam
+1 | 95_1_A | 95_1_A.marked.bam | 95_1_A.marked.bam
+1 | 95_2_B | 95_2_B.marked.bam | 95_2_B.marked.bam
+1 | 95_3_C | 95_3_C.marked.bam | 95_3_C.marked.bam
+1 | 95_4_D | 95_4_D.marked.bam | 95_4_D.marked.bam
+2 | 45_1_B | 45_1_B.2.marked.bam | 45_1_B.2.marked.bam
+2 | 45_2_C | 45_2_C.2.marked.bam | 45_2_C.2.marked.bam
+2 | 45_3_D | 45_3_D.2.marked.bam | 45_3_D.2.marked.bam
+2 | 45_4_E | 45_4_E.2.marked.bam | 45_4_E.2.marked.bam
+2 | 95_1_A | 95_1_A.2.marked.bam | 95_1_A.2.marked.bam
+2 | 95_2_B | 95_2_B.2.marked.bam | 95_2_B.2.marked.bam
+2 | 95_3_C | 95_3_C.2.marked.bam | 95_3_C.2.marked.bam
+2 | 95_4_D | 95_4_D.2.marked.bam | 95_4_D.2.marked.bam
+3 | 45_1_B | 45_1_B.3.marked.bam | 45_1_B.3.marked.bam
+3 | 45_2_C | 45_2_C.3.marked.bam | 45_2_C.3.marked.bam
+3 | 45_3_D | 45_3_D.3.marked.bam | 45_3_D.3.marked.bam
+3 | 45_4_E | 45_4_E.3.marked.bam | 45_4_E.3.marked.bam
+3 | 95_1_A | 95_1_A.3.marked.bam | 95_1_A.3.marked.bam
+3 | 95_2_B | 95_2_B.3.marked.bam | 95_2_B.3.marked.bam
+3 | 95_3_C | 95_3_C.3.marked.bam | 95_3_C.3.marked.bam
+3 | 95_4_D | 95_4_D.3.marked.bam | 95_4_D.3.marked.bam
+4 | 45_1_B | 45_1_B.4.marked.bam | 45_1_B.4.marked.bam
+4 | 45_2_C | 45_2_C.4.marked.bam | 45_2_C.4.marked.bam
+4 | 45_3_D | 45_3_D.4.marked.bam | 45_3_D.4.marked.bam
+4 | 45_4_E | 45_4_E.4.marked.bam | 45_4_E.4.marked.bam
+4 | 95_1_A | 95_1_A.4.marked.bam | 95_1_A.4.marked.bam
+4 | 95_2_B | 95_2_B.4.marked.bam | 95_2_B.4.marked.bam
+4 | 95_3_C | 95_3_C.4.marked.bam | 95_3_C.4.marked.bam
+4 | 95_4_D | 95_4_D.4.marked.bam | 95_4_D.4.marked.bam
 <br />
 
 
