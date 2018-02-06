@@ -1507,7 +1507,17 @@ VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
 <br />
 
-
+Sample | Input file(s) | Output file(s)
+------------ | ------------ | ------------
+45_1_B | 45_1_B.merged.bam | 45_1_B.merged.realigned.bam
+45_2_C | 45_2_C.merged.bam | 45_2_C.merged.realigned.bam
+45_3_D | 45_3_D.merged.bam | 45_3_D.merged.realigned.bam
+45_4_E | 45_4_E.merged.bam | 45_4_E.merged.realigned.bam
+95_1_A | 95_1_A.merged.bam | 95_1_A.merged.realigned.bam
+95_2_B | 95_2_B.merged.bam | 95_2_B.merged.realigned.bam
+95_3_C | 95_3_C.merged.bam | 95_3_C.merged.realigned.bam
+95_4_D | 95_4_D.merged.bam | 95_4_D.merged.realigned.bam
+<br />
 
 Run *[Picard_GATK_localAlign_indels.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Picard_GATK_localAlign_indels.sh)* script for each sample
 
@@ -1617,12 +1627,12 @@ nohup ./GATK_baseQrecalib.sh  95_4_D.merged > 95_4_D.merged.GATK_baseQrecalib.lo
 rm [sample_name].sam
 rm [sample_name].bam
 rm [sample_name].bai
-rm [sample_name].merged.marked.bam
-rm [sample_name].merged.marked.bai
-rm [sample_name].merged.marked.realigned.bam
-rm [sample_name].merged.marked.realigned.bai
-rm [sample_name].merged.marked.realigned.fixed.bam
-rm [sample_name].merged.marked.realigned.fixed.bai
+rm [sample_name].merged.bam
+rm [sample_name].merged.bai
+rm [sample_name].merged.realigned.bam
+rm [sample_name].merged.realigned.bai
+rm [sample_name].merged.realigned.fixed.bam
+rm [sample_name].merged.realigned.fixed.bai
 ```
 
 ----------------------
