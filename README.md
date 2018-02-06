@@ -8,6 +8,11 @@ The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computi
 
     */data/BCI-BioInformatics/PC_ctDNA/**WES_data***
 
+    Batch | Sample | File
+    ------------ | ------------ | ------------
+    1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam
+    <br />
+
 * **tissue WGS** data is located in the following directory:<br>
 
     */data/BCI-BioInformatics/PC_ctDNA/**WGS_data/X16018***
@@ -116,7 +121,6 @@ Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analy
 Batch | Sample | Input file(s) | Output file(s)
 ------------ | ------------ | ------------ | ------------
 1 | 45_1_B | SLX-12721.iPCRtagT002.HGJWLBBXX.s_5.r_1.fq.gz.sam | 45_1_B.sam
-
 <br />
 
 * **Sequencing batch 1**
