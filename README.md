@@ -1391,15 +1391,15 @@ nohup ./GATK_coverage.sh  95_4_D.4 > 95_4_D.4.GATK_coverage.log &
 
 At this step 7 files are created per each sample
 
-Output file suffix | Description
+Output file | Description
 ------------ | ------------
-no suffix | per locus coverage
-\_summary | total, mean, median, quartiles, and threshold proportions, aggregated over all bases
-\_statistics | coverage histograms (# locus with X coverage), aggregated over all bases
-\_interval_summary | total, mean, median, quartiles, and threshold proportions, aggregated per interval
-\_interval_statistics | 2x2 table of # of intervals covered to >= X depth in >=Y samples
-\_cumulative_coverage_counts | coverage histograms (# locus with >= X coverage), aggregated over all bases
-\_cumulative_coverage_proportions | proprotions of loci with >= X coverage, aggregated over all bases
+[sample_name]bam.coverage | per locus coverage
+[sample_name]bam.coverage.sample_summary | total, mean, median, quartiles, and threshold proportions, aggregated over all bases
+[sample_name]bam.coverage.sample_statistics | coverage histograms (# locus with X coverage), aggregated over all bases
+[sample_name]bam.coverage.sample_interval_summary | total, mean, median, quartiles, and threshold proportions, aggregated per interval
+[sample_name]bam.coverage.sample_interval_statistics | 2x2 table of # of intervals covered to >= X depth in >=Y samples
+[sample_name]bam.coverage.sample_cumulative_coverage_counts | coverage histograms (# locus with >= X coverage), aggregated over all bases
+[sample_name]bam.coverage.sample_cumulative_coverage_proportions | proprotions of loci with >= X coverage, aggregated over all bases
 <br />
 
 
