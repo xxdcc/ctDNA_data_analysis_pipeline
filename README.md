@@ -1876,8 +1876,8 @@ Run *[Annovar_annotate_variation_allsample.sh](https://github.research.its.qmul.
 
 Patient | Input file(s) | Output file(s)
 ------------ | ------------ | ------------
-45 | P_45.cns.vcf | P_45.cns.vcf.avinput <br> P_45.cns.vcf.avinput <br> P_45.cns.vcf.avinput.exonic_variant_function <br> P_45.cns.vcf.avinput.invalid_input <br> P_45.cns.vcf.avinput.log <br> P_45.cns.vcf.avinput.variant_function
-95 | P_95.cns.vcf | P_95.cns.vcf.avinput <br> P_95.cns.vcf.avinput <br> P_95.cns.vcf.avinput.exonic_variant_function <br> P_95.cns.vcf.avinput.invalid_input <br> P_95.cns.vcf.avinput.log <br> P_95.cns.vcf.avinput.variant_function
+45 | P_45.cns.vcf | P_45.cns.vcf.avinput <br> P_45.cns.vcf.avinput.exonic_variant_function <br> P_45.cns.vcf.avinput.invalid_input <br> P_45.cns.vcf.avinput.log <br> P_45.cns.vcf.avinput.variant_function
+95 | P_95.cns.vcf | P_95.cns.vcf.avinput <br> P_95.cns.vcf.avinput.exonic_variant_function <br> P_95.cns.vcf.avinput.invalid_input <br> P_95.cns.vcf.avinput.log <br> P_95.cns.vcf.avinput.variant_function
 <br />
 
 Patient 45
@@ -1893,11 +1893,11 @@ nohup ./Annovar_annotate_variation_allsample.sh  P_95.cns > P_95.Annovar_allsamp
 ```
 <br>
 
-**NOTE**: At this step 6 files are created per each vcf file. These are described [here](http://annovar.openbioinformatics.org/en/latest/user-guide/gene/) and [here](http://annovar.openbioinformatics.org/en/latest/user-guide/startup/).
+**NOTE**: At this step 5 files are created per each vcf file. These are described [here](http://annovar.openbioinformatics.org/en/latest/user-guide/gene/) and [here](http://annovar.openbioinformatics.org/en/latest/user-guide/startup/).
 The two gene-based annotation files are:
 
 Annotation file | Description
 ------------ | ------------
-[sample_name].cns.vcf.avinput.exonic_variant_function | The 1st and 2nd columns annotate variant effects on gene structure and the genes that are affected. The other columns are reproduced from input file
-[sample_name].cns.vcf.avinput.variant_function | The 1st, 2nd and 3rd columns annotate variant line number in input file, the variant effects on coding sequences and the gene/transcript being affected. The other columns are reproduced from input file
+[patient].cns.vcf.avinput.exonic_variant_function | The 1st and 2nd columns annotate variant effects on gene structure and the genes that are affected. The other columns are reproduced from input file
+[patient].cns.vcf.avinput.variant_function | The 1st, 2nd and 3rd columns annotate variant line number in input file, the variant effects on coding sequences and the gene/transcript being affected. The other columns are reproduced from input file
 <br />
