@@ -3,7 +3,7 @@
 This repository describes pipeline for analysing circulating tumour DNA (ctDNA) data derived from whole-exome sequencing (WES) of plasma DNA, whole-genome sequencing (WGS) of tumour DNA and corresponding normal DNA samples from pancreatic cancer patients.
 
 The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computing](https://docs.hpc.qmul.ac.uk/) (HPC) cluster.
-* **ctDNA WES** data is located in the following directory:<br>
+* **plasma WES** data is located in the following directory:<br>
 
     */data/BCI-BioInformatics/PC_ctDNA/**WES_data**/raw_data*
 
@@ -50,11 +50,11 @@ The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computi
 
 ----------------------
 
-* **tissue WGS** data is located in the following directory:<br>
+* **tumour and normal DNA WGS** data is located in the following directory:<br>
 
     */data/BCI-BioInformatics/PC_ctDNA/**WGS_data/X16018***
 
-* **tissue WGS** data is located in the following directory:<br>
+* **tumour and normal DNA WGS** data is located in the following directory:<br>
 
     */data/BCI-BioInformatics/PC_ctDNA/**WGS_data/X16018***
 <br>
