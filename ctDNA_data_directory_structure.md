@@ -5,7 +5,7 @@ This repository describes the directory structure for [circulating tumour DNA (c
 
 ## Plasma WES data
 
-*/data/BCI-BioInformatics/PC_ctDNA/**WES_data**
+ */data/BCI-BioInformatics/PC_ctDNA/**WES_data**
 
 ```
 WES_data
