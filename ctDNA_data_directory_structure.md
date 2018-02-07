@@ -1029,7 +1029,6 @@ WES_data
 |____Agilent_Human_Exon_V6
 | |____S07604514_AllTracks.bed
 | |____S07604514_Targets.txt
-| |____.DS_Store
 | |____S07604514_Covered_hg38_clean.bed
 | |____S07604514_Covered_hg38.bed
 | |____S07604514_Covered_hg38unlifted.bed
