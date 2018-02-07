@@ -1413,7 +1413,7 @@ According to Broad Institute recommendation for [pre-processing data from multip
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
-METRICS_FILE | \[sample_name\]\.merged\.DuplicationMetrics\.txt | File to write duplication metrics to
+METRICS_FILE | [*sample_name*].merged.DuplicationMetrics.txt | File to write duplication metrics to
 VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
 <br />
@@ -1636,15 +1636,15 @@ nohup ./GATK_baseQrecalib.sh  95_4_D.merged > 95_4_D.merged.GATK_baseQrecalib.lo
 #### 8.2 Remove redundant files for each sample to save space
 
 ```
-rm [sample_name].sam
-rm [sample_name].bam
-rm [sample_name].bai
-rm [sample_name].merged.bam
-rm [sample_name].merged.bai
-rm [sample_name].merged.realigned.bam
-rm [sample_name].merged.realigned.bai
-rm [sample_name].merged.realigned.fixed.bam
-rm [sample_name].merged.realigned.fixed.bai
+rm [*sample_name*].sam
+rm [*sample_name*].bam
+rm [*sample_name*].bai
+rm [*sample_name*].merged.bam
+rm [*sample_name*].merged.bai
+rm [*sample_name*].merged.realigned.bam
+rm [*sample_name*].merged.realigned.bai
+rm [*sample_name*].merged.realigned.fixed.bam
+rm [*sample_name*].merged.realigned.fixed.bai
 ```
 
 ----------------------
