@@ -5,6 +5,8 @@ This repository describes the directory structure for [circulating tumour DNA (c
 
 ## Plasma WES data
 
+*/data/BCI-BioInformatics/PC_ctDNA/**WES_data**
+
 ```
 WES_data
 |____45_1_B.3.bam.coverage
@@ -1683,6 +1685,8 @@ WES_data
 ----------------------
 
 ## Tumour and normal DNA WGS data
+
+*/data/BCI-BioInformatics/PC_ctDNA/**WGS_data**/X16018*
 
 ```
 X16018
