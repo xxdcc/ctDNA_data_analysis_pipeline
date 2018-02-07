@@ -63,7 +63,7 @@ The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computi
     95 (tumour DNA) | X16018P001D01/B01P0095AAA03_tumour.bam
     <br />
 
-* **tumour and normal DNA WGS** data analyses are performed:<br>
+* **tumour and normal DNA WGS** data analyses are performed in the following directory:<br>
 
     */data/BCI-BioInformatics/PC_ctDNA/**WGS_data**/X16018*
 <br>
