@@ -1,10 +1,10 @@
 # ctDNA data directory structure
 
-This repository describes the directory structure for [circulating tumour DNA (ctDNA) data derived from whole-exome sequencing (WES) of plasma DNA, whole-genome sequencing (WGS) of tumour DNA and corresponding normal DNA samples from pancreatic cancer patients](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline).  
+This repository describes the directory structure for [circulating tumour DNA (ctDNA) data analysis](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline). The directory structure for data from whole-exome sequencing (WES) of plasma DNA is presented here, and for the whole-genome sequencing (WGS) data of tumour DNA and corresponding normal DNA samples is presented here.  
 <br />
 <br />
 
-* **plasma WES raw** data<br>
+## Plasma WES data
 
 ```
 WES_data
@@ -2219,9 +2219,9 @@ WES_data
 |____45_1_B.GATK_MuTect2.log
 ```
 
+----------------------
 
-
-* **tumour and normal DNA WGS** data <br>
+## Tumour and normal DNA WGS data
 
 ```
 X16018
