@@ -165,7 +165,7 @@ Paramter | Value | Description
 ------------ | ------------ | ------------
 -M | N/A | Mark shorter split hits as secondary (for Picard compatibility)
 -t | 4 | Number of threads
--R | @RG:[sample_name] LB:[sample_name] SM:[sample_name] PL:Illumina | Complete read group header line
+-R | @RG:[*sample_name*] LB:[*sample_name*] SM:[*sample_name*] PL:Illumina | Complete read group header line
 <br />
 
 Run *[BWA_mem.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/BWA_mem.sh)* script for each sample
@@ -613,7 +613,7 @@ Duplicates can arise during sample preparation e.g. library construction using P
 
 Paramter | Value | Description
 ------------ | ------------ | ------------
-METRICS_FILE | \[sample_name\]\.DuplicationMetrics\.txt | File to write duplication metrics to
+METRICS_FILE | [*sample_name*].DuplicationMetrics.txt | File to write duplication metrics to
 VALIDATION_STRINGENCY  | LENIENT | Validation stringency for all SAM files read
 CREATE_INDEX | TRUE | Create a BAM index when writing a coordinate-sorted BAM file
 <br />
