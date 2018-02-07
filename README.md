@@ -72,7 +72,7 @@ The analyses are conducted on [QMUL Apocrita (**sm11**) High Performance Computi
 ## Data directory structure
 
 The repository with the directory structure for data from **WES** of plasma DNA is presented [here](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/ctDNA_data_directory_structure.md#plasma-wes-data), and for data from **WGS** of tumour DNA and corresponding normal DNA samples is presented [here](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/ctDNA_data_directory_structure.md#tumour-and-normal-dna-wgs-data)
-<br>
+<br><br>
 
 
 ## Pipeline summary
