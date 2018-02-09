@@ -1817,6 +1817,7 @@ Paramter | Value | Description
 -q  | 20 | Minimum mapping quality for an alignment
 -Q | 15 | Minimum base quality for a base to be considered
 -R | N/A | Ignore RG tags. Treat all reads in one BAM as one sample
+-l | S07604514_Covered_hg38_clean.bed | BED file containing a list of regions where pileup should be generated
 <br />
 
 **Tool**: *VarScan*<br>
