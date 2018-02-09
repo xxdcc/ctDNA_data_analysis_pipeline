@@ -13,12 +13,9 @@ WES_data
 |____45_1_B.3.bam.coverage
 |____45_4_E.4.bam.list
 |____45_1_B.3.bam.list
-|____45_1_B.Picard_GATK_localAlign_indels.log
 |____95_1_A.4.bam.coverage.sample_summary
-|____45_1_B.GATK_baseQrecalib.log
 |____45_4_E.4.bam.coverage.sample_interval_summary
 |____95_4_D.2.Picard_SAM2BAM.log
-|____45_1_B.2.GATK_baseQrecalib.log
 |____95_4_D.marked.bam.stats
 | |____95_4_D.marked.bam.stats.plot-quals3.png
 | |____95_4_D.marked.bam.stats.plot-indel-cycles.gp
@@ -44,7 +41,6 @@ WES_data
 | |____95_4_D.marked.bam.stats.plot.html
 | |____95_4_D.marked.bam.stats.plot-gc-content.png
 | |____95_4_D.marked.bam.stats.plot-insert-size.gp
-|____45_4_E.3.recalib.flagstat.txt
 |____95_1_A.Picard_merge_4BAMs_markDupl.log
 |____95_3_C.4.DuplicationMetrics.txt
 |____45_4_E.3.marked.bam.stats
@@ -78,7 +74,6 @@ WES_data
 |____95_3_C.bam.coverage
 |____95_1_A.3.bam.coverage.sample_interval_statistics
 |____95_1_A.3.bam.coverage.sample_summary
-|____45_3_D.4.recal_data.grp
 |____45_2_C.3.marked.bam.stats
 | |____45_2_C.3.marked.bam.stats.plot-acgt-cycles.png
 | |____45_2_C.3.marked.bam.stats
@@ -104,7 +99,6 @@ WES_data
 | |____45_2_C.3.marked.bam.stats.plot-gc-content.gp
 | |____45_2_C.3.marked.bam.stats.plot-indel-cycles.png
 | |____45_2_C.3.marked.bam.stats.plot-quals.gp
-|____95_1_A.merged.Varscan_pileup2cns_3samples.log
 |____95_4_D.2.marked.bam.stats
 | |____95_4_D.2.marked.bam.stats
 | |____95_4_D.2.marked.bam.stats.plot-gc-content.gp
@@ -136,20 +130,14 @@ WES_data
 |____45_2_C.3.GATK_coverage.log
 |____45_2_C.merged.recalib.bam.bai
 |____45_1_B.2.marked.bai
-|____95_4_D.recal_data.grp
-|____95_2_B.GATK_baseQrecalib.log
 |____95_3_C.2.bam.coverage.sample_summary
-|____45_3_D.3.recal_data.grp
-|____45_3_D.4.recalib.flagstat.txt
 |____45_3_D.merged.GATK_baseQrecalib.log
 |____95_4_D.2.Picard_markDupl.log
 |____45_2_C.3.bam.coverage
 |____95_4_D.bam.coverage.sample_cumulative_coverage_proportions
 |____45_3_D.4.bam.coverage.sample_summary
-|____95_4_D.4.Picard_GATK_localAlign_indels.log
 |____95_2_B.4.bam.coverage.sample_cumulative_coverage_proportions
 |____95_3_C.4.Picard_markDupl.log
-|____45_1_B.recalib.flagstat.txt
 |____45_2_C.2.bam.coverage.sample_summary
 |____45_2_C.bam.coverage.sample_statistics
 |____45_1_B.2.bam.coverage.sample_interval_statistics
@@ -183,15 +171,11 @@ WES_data
 |____Picard_merge_4BAMs_markDupl.sh
 |____45_4_E.merged.recal_data.grp
 |____95_2_B.3.DuplicationMetrics.txt
-|____45_1_B.3.recalib.bai
 |____95_1_A.3.Picard_markDupl.log
-|____45_4_E.Picard_GATK_localAlign_indels.log
 |____95_4_D.GATK_coverage.log
 |____95_2_B.2.bam.coverage.sample_interval_summary
 |____95_2_B.4.Picard_SAM2BAM.log
 |____95_3_C.2.Picard_SAM2BAM.log
-|____45_4_E.GATK_MuTect2.log.tmp
-|____45_1_B.4.Picard_GATK_localAlign_indels.log
 |____45_1_B.3.Picard_markDupl.log
 |____95_3_C.Picard_markDupl.log
 |____45_1_B.3.bam.coverage.sample_summary
@@ -200,12 +184,7 @@ WES_data
 |____45_3_D.bam.coverage.sample_summary
 |____95_4_D.2.bam.coverage.sample_interval_statistics
 |____95_2_B.merged.recalib.flagstat.txt
-|____95_3_C.2.recalib.bam
-|____95_4_D.3.recalib.bam
-|____95_1_A.3.Picard_GATK_localAlign_indels.log
-|____45_3_D.2.Picard_GATK_localAlign_indels.log
 |____45_4_E.3.bam.coverage.sample_summary
-|____95_1_A.GATK_baseQrecalib.log
 |____95_1_A.3.bam.coverage.sample_statistics
 |____45_4_E.4.bam.coverage.sample_cumulative_coverage_counts
 |____45_2_C.3.bam.coverage.sample_cumulative_coverage_counts
@@ -214,22 +193,14 @@ WES_data
 |____95_2_B.bam.coverage.sample_interval_summary
 |____45_3_D.4.bam.coverage.sample_statistics
 |____95_3_C.merged.DuplicationMetrics.txt
-|____45_3_D.vcf
 |____95_2_B.bam.coverage.sample_cumulative_coverage_proportions
 |____45_3_D.merged.bam.list
 |____95_4_D.3.Picard_SAM2BAM.log
 |____95_2_B.4.bam.list
 |____95_2_B.4.GATK_coverage.log
-|____95_3_C.GATK_baseQrecalib.log
 |____95_2_B.3.GATK_coverage.log
-|____95_4_D.3.recalib.bai
-|____95_4_D.4.recalib.bai
 |____45_3_D.3.Picard_SAM2BAM.log
-|____45_3_D.recalib.bai
 |____95_3_C.4.Picard_SAM2BAM.log
-|____45_4_E.3.Picard_GATK_localAlign_indels.log
-|____95_4_D.Picard_GATK_localAlign_indels.log
-|____45_2_C.4.recal_data.grp
 |____95_3_C.bam.coverage.sample_interval_statistics
 |____45_3_D.bam.list
 |____95_2_B.3.bam.coverage.sample_cumulative_coverage_counts
@@ -238,17 +209,13 @@ WES_data
 |____45_1_B.2.bam.coverage
 |____45_1_B.4.bam.coverage.sample_interval_statistics
 |____45_1_B.3.DuplicationMetrics.txt
-|____45_2_C.4.Picard_GATK_localAlign_indels.log
 |____95_1_A.4.bam.coverage
-|____45_1_B.3.recal_data.grp
 |____95_2_B.2.bam.coverage
 |____95_1_A.Picard_markDupl.log
-|____95_1_A.recalib.flagstat.txt
 |____95_4_D.3.bam.coverage.sample_cumulative_coverage_counts
 |____95_2_B.4.bam.coverage.sample_interval_summary
 |____45_2_C.merged.recalib.bai
 |____45_1_B.4.Picard_markDupl.log
-|____45_1_B.3.recalib.bam
 |____95_3_C.4.marked.bam.stats
 | |____95_3_C.4.marked.bam.stats.plot.html
 | |____95_3_C.4.marked.bam.stats.plot-quals3.png
@@ -275,63 +242,38 @@ WES_data
 | |____95_3_C.4.marked.bam.stats.plot-gc-depth.gp
 | |____95_3_C.4.marked.bam.stats.plot-gc-content.png
 |____95_2_B.merged.recalib.bam
-|____95_1_A.vcf.annov.hg38_multianno.txt
 |____95_2_B.bam.coverage
 |____95_2_B.2.bam.coverage.sample_cumulative_coverage_proportions
-|____95_3_C.4.recalib.bai
 |____45_1_B.3.bam.coverage.sample_cumulative_coverage_counts
 |____95_1_A.3.bam.coverage.sample_cumulative_coverage_proportions
-|____45_1_B.recalib.bam
-|____95_4_D.GATK_baseQrecalib.log
-|____45_3_D.2.recal_data.grp
 |____45_4_E.bam.coverage.sample_summary
 |____45_3_D.2.bam.coverage.sample_statistics
 |____95_4_D.2.GATK_coverage.log
 |____45_1_B.bam.coverage.sample_cumulative_coverage_proportions
-|____45_2_C.merged.cns.vcf
 |____45_3_D.bam.coverage.sample_interval_summary
-|____45_1_B.vcf.annov.hg38_multianno.txt
-|____95_4_D.3.Picard_GATK_localAlign_indels.log
 |____45_1_B.merged.recalib.flagstat.txt
-|____45_3_D.4.recalib.bam
 |____95_1_A.merged.recalib.bam.bai
 |____95_1_A.2.bam.coverage.sample_cumulative_coverage_counts
 |____95_4_D.merged.recalib.bai
 |____45_1_B.2.bam.coverage.sample_summary
-|____45_1_B.2.recalib.bam
 |____95_4_D.3.bam.coverage.sample_statistics
-|____95_4_D.2.recalib.bam
-|____95_2_B.3.recalib.bam
 |____95_3_C.4.bam.coverage.sample_statistics
 |____95_2_B.GATK_coverage.log
 |____95_2_B.merged.recalib.bai
 |____45_3_D.3.Picard_markDupl.log
 |____95_4_D.4.bam.coverage
-|____45_3_D.3.GATK_baseQrecalib.log
-|____95_3_C.4.GATK_baseQrecalib.log
 |____95_1_A.bam.coverage.sample_statistics
 |____45_2_C.2.bam.coverage
 |____45_4_E.Picard_SAM2BAM.log
 |____95_4_D.4.bam.coverage.sample_interval_summary
-|____45_2_C.recalib.bam
-|____95_2_B.recalib.bam
-|____45_1_B.4.recalib.bai
 |____95_2_B.Picard_merge_4BAMs_markDupl.log
 |____95_3_C.merged.recalib.bam.bai
-|____45_2_C.GATK_MuTect2.log.tmp
 |____45_3_D.merged.recalib.bam.bai
-|____95_3_C.4.Picard_GATK_localAlign_indels.log
 |____95_3_C.2.GATK_coverage.log
 |____45_3_D.2.GATK_coverage.log
-|____95_3_C.4.recalib.bam
-|____95_1_A.2.GATK_baseQrecalib.log
 |____process_annovar_output_exonic.pl
 |____45_4_E.merged.recalib.bam.bai
-|____95_2_B.4.recalib.bai
 |____45_4_E.2.bam.coverage.sample_summary
-|____95_4_D.2.recal_data.grp
-|____45_1_B.vcf.annov.hg38_multianno.vcf
-|____45_3_D.recalib.bam
 |____45_1_B.4.marked.bam.stats
 | |____45_1_B.4.marked.bam.stats.plot-quals2.png
 | |____45_1_B.4.marked.bam.stats.plot-coverage.png
@@ -358,17 +300,12 @@ WES_data
 | |____45_1_B.4.marked.bam.stats.plot.html
 | |____45_1_B.4.marked.bam.stats.plot-indel-cycles.gp
 |____95_3_C.3.DuplicationMetrics.txt
-|____95_4_D.recalib.bai
 |____45_4_E.3.DuplicationMetrics.txt
-|____95_3_C.recalib.bai
 |____45_3_D.Picard_markDupl.log
 |____95_4_D.bam.coverage
-|____45_1_B.merged.Varscan_pileup2cns_3samples.log
 |____95_2_B.2.Picard_markDupl.log
-|____45_1_B.3.GATK_baseQrecalib.log
 |____Picard_GATK_localAlign_indels.sh
 |____45_2_C.bam.coverage.sample_interval_summary
-|____95_4_D.3.recalib.flagstat.txt
 |____95_1_A.2.Picard_markDupl.log
 |____95_2_B.3.bam.coverage.sample_statistics
 |____45_1_B.3.Picard_SAM2BAM.log
@@ -398,18 +335,13 @@ WES_data
 | |____95_1_A.marked.bam.stats.plot-quals2.gp
 | |____95_1_A.marked.bam.stats.plot-indel-cycles.gp
 |____45_3_D.4.bam.coverage.sample_cumulative_coverage_proportions
-|____45_1_B.2.recal_data.grp
 |____95_4_D.2.bam.coverage.sample_summary
 |____45_1_B.2.DuplicationMetrics.txt
 |____95_4_D.2.bam.coverage.sample_interval_summary
 |____95_1_A.4.bam.coverage.sample_interval_statistics
 |____45_3_D.4.bam.coverage.sample_interval_summary
 |____95_1_A.4.bam.coverage.sample_statistics
-|____95_1_A.Annovar.log
-|____45_2_C.GATK_baseQrecalib.log
-|____95_1_A.4.recalib.bai
 |____95_4_D.4.bam.coverage.sample_interval_statistics
-|____45_3_D.3.recalib.bam
 |____45_1_B.3.bam.coverage.sample_interval_statistics
 |____95_4_D.bam.coverage.sample_statistics
 |____45_1_B.bam.coverage
@@ -418,18 +350,14 @@ WES_data
 |____45_3_D.2.DuplicationMetrics.txt
 |____45_3_D.merged.recalib.bai
 |____Varscan_pileup2cns_3samples_interval.sh
-|____45_3_D.3.Picard_GATK_localAlign_indels.log
 |____Annovar_table_allsample.sh
 |____GATK_MuTect2_interval.sh
 |____45_2_C.bam.list
 |____95_3_C.4.bam.coverage.sample_interval_summary
-|____95_1_A.GATK_MuTect2.log
 |____45_4_E.GATK_coverage.log
 |____45_4_E.bam.list
-|____45_3_D.2.recalib.bam
 |____45_3_D.2.bam.coverage.sample_cumulative_coverage_proportions
 |____95_3_C.4.bam.list
-|____45_4_E.4.Picard_GATK_localAlign_indels.log
 |____95_4_D.Picard_SAM2BAM.log
 |____95_1_A.3.marked.bam.stats
 | |____95_1_A.3.marked.bam.stats.plot-quals2.gp
@@ -486,12 +414,10 @@ WES_data
 | |____45_3_D.2.marked.bam.stats.plot-insert-size.png
 |____45_1_B.3.marked.bai
 |____45_2_C.4.bam.coverage
-|____95_2_B.2.GATK_baseQrecalib.log
 |____45_1_B.4.GATK_coverage.log
 |____95_3_C.4.GATK_coverage.log
 |____45_4_E.3.bam.coverage.sample_interval_statistics
 |____95_2_B.4.bam.coverage.sample_cumulative_coverage_counts
-|____95_1_A.2.recalib.flagstat.txt
 |____45_3_D.merged.recal_data.grp
 |____45_4_E.4.marked.bam.stats
 | |____45_4_E.4.marked.bam.stats.plot-acgt-cycles.png
@@ -523,7 +449,6 @@ WES_data
 |____95_4_D.4.DuplicationMetrics.txt
 |____45_3_D.2.bam.coverage.sample_cumulative_coverage_counts
 |____95_3_C.2.bam.coverage.sample_interval_summary
-|____95_1_A.merged.Varscan_pileup2cns_3samples_interval.log
 |____45_2_C.merged.recalib.bam
 |____95_1_A.merged.recalib.bai
 |____45_4_E.merged.recalib.bam
@@ -534,17 +459,14 @@ WES_data
 |____95_4_D.2.bam.coverage.sample_cumulative_coverage_proportions
 |____45_3_D.bam.coverage
 |____95_2_B.bam.coverage.sample_summary
-|____45_3_D.GATK_baseQrecalib.log
 |____95_4_D.merged.recal_data.grp
 |____45_3_D.3.bam.list
-|____95_3_C.3.recalib.bam
 |____45_3_D.bam.coverage.sample_statistics
 |____45_2_C.bam.coverage.sample_cumulative_coverage_proportions
 |____45_1_B.4.bam.coverage.sample_interval_summary
 |____45_2_C.4.marked.bai
 |____95_1_A.merged.GATK_baseQrecalib.log
 |____45_2_C.merged.Picard_GATK_localAlign_indels.log
-|____45_2_C.2.Picard_GATK_localAlign_indels.log
 |____95_3_C.3.bam.coverage.sample_cumulative_coverage_counts
 |____95_2_B.3.Picard_SAM2BAM.log
 |____95_1_A.3.GATK_coverage.log
@@ -600,10 +522,7 @@ WES_data
 | |____45_2_C.4.marked.bam.stats.plot-quals2.png
 |____45_3_D.3.bam.coverage.sample_cumulative_coverage_counts
 |____45_1_B.2.bam.coverage.sample_interval_summary
-|____45_1_B.merged.vcf
 |____95_4_D.2.DuplicationMetrics.txt
-|____45_2_C.4.recalib.bai
-|____95_4_D.2.GATK_baseQrecalib.log
 |____45_2_C.2.DuplicationMetrics.txt
 |____95_1_A.bam.coverage.sample_interval_statistics
 |____95_3_C.3.bam.coverage.sample_cumulative_coverage_proportions
@@ -641,21 +560,15 @@ WES_data
 | |____95_3_C.2.marked.bam.stats.plot-acgt-cycles.gp
 | |____95_3_C.2.marked.bam.stats.plot-coverage.png
 |____95_2_B.bam.coverage.sample_cumulative_coverage_counts
-|____45_4_E.3.GATK_baseQrecalib.log
-|____45_3_D.4.Picard_GATK_localAlign_indels.log
 |____95_3_C.4.bam.coverage.sample_cumulative_coverage_counts
 |____45_3_D.merged.Picard_GATK_localAlign_indels.log
-|____95_4_D.4.recal_data.grp
 |____95_1_A.4.bam.coverage.sample_interval_summary
-|____45_4_E.2.recalib.bai
 |____45_2_C.4.bam.list
 |____45_4_E.bam.coverage.sample_interval_statistics
 |____95_1_A.4.bam.coverage.sample_cumulative_coverage_proportions
 |____45_4_E.4.bam.coverage.sample_statistics
-|____45_3_D.3.recalib.flagstat.txt
 |____45_4_E.bam.coverage.sample_statistics
 |____45_4_E.4.bam.coverage.sample_interval_statistics
-|____95_1_A.recalib.bam
 |____95_2_B.2.DuplicationMetrics.txt
 |____45_1_B.4.bam.coverage
 |____95_1_A.3.bam.list
@@ -693,12 +606,8 @@ WES_data
 |____95_2_B.bam.coverage.sample_interval_statistics
 |____45_3_D.Picard_SAM2BAM.log
 |____45_3_D.3.bam.coverage
-|____95_4_D.4.recalib.bam
-|____95_2_B.4.Picard_GATK_localAlign_indels.log
 |____45_4_E.4.GATK_coverage.log
-|____45_4_E.4.recalib.bam
 |____45_3_D.3.GATK_coverage.log
-|____95_4_D.3.recal_data.grp
 |____45_3_D.3.marked.bam.stats
 | |____45_3_D.3.marked.bam.stats.plot-indel-cycles.png
 | |____45_3_D.3.marked.bam.stats.plot-gc-depth.png
@@ -726,7 +635,6 @@ WES_data
 | |____45_3_D.3.marked.bam.stats.plot-gc-depth.gp
 |____45_1_B.4.bam.coverage.sample_summary
 |____95_3_C.bam.coverage.sample_cumulative_coverage_counts
-|____95_1_A.vcf
 |____45_2_C.3.DuplicationMetrics.txt
 |____95_2_B.2.marked.bam.stats
 | |____95_2_B.2.marked.bam.stats.plot-indel-cycles.gp
@@ -753,7 +661,6 @@ WES_data
 | |____95_2_B.2.marked.bam.stats.plot-acgt-cycles.gp
 | |____95_2_B.2.marked.bam.stats.plot-insert-size.png
 | |____95_2_B.2.marked.bam.stats.plot-quals2.png
-|____45_2_C.3.Picard_GATK_localAlign_indels.log
 |____95_2_B.3.bam.list
 |____95_4_D.3.bam.list
 |____95_1_A.2.bam.coverage.sample_summary
@@ -764,7 +671,6 @@ WES_data
 |____45_1_B.merged.bam.list
 |____95_1_A.2.bam.coverage
 |____45_3_D.4.GATK_coverage.log
-|____95_4_D.2.Picard_GATK_localAlign_indels.log
 |____45_4_E.3.GATK_coverage.log
 |____95_4_D.3.marked.bam.stats
 | |____95_4_D.3.marked.bam.stats.plot-coverage.png
@@ -972,7 +878,6 @@ WES_data
 | |____SLX-12721.iPCRtagT009.HGJWLBBXX.s_5.r_2.fq.gz
 | |____SLX-12721.HGJWLBBXX.s_5.r_2.lostreads.fq.gz
 |____45_2_C.4.Picard_markDupl.log
-|____95_4_D.3.GATK_baseQrecalib.log
 |____45_2_C.2.marked.bam.stats
 | |____45_2_C.2.marked.bam.stats.plot-quals.png
 | |____45_2_C.2.marked.bam.stats.plot-gc-content.png
@@ -1000,28 +905,23 @@ WES_data
 | |____45_2_C.2.marked.bam.stats.plot-acgt-cycles.png
 |____45_4_E.Picard_merge_4BAMs_markDupl.log
 |____95_2_B.3.bam.coverage.sample_cumulative_coverage_proportions
-|____45_1_B.4.recal_data.grp
 |____95_4_D.Picard_markDupl.log
 |____Annovar_annotate_variation.sh
 |____95_4_D.DuplicationMetrics.txt
 |____45_4_E.2.Picard_SAM2BAM.log
 |____95_3_C.3.bam.coverage.sample_summary
-|____95_2_B.4.GATK_baseQrecalib.log
 |____95_3_C.2.bam.coverage.sample_interval_statistics
 |____45_1_B.4.DuplicationMetrics.txt
-|____95_1_A.merged.vcf
 |____45_1_B.bam.coverage.sample_summary
 |____95_3_C.3.bam.coverage.sample_statistics
 |____95_3_C.bam.list
 |____45_4_E.3.Picard_SAM2BAM.log
 |____95_3_C.bam.coverage.sample_summary
-|____95_1_A.2.recal_data.grp
 |____45_2_C.Picard_SAM2BAM.log
 |____95_2_B.2.bam.coverage.sample_interval_statistics
 |____45_3_D.2.bam.coverage.sample_interval_summary
 |____95_4_D.bam.list
 |____45_2_C.4.GATK_coverage.log
-|____45_1_B.Annovar_table.log
 |____95_4_D.3.bam.coverage
 |____95_2_B.2.bam.coverage.sample_statistics
 |____95_1_A.merged.recal_data.grp
@@ -1037,12 +937,10 @@ WES_data
 | |____S07604514_Regions.bed
 | |____S07604514_Covered.bed
 |____45_4_E.3.bam.coverage.sample_interval_summary
-|____95_3_C.2.GATK_baseQrecalib.log
 |____95_1_A.4.bam.coverage.sample_cumulative_coverage_counts
 |____95_3_C.Picard_merge_4BAMs_markDupl.log
 |____45_4_E.2.bam.coverage.sample_statistics
 |____45_2_C.3.bam.coverage.sample_cumulative_coverage_proportions
-|____95_1_A.4.Picard_GATK_localAlign_indels.log
 |____45_3_D.3.bam.coverage.sample_cumulative_coverage_proportions
 |____45_2_C.marked.bam.stats
 | |____45_2_C.marked.bam.stats.plot-quals.png
@@ -1069,12 +967,10 @@ WES_data
 | |____45_2_C.marked.bam.stats.plot-quals-hm.gp
 | |____45_2_C.marked.bam.stats.plot-gc-depth.gp
 | |____45_2_C.marked.bam.stats.plot-indel-cycles.png
-|____95_2_B.3.recalib.bai
 |____95_3_C.merged.bam.list
 |____45_3_D.3.bam.coverage.sample_statistics
 |____95_3_C.2.Picard_markDupl.log
 |____45_4_E.4.bam.coverage.sample_summary
-|____95_1_A.4.recal_data.grp
 |____45_4_E.merged.recalib.flagstat.txt
 |____45_4_E.3.bam.coverage
 |____45_1_B.4.marked.bai
@@ -1105,48 +1001,30 @@ WES_data
 | |____45_3_D.4.marked.bam.stats.plot-coverage.png
 | |____45_3_D.4.marked.bam.stats.plot-gc-depth.gp
 |____45_3_D.merged.recalib.flagstat.txt
-|____45_1_B.merged.Varscan_pileup2cns_3samples_interval.log
 |____95_4_D.3.Picard_markDupl.log
-|____45_4_E.2.recalib.flagstat.txt
 |____95_1_A.DuplicationMetrics.txt
-|____95_1_A.4.recalib.flagstat.txt
 |____95_4_D.4.bam.coverage.sample_cumulative_coverage_counts
-|____95_4_D.4.recalib.flagstat.txt
-|____95_2_B.2.recalib.flagstat.txt
-|____45_3_D.GATK_MuTect2.log
 |____45_1_B.bam.coverage.sample_interval_statistics
-|____95_4_D.recalib.bam
 |____45_1_B.4.bam.coverage.sample_statistics
 |____95_1_A.2.bam.coverage.sample_statistics
-|____95_3_C.3.GATK_baseQrecalib.log
 |____45_4_E.2.bam.list
-|____45_4_E.GATK_baseQrecalib.log
 |____95_1_A.merged.bam.list
 |____95_3_C.3.bam.coverage.sample_interval_statistics
-|____45_2_C.merged.Varscan_pileup2cns_3samples.log
 |____45_1_B.merged.DuplicationMetrics.txt
 |____45_4_E.3.bam.list
 |____95_1_A.2.bam.list
-|____95_1_A.3.recal_data.grp
 |____95_1_A.GATK_coverage.log
 |____45_2_C.3.bam.list
-|____45_2_C.3.GATK_baseQrecalib.log
-|____45_4_E.recalib.bam
 |____95_4_D.2.bam.coverage.sample_cumulative_coverage_counts
 |____95_4_D.3.bam.coverage.sample_summary
 |____95_1_A.2.bam.coverage.sample_interval_summary
 |____process_annovar_output_exonic_3samples.pl
 |____95_2_B.4.DuplicationMetrics.txt
 |____95_4_D.merged.recalib.flagstat.txt
-|____95_3_C.3.Picard_GATK_localAlign_indels.log
-|____45_2_C.2.recalib.bai
 |____45_3_D.3.DuplicationMetrics.txt
 |____95_3_C.bam.coverage.sample_interval_summary
 |____45_4_E.3.bam.coverage.sample_cumulative_coverage_counts
-|____95_4_D.4.GATK_baseQrecalib.log
 |____45_4_E.bam.coverage.sample_cumulative_coverage_proportions
-|____45_1_B.2.Picard_GATK_localAlign_indels.log
-|____95_2_B.2.recalib.bai
 |____45_1_B.3.bam.coverage.sample_statistics
 |____45_2_C.2.Picard_SAM2BAM.log
 |____45_4_E.marked.bam.stats
@@ -1177,7 +1055,6 @@ WES_data
 |____45_3_D.2.bam.coverage
 |____45_3_D.3.bam.coverage.sample_interval_statistics
 |____95_2_B.merged.GATK_baseQrecalib.log
-|____45_2_C.recal_data.grp
 |____95_1_A.2.DuplicationMetrics.txt
 |____45_1_B.2.marked.bam.stats
 | |____45_1_B.2.marked.bam.stats.plot-quals.gp
@@ -1204,16 +1081,12 @@ WES_data
 | |____45_1_B.2.marked.bam.stats.plot-gc-content.gp
 | |____45_1_B.2.marked.bam.stats.plot-gc-depth.png
 | |____45_1_B.2.marked.bam.stats.plot-coverage.gp
-|____45_2_C.2.GATK_baseQrecalib.log
-|____45_3_D.3.recalib.bai
 |____45_1_B.bam.list
 |____45_1_B.3.GATK_coverage.log
 |____95_4_D.3.GATK_coverage.log
 |____95_3_C.merged.Picard_GATK_localAlign_indels.log
 |____45_2_C.3.bam.coverage.sample_statistics
 |____95_2_B.merged.DuplicationMetrics.txt
-|____45_4_E.3.recalib.bai
-|____95_4_D.2.recalib.bai
 |____95_3_C.2.bam.coverage.sample_statistics
 |____95_1_A.bam.coverage.sample_cumulative_coverage_counts
 |____95_1_A.3.DuplicationMetrics.txt
@@ -1242,7 +1115,6 @@ WES_data
 | |____95_2_B.4.marked.bam.stats.plot.html
 | |____95_2_B.4.marked.bam.stats.plot-gc-content.gp
 | |____95_2_B.4.marked.bam.stats.plot-indel-dist.gp
-|____95_3_C.recalib.flagstat.txt
 |____95_4_D.merged.recalib.bam.bai
 |____95_3_C.4.bam.coverage
 |____95_1_A.2.bam.coverage.sample_cumulative_coverage_proportions
@@ -1251,18 +1123,13 @@ WES_data
 |____95_1_A.merged.recalib.bam
 |____45_1_B.Picard_SAM2BAM.log
 |____95_3_C.bam.coverage.sample_cumulative_coverage_proportions
-|____45_2_C.2.recal_data.grp
-|____45_3_D.2.GATK_baseQrecalib.log
-|____45_2_C.4.recalib.bam
 |____45_4_E.4.bam.coverage
 |____45_2_C.4.bam.coverage.sample_statistics
 |____45_2_C.merged.GATK_baseQrecalib.log
 |____45_2_C.DuplicationMetrics.txt
-|____95_1_A.2.recalib.bam
 |____95_4_D.merged.DuplicationMetrics.txt
 |____45_4_E.merged.recalib.bai
 |____45_1_B.Picard_markDupl.log
-|____95_1_A.2.recalib.bai
 |____process_annovar_output_splice.pl
 |____45_3_D.marked.bam.stats
 | |____45_3_D.marked.bam.stats.plot-gc-depth.gp
@@ -1289,20 +1156,10 @@ WES_data
 | |____45_3_D.marked.bam.stats.plot-quals.png
 | |____45_3_D.marked.bam.stats.plot-quals3.gp
 | |____45_3_D.marked.bam.stats.plot.html
-|____95_1_A.merged.Varscan_somatic_interval.log
 |____95_3_C.merged.recalib.bai
-|____45_2_C.4.recalib.flagstat.txt
-|____45_2_C.4.GATK_baseQrecalib.log
-|____45_2_C.Picard_GATK_localAlign_indels.log
-|____45_4_E.3.recalib.bam
 |____Picard_markDupl.sh
-|____45_4_E.2.recalib.bam
-|____45_1_B.2.recalib.bai
 |____95_2_B.4.bam.coverage.sample_statistics
-|____45_1_B.recal_data.grp
-|____45_2_C.3.recal_data.grp
 |____45_1_B.merged.recalib.bam
-|____45_1_B.merged.GATK_MuTect2.log
 |____45_1_B.2.bam.coverage.sample_statistics
 |____95_4_D.bam.coverage.sample_summary
 |____45_3_D.merged.recalib.bam
@@ -1333,8 +1190,6 @@ WES_data
 | |____95_2_B.3.marked.bam.stats.plot-quals.png
 |____45_3_D.2.bam.coverage.sample_summary
 |____45_1_B.DuplicationMetrics.txt
-|____45_3_D.Picard_GATK_localAlign_indels.log
-|____45_4_E.4.recalib.flagstat.txt
 |____95_1_A.merged.Picard_GATK_localAlign_indels.log
 |____45_4_E.bam.coverage
 |____45_2_C.3.marked.bai
@@ -1385,15 +1240,10 @@ WES_data
 |____45_3_D.bam.coverage.sample_cumulative_coverage_counts
 |____95_3_C.2.bam.coverage
 |____GATK_MuTect2.sh
-|____95_1_A.merged.GATK_MuTect2.log
 |____45_4_E.bam.coverage.sample_cumulative_coverage_counts
 |____95_1_A.bam.coverage
 |____95_4_D.2.bam.coverage
-|____95_4_D.2.recalib.flagstat.txt
-|____45_2_C.3.recalib.bai
-|____45_3_D.recal_data.grp
 |____45_1_B.bam.coverage.sample_statistics
-|____95_1_A.Picard_GATK_localAlign_indels.log
 |____95_2_B.marked.bam.stats
 | |____95_2_B.marked.bam.stats.plot.html
 | |____95_2_B.marked.bam.stats.plot-insert-size.gp
@@ -1424,36 +1274,24 @@ WES_data
 |____45_3_D.4.Picard_markDupl.log
 |____45_3_D.4.bam.coverage
 |____95_4_D.3.DuplicationMetrics.txt
-|____45_4_E.2.GATK_baseQrecalib.log
 |____45_2_C.4.DuplicationMetrics.txt
 |____45_4_E.2.Picard_markDupl.log
 |____BWA_aln_sampe.sh
 |____95_3_C.merged.recalib.bam
-|____95_3_C.3.recalib.bai
-|____95_1_A.3.recalib.bam
 |____45_3_D.3.bam.coverage.sample_interval_summary
-|____95_3_C.2.recalib.flagstat.txt
 |____95_2_B.bam.list
-|____95_1_A.4.GATK_baseQrecalib.log
 |____95_2_B.2.bam.list
 |____45_4_E.merged.DuplicationMetrics.txt
 |____95_1_A.4.Picard_SAM2BAM.log
 |____95_2_B.merged.bam.list
 |____45_2_C.2.marked.bai
-|____45_1_B.merged.cns.vcf
-|____95_1_A.recal_data.grp
-|____45_4_E.3.recal_data.grp
 |____45_2_C.4.Picard_SAM2BAM.log
 |____45_2_C.3.bam.coverage.sample_interval_statistics
-|____95_2_B.2.recalib.bam
-|____95_3_C.Picard_GATK_localAlign_indels.log
 |____95_2_B.3.bam.coverage.sample_interval_summary
 |____95_1_A.bam.coverage.sample_interval_summary
-|____45_1_B.2.recalib.flagstat.txt
 |____95_2_B.DuplicationMetrics.txt
 |____95_2_B.2.bam.coverage.sample_summary
 |____45_3_D.merged.DuplicationMetrics.txt
-|____95_2_B.recalib.flagstat.txt
 |____45_4_E.merged.bam.list
 |____45_4_E.2.bam.coverage.sample_interval_statistics
 |____95_4_D.3.bam.coverage.sample_interval_statistics
@@ -1491,29 +1329,18 @@ WES_data
 | |____95_3_C.marked.bam.stats.plot-quals3.png
 | |____95_3_C.marked.bam.stats.plot-quals.png
 | |____95_3_C.marked.bam.stats.plot-quals-hm.png
-|____45_4_E.4.GATK_baseQrecalib.log
 |____95_4_D.4.Picard_markDupl.log
-|____95_1_A.Annovar_table.log
 |____45_1_B.Picard_merge_4BAMs_markDupl.log
-|____45_2_C.3.recalib.flagstat.txt
-|____45_4_E.2.recal_data.grp
 |____45_1_B.merged.recal_data.grp
-|____45_1_B.4.GATK_baseQrecalib.log
 |____95_1_A.3.bam.coverage.sample_cumulative_coverage_counts
 |____Picard_SAM2BAM.sh
-|____95_1_A.2.Picard_GATK_localAlign_indels.log
-|____45_3_D.4.GATK_baseQrecalib.log
 |____45_2_C.2.GATK_coverage.log
 |____45_2_C.bam.coverage
 |____45_4_E.merged.Picard_GATK_localAlign_indels.log
-|____95_2_B.3.Picard_GATK_localAlign_indels.log
 |____45_1_B.4.Picard_SAM2BAM.log
-|____95_2_B.2.Picard_GATK_localAlign_indels.log
 |____45_3_D.4.Picard_SAM2BAM.log
 |____45_2_C.3.Picard_markDupl.log
-|____95_4_D.recalib.flagstat.txt
 |____95_2_B.Picard_markDupl.log
-|____45_4_E.2.Picard_GATK_localAlign_indels.log
 |____95_3_C.2.DuplicationMetrics.txt
 |____45_4_E.4.bam.coverage.sample_cumulative_coverage_proportions
 |____95_2_B.4.bam.coverage.sample_interval_statistics
@@ -1521,8 +1348,6 @@ WES_data
 |____45_1_B.bam.coverage.sample_cumulative_coverage_counts
 |____95_2_B.3.Picard_markDupl.log
 |____45_1_B.2.bam.list
-|____95_1_A.3.recalib.bai
-|____95_2_B.Picard_GATK_localAlign_indels.log
 |____95_1_A.4.marked.bam.stats
 | |____95_1_A.4.marked.bam.stats.plot-indel-cycles.gp
 | |____95_1_A.4.marked.bam.stats.plot-quals2.png
@@ -1550,46 +1375,33 @@ WES_data
 | |____95_1_A.4.marked.bam.stats.plot-insert-size.png
 |____45_2_C.bam.coverage.sample_interval_statistics
 |____45_3_D.GATK_coverage.log
-|____95_1_A.3.GATK_baseQrecalib.log
 |____95_2_B.3.bam.coverage
 |____95_4_D.3.bam.coverage.sample_interval_summary
-|____95_3_C.recal_data.grp
 |____95_3_C.2.bam.coverage.sample_cumulative_coverage_proportions
 |____95_1_A.4.Picard_markDupl.log
 |____95_1_A.3.Picard_SAM2BAM.log
 |____95_4_D.4.Picard_SAM2BAM.log
 |____45_2_C.Picard_markDupl.log
-|____45_3_D.recalib.flagstat.txt
 |____45_4_E.2.bam.coverage.sample_cumulative_coverage_proportions
 |____95_2_B.3.bam.coverage.sample_interval_statistics
 |____95_4_D.4.bam.coverage.sample_statistics
-|____95_2_B.recal_data.grp
-|____45_1_B.merged.Annovar_allsample.log
-|____45_4_E.recalib.bai
-|____45_1_B.4.recalib.flagstat.txt
 |____95_3_C.merged.GATK_baseQrecalib.log
-|____45_2_C.GATK_MuTect2.log
 |____95_4_D.4.bam.list
 |____95_4_D.merged.Picard_GATK_localAlign_indels.log
 |____45_2_C.3.bam.coverage.sample_summary
 |____45_1_B.2.bam.coverage.sample_cumulative_coverage_counts
 |____95_2_B.4.bam.coverage
-|____95_3_C.3.recal_data.grp
 |____45_1_B.2.GATK_coverage.log
 |____45_3_D.2.Picard_SAM2BAM.log
-|____95_1_A.merged.cns.vcf
 |____95_3_C.4.bam.coverage.sample_summary
 |____45_3_D.DuplicationMetrics.txt
-|____95_2_B.3.recal_data.grp
 |____45_2_C.2.bam.coverage.sample_interval_summary
 |____45_4_E.3.bam.coverage.sample_cumulative_coverage_proportions
 |____45_3_D.4.bam.coverage.sample_cumulative_coverage_counts
-|____GATK_baseQrecalib.sh
 |____95_4_D.2.bam.coverage.sample_statistics
 |____45_2_C.4.bam.coverage.sample_cumulative_coverage_proportions
 |____95_2_B.2.GATK_coverage.log
 |____45_2_C.2.bam.coverage.sample_cumulative_coverage_proportions
-|____95_3_C.3.recalib.flagstat.txt
 |____95_2_B.2.Picard_SAM2BAM.log
 |____45_4_E.2.GATK_coverage.log
 |____95_4_D.Picard_merge_4BAMs_markDupl.log
@@ -1631,7 +1443,6 @@ WES_data
 |____95_1_A.bam.list
 |____95_3_C.3.bam.coverage.sample_interval_summary
 |____95_1_A.bam.coverage.sample_summary
-|____95_3_C.2.Picard_GATK_localAlign_indels.log
 |____95_4_D.4.bam.coverage.sample_summary
 |____95_4_D.bam.coverage.sample_interval_statistics
 |____45_4_E.DuplicationMetrics.txt
@@ -1664,12 +1475,10 @@ WES_data
 | |____95_3_C.3.marked.bam.stats.plot-quals2.png
 |____45_2_C.2.bam.coverage.sample_statistics
 |____95_4_D.3.bam.coverage.sample_cumulative_coverage_proportions
-|____95_2_B.3.GATK_baseQrecalib.log
 |____45_4_E.2.bam.coverage
 |____95_2_B.merged.recal_data.grp
 |____95_3_C.2.bam.coverage.sample_cumulative_coverage_counts
 |____45_3_D.Picard_merge_4BAMs_markDupl.log
-|____45_1_B.3.Picard_GATK_localAlign_indels.log
 |____45_2_C.bam.coverage.sample_summary
 |____45_2_C.3.Picard_SAM2BAM.log
 |____45_1_B.2.bam.coverage.sample_cumulative_coverage_proportions
