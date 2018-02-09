@@ -1808,7 +1808,7 @@ samtools flagstat B01P0095AAA03_tumour.bam > B01P0095AAA03_tumour.flagstat.txt
 
 Since we expect little tumour content in the plasma DNA variant detection algorithms like [*GATK Mutect2*](https://software.broadinstitute.org/gatk/documentation/tooldocs/4.beta.4/org_broadinstitute_hellbender_tools_walkers_mutect_Mutect2.php), which rely on statistical models, are not "sensitive" enough. For that reason, we adopted a *pileup* approach based on reporting any variants, compared to reference genome, across all samples followed by relevant filtering (see paper by Murtaza M *et al.*, 2013, [Non-invasive analysis of acquired resistance to cancer therapy by sequencing of plasma DNA](https://www.ncbi.nlm.nih.gov/pubmed/23563269)).
 
-**NOTE**: Since the plasma samples were profiled using WES approach, we limited the pileup to the exonic regions listed in the *S07604514_Covered_hg38_clean.bed* file described in Step 5 [Calculate coverage](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#5-calculate-coverage).
+**NOTE**: Since the plasma samples were profiled using WES approach, we limited the *pileup* to the exonic regions listed in the *S07604514_Covered_hg38_clean.bed* file described in Step 5 [Calculate coverage](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#5-calculate-coverage).
 
 **Tool**: *SAMtools*<br>
 **Algorithm**: *mpileup*
@@ -1885,20 +1885,20 @@ Run *[Annovar_annotate_variation_allsample.sh](https://github.research.its.qmul.
 
 Patient | Input file(s) | Output file(s)
 ------------ | ------------ | ------------
-45 | P_45.cns.vcf | P_45.cns.vcf.avinput <br> P_45.cns.vcf.avinput.exonic_variant_function <br> P_45.cns.vcf.avinput.invalid_input <br> P_45.cns.vcf.avinput.log <br> P_45.cns.vcf.avinput.variant_function
-95 | P_95.cns.vcf | P_95.cns.vcf.avinput <br> P_95.cns.vcf.avinput.exonic_variant_function <br> P_95.cns.vcf.avinput.invalid_input <br> P_95.cns.vcf.avinput.log <br> P_95.cns.vcf.avinput.variant_function
+45 | P_45.cns_exome.vcf | P_45.cns_exome.vcf.avinput <br> P_45.cns_exome.vcf.avinput.exonic_variant_function <br> P_45.cns_exome.vcf.avinput.invalid_input <br> P_45.cns_exome.vcf.avinput.log <br> P_45.cns_exome.vcf.avinput.variant_function
+95 | P_95.cns_exome.vcf | P_95.cns_exome.vcf.avinput <br> P_95.cns_exome.vcf.avinput.exonic_variant_function <br> P_95.cns_exome.vcf.avinput.invalid_input <br> P_95.cns_exome.vcf.avinput.log <br> P_95.cns_exome.vcf.avinput.variant_function
 <br />
 
 Patient 45
 ```
 cd /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018
-nohup ./Annovar_annotate_variation_allsample.sh  P_45.cns > P_45.Annovar_allsample.log &
+nohup ./Annovar_annotate_variation_allsample.sh  P_45.cns_exome > P_45.Annovar_allsample.log &
 ```
 
 Patient 95
 ```
 cd /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018
-nohup ./Annovar_annotate_variation_allsample.sh  P_95.cns > P_95.Annovar_allsample.log &
+nohup ./Annovar_annotate_variation_allsample.sh  P_95.cns_exome > P_95.Annovar_allsample.log &
 ```
 <br>
 
@@ -1907,15 +1907,15 @@ The 2 gene-based annotation files are:
 
 Annotation file | Description
 ------------ | ------------
-[*patient*].cns.vcf.avinput.exonic_variant_function | The 1st and 2nd columns annotate variant effects on gene structure and the genes that are affected. The other columns are reproduced from input file
-[*patient*].cns.vcf.avinput.variant_function | The 1st, 2nd and 3rd columns annotate variant line number in input file, the variant effects on coding sequences and the gene/transcript being affected. The other columns are reproduced from input file
+[*patient*].cns_exome.vcf.avinput.exonic_variant_function | The 1st and 2nd columns annotate variant effects on gene structure and the genes that are affected. The other columns are reproduced from input file
+[*patient*].cns_exome.vcf.avinput.variant_function | The 1st, 2nd and 3rd columns annotate variant line number in input file, the variant effects on coding sequences and the gene/transcript being affected. The other columns are reproduced from input file
 <br />
 
 The other 3 files are:
 
 Output file | Description
 ------------ | ------------
-[*patient*].cns.vcf.avinput  | *convert2annovar.pl* converted vcf file and input for *annotate_variation.pl*
-[*patient*].cns.vcf.avinput.invalid_input | Problematic variants rejected by *annotate_variation.pl* (e.g. unknown chromosome)
-[*patient*].cns.vcf.avinput.log  | Log file
+[*patient*].cns_exome.vcf.avinput  | *convert2annovar.pl* converted vcf file and input for *annotate_variation.pl*
+[*patient*].cns_exome.vcf.avinput.invalid_input | Problematic variants rejected by *annotate_variation.pl* (e.g. unknown chromosome)
+[*patient*].cns_exome.vcf.avinput.log  | Log file
 <br />
