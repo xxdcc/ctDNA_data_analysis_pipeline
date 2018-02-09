@@ -1808,6 +1808,8 @@ samtools flagstat B01P0095AAA03_tumour.bam > B01P0095AAA03_tumour.flagstat.txt
 
 Since we expect little tumour content in the plasma DNA variant detection algorithms like [*GATK Mutect2*](https://software.broadinstitute.org/gatk/documentation/tooldocs/4.beta.4/org_broadinstitute_hellbender_tools_walkers_mutect_Mutect2.php), which rely on statistical models, are not "sensitive" enough. For that reason, we adopted a *pileup* approach based on reporting any variants, compared to reference genome, across all samples followed by relevant filtering (see paper by Murtaza M *et al.*, 2013, [Non-invasive analysis of acquired resistance to cancer therapy by sequencing of plasma DNA](https://www.ncbi.nlm.nih.gov/pubmed/23563269)).
 
+**NOTE**: Since the plasma samples were profiled using WES approach, we limited the pileup to the exonic regions listed in the *S07604514_Covered_hg38_clean.bed* file described in Step 5 [Calculate coverage](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline#5-calculate-coverage).
+
 **Tool**: *SAMtools*<br>
 **Algorithm**: *mpileup*
 
@@ -1837,22 +1839,22 @@ Paramter | Value | Description
 
 **NOTE**: Run this analysis using all samples: normal DNA + tumour DNA + plasma 1 DNA + plasma 2 DNA + plasma 3 DNA + plasma 4 DNA.
 
-Run *[Varscan_pileup2cns_6samples.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Varscan_pileup2cns_6samples.sh)* script to call variants (SNPs and indels) using *VarScan mpileup2cns* algorithm using data from all 6 samples
+Run *[Varscan_pileup2cns_6samples_interval.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Varscan_pileup2cns_6samples_interval.sh)* script to call variants (SNPs and indels) within exonic regions using *VarScan mpileup2cns* algorithm using data from all 6 samples. To call all variants use *[Varscan_pileup2cns_6samples.sh](https://github.research.its.qmul.ac.uk/hfw456/ctDNA_data_analysis_pipeline/blob/master/Varscan_pileup2cns_6samples.sh)* script.
 
 Patient | Input file(s) | Output file(s)
 ------------ | ------------ | ------------
-45 | X16018P001A01/B01P0045_BBC03_normal.bam <br> X16018P001C01/B01P0045BAA07_tumour.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_1_B.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_2_C.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_3_D.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_4_E.merged.recalib.bam | P_45.cns.vcf
-95 | X16018P001B01/B01P0095_ABC03_normal.bam <br> X16018P001D01/B01P0095AAA03_tumour.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_1_A.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_2_B.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_3_C.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_4_D.merged.recalib.bam | P_95.cns.vcf
+45 | X16018P001A01/B01P0045_BBC03_normal.bam <br> X16018P001C01/B01P0045BAA07_tumour.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_1_B.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_2_C.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_3_D.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_4_E.merged.recalib.bam | P_45.cns_exome.vcf
+95 | X16018P001B01/B01P0095_ABC03_normal.bam <br> X16018P001D01/B01P0095AAA03_tumour.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_1_A.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_2_B.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_3_C.merged.recalib.bam <br> /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_4_D.merged.recalib.bam | P_95.cns_exome.vcf
 <br />
 
 Patient 45
 ```
-nohup ./Varscan_pileup2cns_6samples.sh P_45 X16018P001A01/B01P0045_BBC03_normal.bam X16018P001C01/B01P0045BAA07_tumour.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_1_B.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_2_C.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_3_D.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_4_E.merged.recalib.bam  > P_45.Varscan_pileup2cns_6samples.log &
+nohup ./Varscan_pileup2cns_6samples_interval.sh P_45 /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001A01/B01P0045_BBC03_normal.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001C01/B01P0045BAA07_tumour.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_1_B.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_2_C.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_3_D.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/45_4_E.merged.recalib.bam  > P_45.Varscan_pileup2cns_6samples_interval.log &
 ```
 
 Patient 95
 ```
-nohup ./Varscan_pileup2cns_6samples.sh P_95 X16018P001B01/B01P0095_ABC03_normal.bam X16018P001D01/B01P0095AAA03_tumour.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_1_A.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_2_B.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_3_C.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_4_D.merged.recalib.bam  > P_95.Varscan_pileup2cns_6samples.log &
+nohup ./Varscan_pileup2cns_6samples_interval.sh P_95  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001B01/B01P0095_ABC03_normal.bam  /data/BCI-BioInformatics/PC_ctDNA/WGS_data/X16018/2016-11-21/X16018P001D01/B01P0095AAA03_tumour.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_1_A.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_2_B.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_3_C.merged.recalib.bam  /data/BCI-BioInformatics/PC_ctDNA/WES_data/95_4_D.merged.recalib.bam  > P_95.Varscan_pileup2cns_6samples_interval.log &
 ```
 
 ----------------------
